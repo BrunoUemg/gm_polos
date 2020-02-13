@@ -1,6 +1,6 @@
 
 <?php 
-include_once "../dao/conexao.php";
+include_once "dao/conexao.php";
 
 $result_Polo ="SELECT * FROM polo";
 $resultado_Polo= mysqli_query($con, $result_Polo);
@@ -16,7 +16,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
                 </div>
                 <div class="card-body">
                  
-                <form action="EnvioCadastroAluno.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
+                <form action="envio_cadastro_aluno.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
 
                 <div class="item form-group">
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nome do Aluno

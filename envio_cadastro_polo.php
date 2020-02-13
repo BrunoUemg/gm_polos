@@ -1,6 +1,6 @@
 <?php 
 
-include_once "../dao/conexao.php";
+include_once "dao/conexao.php";
 
 $nomePolo = $_POST["nomePolo"];
 

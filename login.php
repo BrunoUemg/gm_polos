@@ -34,7 +34,7 @@
 	<div class="wrapper wrapper-login wrapper-login-full p-0">
 		<div class="login-aside w-50 d-flex flex-column align-items-center justify-content-center text-center bg-secondary-gradient">
 			<img src="img/logonome.png">
-			<p class="subtitle text-white op-7">Sistema de gestão de Clínica Médica</p>
+			<p class="subtitle text-white op-7">Sistema de polos Guarda Mirim</p>
 		</div>
 		<div class="login-aside w-50 d-flex align-items-center justify-content-center bg-white">
 			<div class="container container-login container-transparent animated fadeIn">
@@ -43,7 +43,7 @@
 					<div class="form-group">
 					<form action="dao/valida.php" method="POST">
 						<label for="username" class="placeholder"><b>Usuário</b></label>
-						<input id="username" name="usuario" type="text" class="form-control" required>
+						<input id="username" name="user" type="text" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="password" class="placeholder"><b>Senha</b></label>

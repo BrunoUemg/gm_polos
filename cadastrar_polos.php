@@ -11,7 +11,7 @@
                 </div>
                 <div class="card-body">
                  
-                <form action="EnvioCadastroPolo.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
+                <form action="envio_cadastro_polo.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
 
                 <div class="item form-group">
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nome do Polo

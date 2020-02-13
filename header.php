@@ -1,17 +1,20 @@
 <?php
+include "dao/conexao.php";
 session_start();
-if (isset($_SESSION['login'])) {
+if (isset($_SESSION['nomeUsuario'])) {
     //login ok!
 } else {
     header('location: ./login.php');
-}
-if ($_SESSION['idCargo'] == 1){
-$profileimg= "./img/profile/profileADM.jpg";
-}if($_SESSION['idCargo'] == 2){
-$profileimg= "./img/profile/profileSEC.jpg";
-}if($_SESSION['idCargo'] == 3){
-$profileimg= "./img/profile/profileMED.jpeg";
-}
+} 
+
+$idUsuario=$_SESSION['idUsuario'];
+
+$sql = "SELECT * FROM usuario WHERE idUsuario = '$idUsuario' " ;
+
+
+
+$res = $con-> query($sql);
+$linha = $res->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -59,7 +62,7 @@ $profileimg= "./img/profile/profileMED.jpeg";
 
                 <a href="index.php" class="logo">
                     <img src="img/logo.svg" alt="navbar brand" class="navbar-brand">
-                    <font color="white"> <strong>SOFTMED</strong></font>
+                    <font color="white"> <strong>Polos</strong></font>
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -129,8 +132,8 @@ $profileimg= "./img/profile/profileMED.jpeg";
                         <div class="info">
                             <a data-toggle="collapse" aria-expanded="true">
                                 <span>
-                                    <?php echo $_SESSION['nomeFuncionario']; ?>
-                                    <span class="user-level"><?php echo $_SESSION['descricao']; ?></span>
+                                    <?php echo $_SESSION['nomeUsuario']; ?>
+                                    
                                 </span>
                             </a>
                             <div class="clearfix"></div>
@@ -145,7 +148,7 @@ $profileimg= "./img/profile/profileMED.jpeg";
                         </li>
 
                         <?php
-                        if ($_SESSION['idCargo'] == 1) {
+                        if ($_SESSION['nivelAcesso'] == 0) {
                             echo '<li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-ellipsis-h"></i>
@@ -194,15 +197,16 @@ $profileimg= "./img/profile/profileMED.jpeg";
                                 </ul>
                             </div>
                         </li>';
-                        } ?>
+                        } 
 
 
-                        <?php
-                        if ($_SESSION['idCargo'] == 2 || $_SESSION['idCargo'] == 3) {
+                        
+                        else  
+                        {
                             echo '<li class="nav-item">
                             <a data-toggle="collapse" href="#pacientes">
                             <i class="fas fa-procedures"></i>
-                                <p>Pacientes</p>
+                                <p>adm</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="pacientes">
@@ -242,27 +246,8 @@ $profileimg= "./img/profile/profileMED.jpeg";
                             </div>
                         </li>';
                         } ?>
-
-                        <?php
-                        if ($_SESSION['idCargo'] == 3) {
-                            echo
-                                '<li class="nav-item">
-                            <a data-toggle="collapse" href="#prontuarios">
-                            <i class="fas fa-notes-medical"></i>
-                                <p>Prontuário</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="prontuarios">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a data-toggle="modal" data-target="#procurar_prontuario">
-                                            <span class="sub-item">Procurar</span>
-                                        </a>
-                                    </li>                          
-                                </ul>
-                            </div>
-                        </li>';
-                        } ?>
+  
+                     
 
 
 
