@@ -8,15 +8,16 @@ $senha = $_POST['senha'];
 
 
 $sql = "SELECT * FROM usuario WHERE userAcesso = '$usuario' and senha = '$senha'  ";
-		
+	
 $res = $con->query($sql);
 $linha = $res->fetch_assoc();
-
+	
 $id = $linha['idUsuario'];
 	$nome = $linha['nomeUsuario'];
     $user = $linha['userAcesso'];
     $senha_db = $linha['senha'];
-	$nivelAcesso = $linha['nivelAcesso'];	
+	$idMonitor = $linha['idMonitor'];
+	$idAluno = $linha['idAluno'];	
 		
     
 
@@ -25,8 +26,8 @@ $id = $linha['idUsuario'];
         session_start();
         $_SESSION['idUsuario'] = $id;
         $_SESSION['nomeUsuario'] = $nome;
-		$_SESSION['nivelAcesso'] = $acesso;
-		
+		$_SESSION['idMonitor'] = $idMonitor;
+		$_SESSION['idAluno'] = $idAluno;
 		$_SESSION['userAcesso'] = $user;
 	header('location: ../pagina_principal.php');
     }

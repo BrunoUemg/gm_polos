@@ -1,20 +1,16 @@
 <?php
-include "dao/conexao.php";
+
 session_start();
 if (isset($_SESSION['nomeUsuario'])) {
     //login ok!
 } else {
     header('location: ./login.php');
-} 
-
-$idUsuario=$_SESSION['idUsuario'];
-
-$sql = "SELECT * FROM usuario WHERE idUsuario = '$idUsuario' " ;
+}
 
 
 
-$res = $con-> query($sql);
-$linha = $res->fetch_assoc();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -148,7 +144,32 @@ $linha = $res->fetch_assoc();
                         </li>
 
                         <?php
-                        if ($_SESSION['nivelAcesso'] == 0) {
+                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] != 0) {
+                            echo '<li class="nav-item">
+                            <a data-toggle="collapse" href="#pacientes">
+                            <i class="fas fa-procedures"></i>
+                                <p>Cadastrar </p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="pacientes">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="cadastrar_paciente.php">
+                                            <span class="sub-item">Cadastrar</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="consultar_paciente.php">
+                                            <span class="sub-item">Consultar</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                       ';
+                        } 
+
+                        if ($_SESSION['idMonitor'] != 0 && $_SESSION['idAluno'] == 0) {
                             echo '<li class="nav-section">
                             <span class="sidebar-mini-icon">
                                 <i class="fa fa-ellipsis-h"></i>
@@ -158,7 +179,7 @@ $linha = $res->fetch_assoc();
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#funcionarios">
                                 <i class="fas fa-user-md"></i>
-                                <p>Funcionários</p>
+                                <p>monitor</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="funcionarios">
@@ -197,16 +218,14 @@ $linha = $res->fetch_assoc();
                                 </ul>
                             </div>
                         </li>';
-                        } 
-
-
+                        }
                         
                         else  
                         {
                             echo '<li class="nav-item">
                             <a data-toggle="collapse" href="#pacientes">
                             <i class="fas fa-procedures"></i>
-                                <p>adm</p>
+                                <p>Cadastrar </p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="pacientes">
