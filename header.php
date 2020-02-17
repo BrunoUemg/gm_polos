@@ -220,7 +220,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                         </li>';
                         }
                         
-                        else  
+                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0)
                         {
                             echo '<li class="nav-item">
                             <a data-toggle="collapse" href="#pacientes">
