@@ -17,9 +17,9 @@ if (isset($_SESSION['nomeUsuario'])) {
 
 <head>
     <meta charset="UTF-8" />
-    <title>SOFTMED-Software de gestão de Clínicas Médicas</title>
+    <title>POLOS</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+  <link rel="icon" href="img/logo.png" type="image/x-icon" /> 
 
     <!-- Fonts and icons -->
     <script src="js/plugin/webfont/webfont.min.js"></script>
@@ -57,8 +57,8 @@ if (isset($_SESSION['nomeUsuario'])) {
             <div class="logo-header" data-background-color="dark2">
 
                 <a href="index.php" class="logo">
-                    <img src="img/logo.svg" alt="navbar brand" class="navbar-brand">
-                    <font color="white"> <strong>Polos</strong></font>
+            <!--        <img src="img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
+                    <font color="white"> <strong>POLOS</strong></font>
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -87,17 +87,17 @@ if (isset($_SESSION['nomeUsuario'])) {
                         <li class="nav-item dropdown hidden-caret">
                             <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                                 <div class="avatar-sm">
-                                    <img src="<?php echo $profileimg;?>" alt="..." class="avatar-img rounded-circle">
+                                    <img src="img/icon.jpg" alt="..." class="avatar-img rounded-circle">
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-user animated fadeIn">
                                 <div class="dropdown-user-scroll scrollbar-outer">
                                     <li>
                                         <div class="user-box">
-                                            <div class="avatar-lg"><img src="<?php echo $profileimg;?>" alt="image profile" class="avatar-img rounded"></div>
+                                            <div class="avatar-lg"><img src="img/icon.jpg" alt="image profile" class="avatar-img rounded"></div>
                                             <div class="u-text">
-                                                <h4><?php echo $_SESSION['nomeFuncionario']; ?></h4>
-                                                <p class="text-muted"><?php echo $_SESSION['email']; ?>
+                                                <h4><?php echo $_SESSION['nomeUsuario']; ?></h4>
+                                             <!--   <p class="text-muted"><?php echo $_SESSION['email']; ?> -->
                                             </div>
                                         </div>
                                     </li>
@@ -123,7 +123,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                 <div class="sidebar-content">
                     <div class="user">
                         <div class="avatar-sm float-left mr-2">
-                            <img src="<?php echo $profileimg;?>" alt="..." class="avatar-img rounded-circle">
+                            <img src="img/icon.jpg" alt="..." class="avatar-img rounded-circle">
                         </div>
                         <div class="info">
                             <a data-toggle="collapse" aria-expanded="true">
@@ -154,7 +154,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                             <div class="collapse" id="pacientes">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="cadastrar_paciente.php">
+                                        <a href="cadastrar_polos.php">
                                             <span class="sub-item">Cadastrar</span>
                                         </a>
                                     </li>
@@ -225,18 +225,18 @@ if (isset($_SESSION['nomeUsuario'])) {
                             echo '<li class="nav-item">
                             <a data-toggle="collapse" href="#pacientes">
                             <i class="fas fa-procedures"></i>
-                                <p>Cadastrar </p>
+                                <p>Polos</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="pacientes">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="cadastrar_paciente.php">
+                                        <a href="cadastrar_polos.php">
                                             <span class="sub-item">Cadastrar</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="consultar_paciente.php">
+                                        <a href="consultar_polos.php">
                                             <span class="sub-item">Consultar</span>
                                         </a>
                                     </li>
@@ -246,24 +246,47 @@ if (isset($_SESSION['nomeUsuario'])) {
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#consultas">
                             <i class="fas fa-calendar-check"></i>
-                                <p>Consultas</p>
+                                <p>Monitores</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="consultas">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="agendar_consulta.php">
-                                            <span class="sub-item">Agendar</span>
+                                        <a href="cadastrar_monitores.php">
+                                            <span class="sub-item">Cadastrar</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="listar_consulta.php">
-                                            <span class="sub-item">Listar</span>
+                                            <span class="sub-item">Consultar</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                        </li>';
+                        </li>                        
+
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#alunos">
+                            <i class="fas fa-calendar-check"></i>
+                                <p>Alunos</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="alunos">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="cadastrar_alunos.php">
+                                            <span class="sub-item">Cadastrar</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="listar_consulta.php">
+                                            <span class="sub-item">Consultar</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>'
+                        ;
                         } ?>
   
                      
@@ -310,7 +333,7 @@ if (isset($_SESSION['nomeUsuario'])) {
         </div>
         <!-- modal -->
 
-        <!-- Modal -->
+        <!-- Modal 
         <div aria-hidden="true" aria-labelledby="procurar_prontuario" role="dialog" tabindex="-1" id="procurar_prontuario" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -338,14 +361,14 @@ if (isset($_SESSION['nomeUsuario'])) {
                 </div>
             </div>
         </div>
-        <!-- modal -->
+        modal -->
         <script>
             $("#pacID").select2({
                 placeholder: "Selecione um Paciente",
                 allowClear: true,
                 theme: "bootstrap"
             });
-        </script>
+        </script> 
         <script>
             var password = document.getElementById("nova_senha"),
                 confirm_password = document.getElementById("confirma_senha");

@@ -1,20 +1,23 @@
 
 <?php 
 include_once "dao/conexao.php";
+include_once "header.php";
 
 $result_Polo ="SELECT * FROM polo";
 $resultado_Polo= mysqli_query($con, $result_Polo);
 ?>
 
 
-
-         
-         <div class="col-lg-6 mb-4">
-          <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h4 class="m-0 font-weight-bold text-primary">Cadastro de Aluno</h4>
-                </div>
-                <div class="card-body">
+<div class="main-panel">
+  <div class="content">
+    <div class="page-inner">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <!-- Start Content -->
+              <div class="card-title">Cadastro de Alunos</div>
+            </div>
                  
                 <form action="envio_cadastro_aluno.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
 
@@ -142,6 +145,6 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
 
 
 <?php
-//include_once("Footer.php");
+include_once("footer.php");
 
 ?>

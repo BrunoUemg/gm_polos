@@ -1,15 +1,19 @@
 <?php
-//include_once("Head.php");
+include_once("header.php");
 
 ?>
 
          
-         <div class="col-lg-6 mb-4">
-          <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h4 class="m-0 font-weight-bold text-primary">Cadastro de Polos</h4>
-                </div>
-                <div class="card-body">
+<div class="main-panel">
+  <div class="content">
+    <div class="page-inner">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <!-- Start Content -->
+              <div class="card-title">Cadastro de Polos</div>
+            </div>
                  
                 <form action="envio_cadastro_polo.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
 
@@ -47,6 +51,6 @@
 
 
 <?php
-//include_once("Footer.php");
+include_once("footer.php");
 
 ?>
