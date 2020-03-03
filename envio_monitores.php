@@ -24,11 +24,15 @@ bairro, estado, cidade, idPolo) VALUES ('$nomeMonitor', '$dtNascimento', '$cpf',
   
 
 if ($con->query($sql) === TRUE){
-   
 
-$sql2 = "INSERT INTO usuario (nomeUsuario, userAcesso, senha, idMonitor) VALUES ('$nomeMonitor', '$cpf', '$dtNascimento' )";
+    $query = mysqli_query($con, "SELECT Max(idMonitor)  AS codigo FROM monitor");
+    $result = mysqli_fetch_array($query);
+
+$idMonitor = $result['codigo'];
+
+$sql2 = "INSERT INTO usuario (nomeUsuario, userAcesso, senha, idMonitor) VALUES ('$nomeMonitor', '$cpf', '$cpf','$idMonitor' )";
 if ($con->query($sql2) === TRUE)
-echo "<script>alert('Cadastro realizado com sucesso!');window.location='CadastroAlunos.php'</script>";
+echo "<script>alert('Cadastro realizado com sucesso!');window.location='cadastrar_monitores.php'</script>";
 else 
     echo "Erro para inserir: " . $con->error; 
 } else {

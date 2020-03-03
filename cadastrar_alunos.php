@@ -37,13 +37,15 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               </div>
             </div>
 
-            <div class="form-group col-md-4">
-              <label>Sexo</label>
-                <Select class="form-control"  name="sexo" maxlength="20" required="required" type="">
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Sexo</label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <Select class="form-control col-md-7 col-xs-12"  name="sexo" maxlength="20" required="required" type="">
                   <option >Selecione</option>
                 <option value="Masculino">Masculino</option>
                   <option value="Feminino">Feminino</option>
 </select>
+</div>
 </div>
 
 <div class="item form-group">
@@ -98,7 +100,39 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Telefone Contato
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="telefoneContato" required="required" type="text">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="telefoneContato" required="required" type="text" onkeyup="mascara('(##)####-####',this,event,true)">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Escola
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="escola" required="required" type="text" >
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Ano Escola
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="anoEscola" required="required" type="text" >
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Turma Escola
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="turmaEscola" required="required" type="text" >
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Turno Escola
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="turnoEscola" required="required" type="text">
               </div>
             </div>
 
@@ -137,7 +171,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
                 </div>
               </div>
 </div> 
-
+<script src="js/mascaras.js"></script>
 
     
 

@@ -56,7 +56,7 @@ if (isset($_SESSION['nomeUsuario'])) {
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark2">
 
-                <a href="index.php" class="logo">
+                <a href="pagina_principal.php" class="logo">
             <!--        <img src="img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
                     <font color="white"> <strong>POLOS</strong></font>
                 </a>
@@ -137,7 +137,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                     </div>
                     <ul class="nav nav-primary">
                         <li class="nav-item active">
-                            <a href="index.php">
+                            <a href="pagina_principal.php">
                                 <i class="fas fa-home"></i>
                                 <p>Menu Principal</p>
                             </a>
@@ -170,37 +170,12 @@ if (isset($_SESSION['nomeUsuario'])) {
                         } 
 
                         if ($_SESSION['idMonitor'] != 0 && $_SESSION['idAluno'] == 0) {
-                            echo '<li class="nav-section">
-                            <span class="sidebar-mini-icon">
-                                <i class="fa fa-ellipsis-h"></i>
-                            </span>
-                            <h4 class="text-section">Components</h4>
-                        </li>
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#funcionarios">
-                                <i class="fas fa-user-md"></i>
-                                <p>monitor</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="funcionarios">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a href="cadastrar_funcionario.php">
-                                            <span class="sub-item">Cadastrar</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="consultar_funcionario.php">
-                                            <span class="sub-item">Consultar</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                            echo '
+               
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#cargos">
                                 <i class="fas fa-plus-square"></i>
-                                <p>Cargos</p>
+                                <p>Chamada</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="cargos">
@@ -224,7 +199,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                         {
                             echo '<li class="nav-item">
                             <a data-toggle="collapse" href="#pacientes">
-                            <i class="fas fa-procedures"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                                 <p>Polos</p>
                                 <span class="caret"></span>
                             </a>
@@ -245,7 +220,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                         </li>
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#consultas">
-                            <i class="fas fa-calendar-check"></i>
+                            <i class="fas fa-user"></i>
                                 <p>Monitores</p>
                                 <span class="caret"></span>
                             </a>
@@ -257,7 +232,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="listar_consulta.php">
+                                        <a href="consultar_monitores.php">
                                             <span class="sub-item">Consultar</span>
                                         </a>
                                     </li>
@@ -267,7 +242,7 @@ if (isset($_SESSION['nomeUsuario'])) {
 
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#alunos">
-                            <i class="fas fa-calendar-check"></i>
+                            <i class="fas fa-users"></i>
                                 <p>Alunos</p>
                                 <span class="caret"></span>
                             </a>
@@ -279,7 +254,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="listar_consulta.php">
+                                        <a href="consultar_alunos.php">
                                             <span class="sub-item">Consultar</span>
                                         </a>
                                     </li>

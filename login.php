@@ -5,7 +5,12 @@
 <meta charset="UTF-8" />
     <title>POLOS</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/x-icon" />
+	<meta name="theme-color" content="#f9f9f9">
+  <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+  <link rel="manifest" href="manifest.json" />  
+  <link rel="canonical" href="http://gmfrutal.com/gm_polos/login.php">
+
 
 	<!-- Fonts and icons -->
 	<script src="js/plugin/webfont/webfont.min.js"></script>
@@ -31,6 +36,17 @@
 </head>
 
 <body class="login">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(function () {
+        console.log('service worker registered');
+      })
+      .catch(function () {
+        console.warn('service worker failed');
+      });
+  }
+</script>
 	<div class="wrapper wrapper-login wrapper-login-full p-0">
 		<div class="login-aside w-50 d-flex flex-column align-items-center justify-content-center text-center bg-secondary-gradient">
 			<img src="img/logo1.png">
