@@ -1,7 +1,7 @@
 <footer class="footer">
 	<div class="container-fluid">
 		<div class="copyright ml-auto">
-			&copy; Copyrights 2019 by <strong>A culpa é do usuário</strong>
+			&copy; Copyrights 2020 by <strong>NUSPI</strong>
 		</div>
 	</div>
 </footer>

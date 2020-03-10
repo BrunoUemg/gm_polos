@@ -175,21 +175,17 @@ if (isset($_SESSION['nomeUsuario'])) {
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#cargos">
                                 <i class="fas fa-plus-square"></i>
-                                <p>Chamada</p>
+                                <p>Encontros</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="cargos">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="cadastrar_cargo.php">
-                                            <span class="sub-item">Cadastrar</span>
+                                        <a href="consultar_encontros.php">
+                                            <span class="sub-item">Ver Encontros</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="consultar_cargo.php">
-                                            <span class="sub-item">Consultar</span>
-                                        </a>
-                                    </li>
+                                  
                                 </ul>
                             </div>
                         </li>';
@@ -260,7 +256,28 @@ if (isset($_SESSION['nomeUsuario'])) {
                                     </li>
                                 </ul>
                             </div>
-                        </li>'
+                        </li>
+                        <li class="nav-item">
+                        <a data-toggle="collapse" href="#cargos">
+                            <i class="fas fa-plus-square"></i>
+                            <p>Encontro</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="cargos">
+                            <ul class="nav nav-collapse">
+                                <li>
+                                    <a href="cadastrar_encontro.php">
+                                        <span class="sub-item">Cadastrar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="consultar_cargo.php">
+                                        <span class="sub-item">Consultar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>'
                         ;
                         } ?>
   
