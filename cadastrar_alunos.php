@@ -3,7 +3,7 @@
 include_once "dao/conexao.php";
 include_once "header.php";
 
-$result_Polo ="SELECT * FROM polo";
+$result_Polo ="SELECT * FROM polo where status = 1";
 $resultado_Polo= mysqli_query($con, $result_Polo);
 ?>
 
@@ -49,10 +49,34 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
 </div>
 
 <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nacionalidade Aluno
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nacionalidadeAluno"  type="text">
+              </div>
+            </div>
+
+<div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">RG Aluno
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="rgAluno"  type="text">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">CPF Aluno
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="cpfAluno"  type="text" onkeyup="mascara('###.###.###-##',this,event,true)">
+              </div>
+            </div>
+
+<div class="item form-group">
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nome do Pai
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nomePai" required="required" type="text">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nomePai"  type="text">
               </div>
             </div>
 
@@ -60,7 +84,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Profissão do Pai
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="profissaoPai" required="required" type="text">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="profissaoPai"  type="text">
               </div>
             </div>
 
@@ -68,7 +92,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nome da Mãe
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nomeMae" required="required" type="text">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nomeMae"  type="text">
               </div>
             </div>
 
@@ -76,7 +100,31 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Profissão da Mãe
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="profissaoMae" required="required" type="text">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="profissaoMae"  type="text">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">RG Responsável
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="rgResponsavel"  type="text">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">CPF Responsável
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="cpfResponsavel"  type="text" onkeyup="mascara('###.###.###-##',this,event,true)">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nacionalidade
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nacionalidadeResponsavel"  type="text">
               </div>
             </div>
 
@@ -92,7 +140,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Bairro
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="bairro" required="required" type="text">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="bairro"  type="text">
               </div>
             </div>
 
@@ -108,7 +156,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Escola
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="escola" required="required" type="text" >
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="escola"  type="text" >
               </div>
             </div>
 
@@ -116,7 +164,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Ano Escola
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="anoEscola" required="required" type="text" >
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="anoEscola"  type="text" >
               </div>
             </div>
 
@@ -124,7 +172,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Turma Escola
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
-                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="turmaEscola" required="required" type="text" >
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="turmaEscola"  type="text" >
               </div>
             </div>
 
@@ -135,6 +183,15 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
                 <input class="form-control col-md-7 col-xs-12" maxlength="100" name="turnoEscola" required="required" type="text">
               </div>
             </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome"> Data de Matrícula
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="dtMatricula" required="required" type="date">
+              </div>
+            </div>
+           
 
 
 <div class="item form-group">

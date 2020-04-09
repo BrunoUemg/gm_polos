@@ -1,7 +1,7 @@
 <?php
 include_once "dao/conexao.php";
 include_once "header.php";
-$profile = mysqli_query($con,"SELECT U.nomeUsuario, U.userAcesso, M.idPolo  FROM usuario U, monitor M , polo P WHERE idUsuario = $_SESSION[idUsuario]  and M.idPolo = P.idPolo");
+$profile = mysqli_query($con,"SELECT U.idUsuario, U.nomeUsuario, U.userAcesso, M.idPolo  FROM usuario U, monitor M , polo P WHERE idUsuario = $_SESSION[idUsuario]  and M.idPolo = P.idPolo");
 $result_profile = mysqli_fetch_array($profile);
 ?>
 <div class="main-panel">
@@ -34,7 +34,7 @@ $result_profile = mysqli_fetch_array($profile);
 
               <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Polo</label>
-                  <select class="form-control" name="cargos" readonly>
+                  <select class="form-control" name="idPolo" readonly>
                     <option value="">Selecione o Cargo</option>
                     <?php
                     $resultado_cargos = mysqli_query($con, "SELECT * FROM polo");
@@ -44,7 +44,7 @@ $result_profile = mysqli_fetch_array($profile);
                   </select>
                 </div>
               <div class="card-action">
-                <button type="submit" class="btn btn-danger" onClick="window.location.href='index.php'">Cancelar</button>
+                <button type="button" class="btn btn-danger" onClick="window.location.href='pagina_principal.php'">Cancelar</button>
 
                 <button type="submit" class="btn btn-theme">Salvar</button>
               </div>

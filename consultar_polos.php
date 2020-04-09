@@ -2,9 +2,19 @@
 include_once "header.php";
 
 include_once "dao/conexao.php";
-$result_consultaPolos = "SELECT * from polo";
+
+$result_consultaPolosDesati = "SELECT * from polo where status = 0 ";
+$resultado_consultaPolosDesati = mysqli_query($con, $result_consultaPolosDesati);
+
+$result_consultaPolos = "SELECT * from polo where status = 1 ";
 $resultado_consultaPolos = mysqli_query($con, $result_consultaPolos);
 ?>
+
+
+
+
+
+
 
 <div class="main-panel">
   <div class="content">
@@ -38,8 +48,9 @@ $resultado_consultaPolos = mysqli_query($con, $result_consultaPolos);
 
                         <td>
                           <?php echo "<a class='btn btn-default' href='consultar_polos.php?id=" . $rows_consultaPolos['idPolo'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaPolos['idPolo'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                          <?php echo "<a class='btn btn-default' href='consultar_polos.php?id=" . $rows_consultaPolos['idPolo'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaPolos['idPolo'] . "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
+                          <?php echo "<a class='btn btn-default' title='Desativar' href='consultar_polos.php?id=" . $rows_consultaPolos['idPolo'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaPolos['idPolo'] . "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
 
+                          <?php  echo "<a  class='btn btn-default' title='Excluir Polo' href='excluir_polo.php?idPolo=" .$rows_consultaPolos['idPolo']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
 
                           <!-- Modal-->
 
@@ -47,7 +58,7 @@ $resultado_consultaPolos = mysqli_query($con, $result_consultaPolos);
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Alterar Funcionário</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Alterar Polos</h5>
                                   <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                   </button>
@@ -56,12 +67,34 @@ $resultado_consultaPolos = mysqli_query($con, $result_consultaPolos);
                                   <form action="alterar_polos.php" method="POST">
 
                                     <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $rows_consultaPolos['idPolo']; ?>">
+                                    <input type="text" readonly hidden name="status" class="form-control" value="<?php echo $rows_consultaPolos['status']; ?>">
+                                    <input type="text" readonly hidden name="dtDesativacao" class="form-control" value="<?php echo $rows_consultaPolos['dtDesativacao']; ?>">
 
                                     <label>Nome</label>
                                     <input type="text" class="form-control" required name="nomePolo" value="<?php echo $rows_consultaPolos['nomePolo']; ?>">
 
-                                  
+                                    <label>Data de Criação</label>
+                                    <input type="text" class="form-control" required name="dtCriacao" value="<?php echo $rows_consultaPolos['dtCriacao']; ?>">
 
+                                    <label>Endereço de Funcionamento</label>
+                                    <input type="text" class="form-control" required name="enderecoFuncionamento" value="<?php echo $rows_consultaPolos['enderecoFuncionamento']; ?>">
+
+                                    <label>local Funcionameno</label>
+                                    <input type="text" class="form-control" required name="localFuncionamento" value="<?php echo $rows_consultaPolos['localFuncionamento']; ?>">
+
+                                    <label>Hora Funcionamento</label>
+                                    <input type="text" class="form-control" required name="horaFuncionamento" value="<?php echo $rows_consultaPolos['horaFuncionamento']; ?>">
+                                    <label>Dia Funcionamento</label>
+                                    <select class="form-control" required id="estado" name="diaFuncionamento" onchange="buscaCidades(this.value)">
+                                      <option value="">Selecione o dia</option>
+                                      <option value="Domingo" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Domingo') echo 'selected'; ?>>Domingo</option>
+                                      <option value="Segunda" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Segunda') echo 'selected'; ?>>Segunda</option>
+                                      <option value="Terça" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Terça') echo 'selected'; ?>>Terça</option>
+                                      <option value="Quarta" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Quarta') echo 'selected'; ?>>Quarta</option>
+                                      <option value="Quinta" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Quinta') echo 'selected'; ?>>Quinta</option>
+                                      <option value="Sexta" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Sexta') echo 'selected'; ?>>Sexta</option>
+                                      <option value="Sabado" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Sabado') echo 'selected'; ?>>Sabado</option>
+                                      </select>
                                 </div>
                                 <div class="modal-footer">
                                   <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
@@ -75,72 +108,53 @@ $resultado_consultaPolos = mysqli_query($con, $result_consultaPolos);
                         </td>
 
 
-                        <div class="modal fade" id="ModalMaisInfo<?php echo $rows_consultaFuncionario['idFuncionario']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="ModalMaisInfo<?php echo $rows_consultaPolos['idPolo']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Mais Informações</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Desativar Polos</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">×</span>
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <form>
+                                <form action="alterar_polos.php" method="POST">
+<label >Status</label>
+                                <Select class="form-control col-md-7 col-xs-12"  name="status" maxlength="50" required="required" type="text">
+                 
+                <option value='1' <?php if ($rows_consultaPolos['status'] == '1') echo 'selected'; ?>>Ativado</option>
+                  <option value='0'>Desativar</option>
+                  </select>
+                  <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $rows_consultaPolos['idPolo']; ?>">
+                  <input type="text" readonly hidden class="form-control" required name="nomePolo" value="<?php echo $rows_consultaPolos['nomePolo']; ?>">
+                  <input type="text"  readonly hidden class="form-control" required name="dtCriacao" value="<?php echo $rows_consultaPolos['dtCriacao']; ?>">
+                  <input type="text" readonly hidden class="form-control" required name="enderecoFuncionamento" value="<?php echo $rows_consultaPolos['enderecoFuncionamento']; ?>">
+                  <input type="text"  readonly hidden class="form-control" required name="localFuncionamento" value="<?php echo $rows_consultaPolos['localFuncionamento']; ?>">
+                 
+                                    <input type="text" readonly hidden class="form-control" required name="horaFuncionamento" value="<?php echo $rows_consultaPolos['horaFuncionamento']; ?>">
+                                    
+                                    <select class="form-control" required id="estado" readonly hidden name="diaFuncionamento" onchange="buscaCidades(this.value)">
+                                      <option value="">Selecione o dia</option>
+                                      <option value="Domingo" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Domingo') echo 'selected'; ?>>Domingo</option>
+                                      <option value="Segunda" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Segunda') echo 'selected'; ?>>Segunda</option>
+                                      <option value="Terça" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Terça') echo 'selected'; ?>>Terça</option>
+                                      <option value="Quarta" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Quarta') echo 'selected'; ?>>Quarta</option>
+                                      <option value="Quinta" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Quinta') echo 'selected'; ?>>Quinta</option>
+                                      <option value="Sexta" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Sexta') echo 'selected'; ?>>Sexta</option>
+                                      <option value="Sabado" <?php if ($rows_consultaPolos['diaFuncionamento'] == 'Sabado') echo 'selected'; ?>>Sabado</option>
+                                      </select>
 
-                                  <label>Nome</label>
-                                  <input type="text" disabled class="form-control" name="nomeFuncionario" value="<?php echo $rows_consultaFuncionario['nomeFuncionario']; ?>">
 
-                                  <label>RG</label>
-                                  <input type="text" disabled class="form-control" name="rg" value="<?php echo $rows_consultaFuncionario['rg']; ?>">
-
-                                  <label>CPF</label>
-                                  <input type="text" disabled class="form-control" name="cpf" value="<?php echo $rows_consultaFuncionario['cpf']; ?>">
-
-                                  <label>Data de Nascimento</label>
-                                  <input type="text" disabled class="form-control" name="dtNascimento" value="<?php echo $rows_consultaFuncionario['dtNascimento']; ?>">
-
-                                  <label>Data de Admissão</label>
-                                  <input type="text" disabled class="form-control" name="dtAdmissao" value="<?php echo $rows_consultaFuncionario['dtAdmissao']; ?>">
-
-                                  <label>Data de Desligamento</label>
-                                  <input type="text" disabled class="form-control" name="dtDesligamento" value="<?php echo $rows_consultaFuncionario['dtDesligamento']; ?>">
-
-                                  <label>Rua</label>
-                                  <input type="text" disabled class="form-control" name="rua" value="<?php echo $rows_consultaFuncionario['rua']; ?>">
-
-                                  <label>Número</label>
-                                  <input type="text" disabled class="form-control" name="numero" value="<?php echo $rows_consultaFuncionario['numero']; ?>">
-
-                                  <label>Bairro</label>
-                                  <input type="text" disabled class="form-control" name="bairro" value="<?php echo $rows_consultaFuncionario['bairro']; ?>">
-
-                                  <label>Cidade</label>
-                                  <input type="text" disabled class="form-control" name="cidade" value="<?php echo $rows_consultaFuncionario['cidade']; ?>">
-
-                                  <label>Estado</label>
-                                  <input type="text" disabled class="form-control" name="estado" value="<?php echo $rows_consultaFuncionario['estado']; ?>">
-
-                                  <label>CEP</label>
-                                  <input type="text" disabled class="form-control" name="cep" value="<?php echo $rows_consultaFuncionario['cep']; ?>">
-
-                                  <label>Telefone</label>
-                                  <input type="text" disabled class="form-control" name="telefone" value="<?php echo $rows_consultaFuncionario['telefone']; ?>">
-
-                                  <label>Celular</label>
-                                  <input type="text" disabled class="form-control" name="celular" value="<?php echo $rows_consultaFuncionario['celular']; ?>">
-
-                                  <label>Email</label>
-                                  <input type="text" disabled class="form-control" name="email" value="<?php echo $rows_consultaFuncionario['email']; ?>">
-
-                                  <label>Cargo</label>
-                                  <input type="text" disabled class="form-control" name="estado" value="<?php echo $rows_consultaFuncionario['descricao']; ?>">
-
+ 
+                               <label>Data de desativação</label>
+                                    <input type="date" class="form-control" required name="dtDesativacao" >
 
 
 
                               </div>
                               <div class="modal-footer">
                                 <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
+                                <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
                                 </form>
 
                               </div>

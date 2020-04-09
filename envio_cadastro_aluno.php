@@ -17,11 +17,21 @@ $escola = $_POST["escola"];
 $anoEscola = $_POST["anoEscola"];
 $turmaEscola = $_POST["turmaEscola"];
 $turnoEscola = $_POST["turnoEscola"];
+$nacionalidadeAluno = $_POST["nacionalidadeAluno"];
+$nacionalidadeResponsavel = $_POST["nacionalidadeResponsavel"];
+$rgAluno = $_POST["rgAluno"];
+$cpfAluno = $_POST["cpfAluno"];
+$rgResponsavel = $_POST["rgResponsavel"];
+$cpfResponsavel = $_POST["cpfResponsavel"];
+$dtMatricula = $_POST["dtMatricula"];
 
 
 
 
-$sql = "INSERT INTO aluno ( nomeAluno, dtNascimento, nomePai, profissaoPai, nomeMae, profissaoMae, sexo, enderecoResidencial, bairro, idPolo, telefoneContato, escola, anoEscola, turmaEscola, turnoEscola) VALUES ('$nomeAluno', '$dtNascimento', '$nomePai', '$profissaoPai', '$nomeMae', '$profissaoMae', '$sexo', '$enderecoResidencial', '$bairro', '$idPolo', '$telefoneContato','$escola', '$anoEscola', '$turmaEscola', '$turnoEscola')";
+$sql = "INSERT INTO aluno ( nomeAluno, dtNascimento, nomePai, profissaoPai, nomeMae, profissaoMae, sexo, enderecoResidencial, bairro, idPolo, telefoneContato, escola, anoEscola, turmaEscola, turnoEscola,
+nacionalidadeAluno, nacionalidadeResponsavel, rgAluno, cpfAluno, rgResponsavel, cpfResponsavel, dtMatricula, status) VALUES ('$nomeAluno', '$dtNascimento', '$nomePai', '$profissaoPai', '$nomeMae', '$profissaoMae', 
+'$sexo', '$enderecoResidencial', '$bairro', '$idPolo', '$telefoneContato','$escola', '$anoEscola', '$turmaEscola', '$turnoEscola',
+'$nacionalidadeAluno', '$nacionalidadeResponsavel', '$rgAluno', '$cpfAluno', '$rgResponsavel', '$cpfResponsavel','$dtMatricula', 1)";
 
   
 

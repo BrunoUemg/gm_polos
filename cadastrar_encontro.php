@@ -1,7 +1,7 @@
 <?php
 include_once "dao/conexao.php";
 include_once("header.php");
-$result_Polo ="SELECT * FROM polo";
+$result_Polo ="SELECT * FROM polo where status = 1";
 $resultado_Polo= mysqli_query($con, $result_Polo);
 
 ?>

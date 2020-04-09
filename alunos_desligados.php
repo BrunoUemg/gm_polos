@@ -29,7 +29,7 @@ A.dtMatricula,
 P.idPolo,
 P.nomePolo
 from aluno A, polo P
-where A.idPolo = P.idPolo and A.status = 1 ";
+where A.idPolo = P.idPolo and A.status = 0 ";
 $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
 ?>
 
@@ -37,7 +37,7 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
   <div class="content">
     <div class="page-inner">
       <div class="page-header">
-        <h4 class="page-title">Consultar Alunos</h4>
+        <h4 class="page-title">Consultar Alunos Desligados</h4>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -67,8 +67,8 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                         <td><?php echo $rows_consultaAluno['nomePolo']; ?></td>
 
                         <td>
-                          <?php echo "<a class='btn btn-default' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                          <?php echo "<a class='btn btn-default' title='Desativar' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
+                          <?php echo "<a class='btn btn-default' title='Dados' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
+                          <?php echo "<a class='btn btn-default' title='Ativar' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
 
 
                           <!-- Modal-->
@@ -77,7 +77,7 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Alterar Aluno</h5>
+                                  <h5 class="modal-title" id="exampleModalLabel">Dados Alunos</h5>
                                   <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                   </button>
@@ -89,7 +89,7 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                                     <input type="text" readonly hidden name="status" class="form-control" value="<?php echo $rows_consultaAluno['status']; ?>">
                                      <input type="text" readonly hidden name="dataDesligamento" class="form-control" value="<?php echo $rows_consultaAluno['dataDesligamento']; ?>">
 
-                                    <label>Nome</label>
+                                     <label>Nome</label>
                                     <input type="text" class="form-control" required name="nomeAluno" value="<?php echo $rows_consultaAluno['nomeAluno']; ?>">
 
                                   
@@ -176,10 +176,11 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                                       <?php } ?> } ?>
                                     </select>
 
+
                                 </div>
                                 <div class="modal-footer">
                                   <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-                                  <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
+                                
                                   </form>
 
                                 </div>
@@ -193,7 +194,7 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Desligar Aluno</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Ativar Aluno</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">×</span>
                                 </button>
@@ -203,12 +204,18 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
 <label >Status</label>
                                 <Select class="form-control col-md-7 col-xs-12"  name="status" maxlength="50" required="required" type="text">
                  
-                <option value='1' <?php if ($rows_consultaAluno['status'] == '1') echo 'selected'; ?>>Ativado</option>
-                  <option value='0'>Desligar</option>
+               
+                  <option value='1'>Ativar</option>
                   </select>
                   <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaAluno['idAluno']; ?>">
                   
                                     <input type="text" readonly hidden class="form-control" required name="nomeAluno" value="<?php echo $rows_consultaAluno['nomeAluno']; ?>">
+
+                                  
+
+                                  
+
+                                    <input type="date" readonly hidden class="form-control" required name="dtNascimento" value="<?php echo $rows_consultaAluno['dtNascimento']; ?>">
 
                                     <input type="text" readonly hidden class="form-control" required name="cpfResponsavel" value="<?php echo $rows_consultaAluno['cpfResponsavel']; ?>">
                                     <input type="date" readonly hidden class="form-control" required name="dtMatricula" value="<?php echo $rows_consultaAluno['dtMatricula']; ?>">
@@ -225,9 +232,6 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                                     <input type="text" readonly hidden class="form-control" required name="cpfAluno" value="<?php echo $rows_consultaAluno['cpfAluno']; ?>">
 
                                     
-                                    <input type="date" readonly hidden class="form-control" required name="dtNascimento" value="<?php echo $rows_consultaAluno['dtNascimento']; ?>">
-
-                                   
 
                                    
                                  
@@ -285,8 +289,8 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
 
 
  
-                               <label>Data de desligamento</label>
-                                    <input type="date" class="form-control" required name="dataDesligamento" >
+                               
+                                    <input type="date" hidden class="form-control" required name="dataDesligamento" value="<?php echo $rows_consultaAluno['dataDesligamento']; ?>" >
 
 
 

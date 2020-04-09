@@ -25,6 +25,56 @@ include_once("header.php");
               </div>
             </div>
 
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Data de Criação
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="dtCriacao" required="required" type="text" onkeyup="mascara('##/##/####',this,event,true)">
+              </div>
+            </div>
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Endereço de Funcionamento
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="enderecoFuncionamento" required="required" type="text">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Local Funcionamento
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="localFuncionamento" required="required" type="text">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Hora Funcionamento
+              </label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <input class="form-control col-md-7 col-xs-12" maxlength="100" name="horaFuncionamento" required="required" type="time">
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Dia de Funcionamento</label>
+              <div class="col-md-10 col-sm-6 col-xs-12">
+                <Select class="form-control col-md-7 col-xs-12"  name="diaFuncionamento" maxlength="50" required="required" type="text">
+                  <option value="null">Selecione</option>
+                <option value="Domingo">Domingo</option>
+                  <option value="Segunda">Segunda</option>
+                  <option value="Terça">Terça</option>
+                  <option value="Quarta">Quarta</option>
+                  <option value="Quinta">Quinta</option>
+                  <option value="Sexta">Sexta</option>
+                  <option value="Sabado">Sabado</option>
+                
+</select>
+</div>
+</div>
+
+
+
             
            
     
@@ -44,7 +94,7 @@ include_once("header.php");
               </div>
 </div> 
 
-
+<script src="js/mascaras.js"></script>
     
 
 

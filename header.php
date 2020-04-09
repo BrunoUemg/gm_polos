@@ -106,7 +106,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                                         <a class="dropdown-item" href="./profile.php">Meu Perfil</a>
                                         <a class="dropdown-item" data-toggle="modal" data-target="#alterar_senha">Alterar senha</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="./logout.php">Logout</a>
+                                        <a class="dropdown-item" href="./logout.php">Sair</a>
                                     </li>
                                 </div>
                             </ul>
@@ -211,13 +211,20 @@ if (isset($_SESSION['nomeUsuario'])) {
                                             <span class="sub-item">Consultar</span>
                                         </a>
                                     </li>
+                                    <li>
+                                    <a href="polos_desativados.php">
+                                        <span class="sub-item">Desativados</span>
+                                    </a>
+                                </li>
                                 </ul>
                             </div>
                         </li>
+
+                     
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#consultas">
                             <i class="fas fa-user"></i>
-                                <p>Monitores</p>
+                                <p>Comandantes</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="consultas">
@@ -254,6 +261,12 @@ if (isset($_SESSION['nomeUsuario'])) {
                                             <span class="sub-item">Consultar</span>
                                         </a>
                                     </li>
+
+                                    <li>
+                                    <a href="alunos_desligados.php">
+                                        <span class="sub-item">Desligados</span>
+                                    </a>
+                                </li>
                                 </ul>
                             </div>
                         </li>

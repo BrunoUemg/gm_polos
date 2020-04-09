@@ -20,7 +20,7 @@ $resultado_consultaEncontro = mysqli_query($con, $result_consultaEncontro);
   <div class="content">
     <div class="page-inner">
       <div class="page-header">
-        <h4 class="page-title">Consultar Monitor</h4>
+        <h4 class="page-title">Consultar Encontros</h4>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -67,9 +67,9 @@ $resultado_consultaEncontro = mysqli_query($con, $result_consultaEncontro);
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                  <form action="alterar_monitor.php" method="POST">
+                                  <form action="alterar_encontros.php" method="POST">
 
-                                    <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaMonitor['idEncontro']; ?>">
+                                    <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaEncontro['idEncontro']; ?>">
 
                                     <label>Nome Encontro</label>
                                     <input type="text" readonly class="form-control" required name="nomeEncontro" value="<?php echo $rows_consultaEncontro['nomeEncontro']; ?>">
@@ -103,7 +103,7 @@ $resultado_consultaEncontro = mysqli_query($con, $result_consultaEncontro);
                                 </div>
                                 <div class="modal-footer">
                                   <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-                                  <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
+                                  <input type="submit" name="enviar" class="btn btn-success" value="Salvar"  onClick="window.location.href='chamada_alunos.php'">
                                   </form>
 
                                 </div>

@@ -59,7 +59,7 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                         <td>
                           <?php echo "<a class='btn btn-default' href='consultar_monitores.php?id=" . $rows_consultaMonitor['idMonitor'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaMonitor['idMonitor'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
                           <?php echo "<a class='btn btn-default' href='excluir_monitores.php?idMonitor=" . $rows_consultaMonitor['idMonitor'] . "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
-                          <?php  echo "<a  class='btn btn-default' title='Excluir Produto' href='excluir_monitores.php?idMonitor=" .$rows_consultaMonitor['idMonitor']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
+                          <?php  echo "<a  class='btn btn-default' title='Excluir ' href='excluir_monitores.php?idMonitor=" .$rows_consultaMonitor['idMonitor']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
 
                           <!-- Modal-->
 

@@ -2,7 +2,7 @@
 include_once "dao/conexao.php";
 include_once "header.php";
 
-$result_Polo ="SELECT * FROM polo";
+$result_Polo ="SELECT * FROM polo where status = 1";
 $resultado_Polo= mysqli_query($con, $result_Polo);
 ?>
 <div class="main-panel">
@@ -13,7 +13,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
           <div class="card">
             <div class="card-header">
               <!-- Start Content -->
-              <div class="card-title">Cadastro de Monitor</div>
+              <div class="card-title">Cadastro de Comandante</div>
             </div>
             <form class="form-horizontal style-form" action="envio_monitores.php" method="post">
               <div class="form-group">
@@ -115,7 +115,7 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
                 </div>
 
               <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Polo do Monitor</label>
+                <label class="col-sm-2 col-sm-2 control-label">Polo do Comandante</label>
                   <select class="form-control" name="idPolo">
                     <option value="">Selecione o Polo</option>
                     <?php
