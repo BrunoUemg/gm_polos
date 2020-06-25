@@ -284,7 +284,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="consultar_cargo.php">
+                                    <a href="consultar_encontros.php">
                                         <span class="sub-item">Consultar</span>
                                     </a>
                                 </li>

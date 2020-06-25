@@ -1,5 +1,12 @@
+
 <?php
+
+
+
 include_once "header.php";
+
+$idEncontros = $_GET['idEncontro'];
+
 
 include_once "dao/conexao.php";
 $result_consultaChamada = "SELECT E.idEncontro,
@@ -19,7 +26,7 @@ A.dtNascimento
 
 
 from monitor M, encontro E, aluno A
-where M.idMonitor = '$_SESSION[idMonitor]'  and A.idPolo = E.idPolo and M.idPolo = A.idPolo and  E.idPolo = M.idPolo and A.status = 1   ";
+where M.idMonitor = '$_SESSION[idMonitor]'  and A.idPolo = E.idPolo and M.idPolo = A.idPolo and  E.idPolo = M.idPolo and A.status = 1 and E.idEncontro = $idEncontros   ";
 $resultado_consultaChamada = mysqli_query($con, $result_consultaChamada);
 
 $result_Chamada = mysqli_query($con, "SELECT E.idEncontro,
@@ -44,7 +51,7 @@ $resultFinal = mysqli_fetch_array($result_Chamada);
 
 
 $date_hoje = date("d/m/y");
-$idEncontro = $_GET["idEncontro"];
+
 
 ?>
 
@@ -78,7 +85,7 @@ $idEncontro = $_GET["idEncontro"];
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Encerrar</th>
+                   
                      
                   
                     </tr>
@@ -90,11 +97,12 @@ $idEncontro = $_GET["idEncontro"];
                     <?php while ($rows_consultaChamada = mysqli_fetch_assoc($resultado_consultaChamada)) {
                       ?>
                       <tr>
-                      <td><?php echo $rows_consultaChamada['idAluno']; ?> 
+                     
+                      <td><?php echo $rows_consultaChamada['idAluno']; ?>  
                         <td><?php echo $rows_consultaChamada['nomeAluno']; ?>  </td>
                         <td><?php echo $rows_consultaChamada['dtNascimento']; ?>  </td>
                        
-                      
+                        
 
                      <td>
                    
@@ -106,9 +114,19 @@ $idEncontro = $_GET["idEncontro"];
                          <input type='radio' name="presenca" id="idAluno" value="0" > </input>
                           <input type='submit' name='button' value='Guardar' class="btn btn-success" > -->
                           <?php echo "<a class='btn btn-success' title='Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaChamada['idAluno'] . "'>" ?>Guardar<?php echo "</a>"; ?>
-                          <?php echo "<a class='btn btn-success' title='Editar Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#editarPresenca" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
+            
+                    <?php echo "<a class='btn btn-success' title='Editar Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#editarPresenca" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
+                   
+                    <input type="text" readonly hidden name="idPolo" id="idPolo"class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
+                                  <input type="text" readonly hidden name="idMonitor" id="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
+                                  <input type="text" readonly hidden name="idEncontro" id="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
+                                    <input type="text" readonly hidden name="idAluno" id="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
 
-
+                 
+                  
+                  
+                  
+             
                           <!-- Modal-->
 
                           <div class="modal fade" id="ModalMaisInfo<?php echo $rows_consultaChamada['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -302,6 +320,8 @@ $data_hoje = date("d/m/y");
   <script src="jquery/jquery-3.4.1.min.js"></script>
   <script src="js/states.js"></script>
   <script src="js/mascaras.js"></script>
+  
+  <script src="js/dataTables.bootstrap4.min.js"></script>
 
   <?php
   include_once "footer.php"
@@ -309,6 +329,7 @@ $data_hoje = date("d/m/y");
   <script>
     $(document).ready(function() {
       $('#basic-datatables').DataTable({
+       
         "language": {
           "sEmptyTable": "Nenhum registro encontrado",
           "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -332,6 +353,7 @@ $data_hoje = date("d/m/y");
             "sSortDescending": ": Ordenar colunas de forma descendente"
           }
         }
+        
       });
     });
   </script>

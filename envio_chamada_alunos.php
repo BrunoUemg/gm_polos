@@ -17,7 +17,7 @@ $date = date("d/m/y");
 $sql = $con->query("SELECT * FROM lista_chamda WHERE dataChamada= '$date' and idAluno = '$idAluno'");
 
 if(mysqli_num_rows($sql) > 0){
-	echo "<script>alert('Ja foi dado a presença para esse aluno');window.location='Chamada_alunos.php'</script>";
+	echo "<script>alert('Ja foi dado a presença para esse aluno');window.location='chamada_alunos.php'</script>";
 exit();
 } else {
 

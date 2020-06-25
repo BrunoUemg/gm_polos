@@ -13,9 +13,9 @@ if ($nova_senha == $confirma_senha) {
         exit();
     } else {
         !$con->query("UPDATE usuario SET senha = '$nova_senha' WHERE userAcesso = '$_SESSION[userAcesso]'");
-        echo "<script>alert('Senha Atualizada com sucesso.');window.location='index.php'</script>";
+        echo "<script>alert('Senha Atualizada com sucesso.');window.location='pagina_principal.php'</script>";
     }
 } else {
-    echo "<script>alert('Senha e confirmação incorreta!');window.location='index.php'</script>";
+    echo "<script>alert('Senha e confirmação incorreta!');window.location='pagina_principal.php'</script>";
     exit();
 }
