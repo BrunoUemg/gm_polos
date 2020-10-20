@@ -1,8 +1,4 @@
-
 <?php
-
-
-
 include_once "header.php";
 
 $idEncontros = $_GET['idEncontro'];
@@ -23,11 +19,12 @@ A.nomeAluno,
 A.idPolo,
 A.status,
 A.dtNascimento
-
-
 from monitor M, encontro E, aluno A
 where M.idMonitor = '$_SESSION[idMonitor]'  and A.idPolo = E.idPolo and M.idPolo = A.idPolo and  E.idPolo = M.idPolo and A.status = 1 and E.idEncontro = $idEncontros   ";
 $resultado_consultaChamada = mysqli_query($con, $result_consultaChamada);
+
+$res = $con-> query($result_consultaChamada);
+$linha = $res->fetch_assoc();
 
 $result_Chamada = mysqli_query($con, "SELECT E.idEncontro,
 E.nomeEncontro,
@@ -43,11 +40,12 @@ A.nomeAluno,
 A.idPolo,
 A.status,
 A.dtNascimento
-
-
 from monitor M, encontro E, aluno A
-where M.idMonitor = '$_SESSION[idMonitor]'  and A.idPolo = E.idPolo and M.idPolo = A.idPolo and  E.idPolo = M.idPolo and A.status = 1   ");
+where M.idMonitor = '$_SESSION[idMonitor]'   and A.idPolo = E.idPolo and M.idPolo = A.idPolo and  E.idPolo = M.idPolo and A.status = 1   ");
 $resultFinal = mysqli_fetch_array($result_Chamada);
+
+
+
 
 
 $date_hoje = date("d/m/y");
@@ -116,7 +114,7 @@ $date_hoje = date("d/m/y");
                           <?php echo "<a class='btn btn-success' title='Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaChamada['idAluno'] . "'>" ?>Guardar<?php echo "</a>"; ?>
             
                     <?php echo "<a class='btn btn-success' title='Editar Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#editarPresenca" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                   
+                    <?php echo "<a class='btn btn-success' title='Sansção diciplinar' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalSancao" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fa fa-exclamation-triangle"></i><?php echo "</a>"; ?>
                     <input type="text" readonly hidden name="idPolo" id="idPolo"class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
                                   <input type="text" readonly hidden name="idMonitor" id="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
                                   <input type="text" readonly hidden name="idEncontro" id="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
@@ -143,12 +141,13 @@ $date_hoje = date("d/m/y");
                                   <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
                                   <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
                                   <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
+                                  <input type="text" readonly hidden name="nomeEncontro" class="form-control" value="<?php echo $rows_consultaChamada['nomeEncontro']; ?>">
                                     <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
                                    <label for="">Presença</label>
                                     <Select class="form-control col-md-7 col-xs-12"  name="presenca" maxlength="50" required="required" type="text">
                  
-                 <option value='1'>Presente</option>
-                   <option value='0'>Falta</option>
+                 <option value='0'>Presente</option>
+                   <option value='1'>Falta</option>
                    </select>
                                   
 
@@ -183,8 +182,8 @@ $date_hoje = date("d/m/y");
                                    <label for="">Retirar ou dar presença</label>
                                     <Select class="form-control col-md-7 col-xs-12"  name="presenca" maxlength="50" required="required" type="text">
                  
-                 <option value='1'>Dar presença</option>
-                   <option value='0'>Retirar</option>
+                 <option value='0'>Dar presença</option>
+                   <option value='1'>Retirar</option>
                    </select>
                                   
 
@@ -198,6 +197,36 @@ $date_hoje = date("d/m/y");
                               </div>
                             </div>
                           </div>
+
+                          <div class="modal fade" id="ModalSancao<?php echo $rows_consultaChamada['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Chamada</h5>
+                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <form action="envio_chamada_alunos.php" method="POST">
+                                  <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
+                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
+                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
+                                    <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
+                                   <label for="">Dar Sanção Disciplinar</label>
+                                    <Select class="form-control col-md-7 col-xs-12"  name="presenca" maxlength="50" required="required" type="text">
+                 
+                 <option value='Advertência'>Advertência</option>
+                 <option value='Advertência'>Suspenção</option>
+                   <option value='Expulsão'>Falta</option>
+                   </select>
+                                  
+
+                                </div>
+                                <div class="modal-footer">
+                                  <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
+                                  <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
+                                  </form>
 
 
 
@@ -221,6 +250,10 @@ $date_hoje = date("d/m/y");
                   </tbody>
                   
                 </table>
+<?php
+               
+
+?>
 
                <center> <a  class='btn btn-success' title='Finalizar'  data-toggle='modal' data-target='#finalizar'> Encerrar Chamada</a> </center>
                 <div class="modal fade" id="finalizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -233,11 +266,11 @@ $date_hoje = date("d/m/y");
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                  <form action="envio_chamada.php" method="POST">
+                                  <form action="envio_chamada.php" method="POST" enctype="multipart/form-data">
                                  
                                   <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $resultFinal['idMonitor']; ?>">
                                   <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $resultFinal['idPolo']; ?>">
-                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $resultFinal['idEncontro']; ?>">
+                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $linha['idEncontro']; ?>">
                                  
                                <label for="">Foto do dia</label>
                                <input type="file"  name="foto" class="form-control" >

@@ -61,6 +61,7 @@
     margin-top: 70px;
     margin-left: 62px;
     width: 240px;
+    
 }
 
 .wizard.vertical > .steps
@@ -149,7 +150,7 @@
     background: #eee;
     display: block;
     margin: 0.5em;
-    min-height: 35em;
+    min-height: 107em;
     overflow: hidden;
     position: relative;
     width: auto;
@@ -396,7 +397,7 @@
     {
        
         margin: 0.5em;
-        min-height: 75em;
+        min-height: 95em;
         overflow: hidden;
        margin-left: 18%;
         -webkit-border-radius: 5px;

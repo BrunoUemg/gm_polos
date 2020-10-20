@@ -9,6 +9,7 @@ E.dt,
 E.horaInicio,
 E.horaFinal,
 E.idPolo,
+E.funcionamento,
 M.idPolo,
 M.idMonitor
 from monitor M, encontro E
@@ -25,7 +26,8 @@ E.idPolo,
 M.idMonitor,
 M.idPolo,
 M.nomeMonitor
-from monitor M, encontro E " ;
+from monitor M, encontro E 
+where M.idMonitor = 25 " ;
 $resultado_consultaEncontroAdm = mysqli_query($con, $result_consultaEncontroAdm);
 ?>
 
@@ -48,7 +50,7 @@ $resultado_consultaEncontroAdm = mysqli_query($con, $result_consultaEncontroAdm)
                       <th>Nome Encontro</th>
                       <th>Descrição</th>
                       <th>Data do encontro</th>
-                     
+                      <th>Funcionamento</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -63,11 +65,15 @@ $resultado_consultaEncontroAdm = mysqli_query($con, $result_consultaEncontroAdm)
                         <td><?php echo $rows_consultaEncontro['nomeEncontro']; ?></td>
                         <td><?php echo $rows_consultaEncontro['descricao']; ?></td>
                         <td><?php echo $rows_consultaEncontro['dt']; ?></td>
-                      
+                        <td><?php echo $rows_consultaEncontro['funcionamento']; ?></td>
 
                         <td>
                           <?php echo "<a class='btn btn-default'title='Alterar encontro' href='consultar_encontros.php?id=" . $rows_consultaEncontro['idEncontro'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaEncontro['idEncontro'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                          <?php  echo "<a class='btn btn-default' title='Chamada' href='chamada_alunos.php?idEncontro=".$rows_consultaEncontro['idEncontro'] .  "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
+                          <?php if( $rows_consultaEncontro['funcionamento'] == 'Encerrado') {?>
+                          <?php  echo "<a class='btn btn-default' title='Chamada'> Encerrado   </a>"; ?>
+                          <?php }  else {?>
+                            <?php  echo "<a class='btn btn-default' title='Chamada' href='chamada_alunos.php?idEncontro=".$rows_consultaEncontro['idEncontro'] .  "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
+                          <?php } ?>
 
 
                           <!-- Modal-->

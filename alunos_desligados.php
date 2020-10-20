@@ -69,7 +69,7 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                         <td>
                           <?php echo "<a class='btn btn-default' title='Dados' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
                           <?php echo "<a class='btn btn-default' title='Ativar' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
-
+                          <?php echo "<a class='btn btn-default' title='Imprimir histórico' href='imprimir_historico.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-file-archive"></i><?php echo "</a>"; ?>
 
                           <!-- Modal-->
 
@@ -200,7 +200,7 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <form action="alterar_aluno.php" method="POST">
+                                <form action="desligar_aluno.php" method="POST">
 <label >Status</label>
                                 <Select class="form-control col-md-7 col-xs-12"  name="status" maxlength="50" required="required" type="text">
                  

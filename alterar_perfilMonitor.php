@@ -14,7 +14,11 @@ $sql = "UPDATE  usuario SET nomeUsuario = '$nomeUsuario', userAcesso = '$userAce
 
 
 if($con->query($sql)=== true){
-echo "<script>alert('Cadastro alterado com sucesso!');window.location='profile.php'</script>";
+
+   echo "<script>alert('Cadastro alterado com sucesso!');window.location='profile.php'</script>";
+
+
+
 } else {
 	echo "Erro para inserir: " . $con->error; 
 }

@@ -9,7 +9,7 @@ $dt = $_POST["dt"];
 $horaInicio = $_POST["horaInicio"];
 $horaFinal = $_POST["horaFinal"];
 
-$sql = "INSERT INTO encontro (idPolo, nomeEncontro, descricao, dt, horaInicio, horaFinal ) VALUES ('$idPolo', '$nomeEncontro', '$descricao', '$dt', '$horaInicio', '$horaFinal')";
+$sql = "INSERT INTO encontro (idPolo, nomeEncontro, descricao, dt, horaInicio, horaFinal, funcionamento ) VALUES ('$idPolo', '$nomeEncontro', '$descricao', '$dt', '$horaInicio', '$horaFinal', 'Aberto')";
 if ($con->query($sql) === TRUE){
 
 	echo "<script>alert('Cadastro realizado com sucesso!');window.location='cadastrar_encontro.php'</script>";

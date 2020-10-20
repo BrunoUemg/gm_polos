@@ -1,5 +1,5 @@
 <?php
-
+include_once "dao/conexao.php";
 session_start();
 if (isset($_SESSION['nomeUsuario'])) {
     //login ok!
@@ -7,7 +7,8 @@ if (isset($_SESSION['nomeUsuario'])) {
     header('location: ./login.php');
 }
 
-
+$result = mysqli_query($con, "SELECT foto from usuario where idUsuario = '$_SESSION[idUsuario] '");
+$resultado_final = mysqli_fetch_array($result);
 
 
 
@@ -43,7 +44,9 @@ if (isset($_SESSION['nomeUsuario'])) {
     <link rel="stylesheet" href="css/atlantis.min.css">
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/select2-bootstrap.min.css" />
-
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="datatables/dataTables.bootstrap4.min.css">
+    
 
     <script src="jquery/jquery.min.js"></script>
     <script src="js/select2.min.js"></script>
@@ -87,14 +90,14 @@ if (isset($_SESSION['nomeUsuario'])) {
                         <li class="nav-item dropdown hidden-caret">
                             <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                                 <div class="avatar-sm">
-                                    <img src="img/icon.jpg" alt="..." class="avatar-img rounded-circle">
+                                    <img src="img/logo.png" alt="..." class="avatar-img rounded-circle" title="Perfil">
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-user animated fadeIn">
                                 <div class="dropdown-user-scroll scrollbar-outer">
                                     <li>
                                         <div class="user-box">
-                                            <div class="avatar-lg"><img src="img/icon.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                            <div class="avatar-lg"><img src="<?php echo 'upload/'. $resultado_final['foto'] .'' ?>" alt="image profile" class="avatar-img rounded"></div>
                                             <div class="u-text">
                                                 <h4><?php echo $_SESSION['nomeUsuario']; ?></h4>
                                              <!--   <p class="text-muted"><?php echo $_SESSION['email']; ?> -->
@@ -105,6 +108,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="./profile.php">Meu Perfil</a>
                                         <a class="dropdown-item" data-toggle="modal" data-target="#alterar_senha">Alterar senha</a>
+                                        <a class="dropdown-item" data-toggle="modal" data-target="#alterar_foto">Alterar foto perfil</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="./logout.php">Sair</a>
                                     </li>
@@ -123,7 +127,7 @@ if (isset($_SESSION['nomeUsuario'])) {
                 <div class="sidebar-content">
                     <div class="user">
                         <div class="avatar-sm float-left mr-2">
-                            <img src="img/icon.jpg" alt="..." class="avatar-img rounded-circle">
+                            <img src="<?php echo 'upload/'. $resultado_final['foto'] .'' ?>" alt="..." class="avatar-img rounded-circle">
                         </div>
                         <div class="info">
                             <a data-toggle="collapse" aria-expanded="true">
@@ -171,29 +175,135 @@ if (isset($_SESSION['nomeUsuario'])) {
 
                         if ($_SESSION['idMonitor'] != 0 && $_SESSION['idAluno'] == 0) {
                             echo '
-               
                         <li class="nav-item">
-                            <a data-toggle="collapse" href="#cargos">
-                                <i class="fas fa-plus-square"></i>
-                                <p>Encontros</p>
+                            <a data-toggle="collapse" href="#consultas">
+                            <i class="fas fa-user"></i>
+                                <p>Alunos</p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse" id="cargos">
+                            <div class="collapse" id="consultas">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="consultar_encontros.php">
-                                            <span class="sub-item">Ver Encontros</span>
+                                        <a href="presenca_alunos.php">
+                                            <span class="sub-item">Presença</span>
                                         </a>
                                     </li>
-                                  
+                                    <li>
+                                        <a href="#">
+                                            <span class="sub-item">Consultar</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
-                        </li>';
+                        </li>                   
+                        <li class="nav-item">
+                        <a data-toggle="collapse" href="#cargos">
+                            <i class="fas fa-plus-square"></i>
+                            <p>Encontros</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="cargos">
+                            <ul class="nav nav-collapse">
+                                <li>
+                                    <a href="consultar_encontros.php">
+                                        <span class="sub-item">Ver Encontros</span>
+                                    </a>
+                                </li>
+                              
+                            </ul>
+                        </div>
+                    </li>
+                        ';
                         }
                         
                         if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0)
                         {
-                            echo '<li class="nav-item">
+                            echo ' 
+                            <li class="nav-item">
+                                <a data-toggle="collapse" href="#alunos">
+                                <i class="fas fa-users"></i>
+                                    <p>Alunos</p>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="alunos">
+                                    <ul class="nav nav-collapse">
+                                        <li>
+                                            <a href="cadastrar_alunos.php">
+                                                <span class="sub-item">Cadastrar</span>
+                                            </a>
+                                        </li>
+    
+                                        
+                                        <li>
+                                            <a href="consultar_alunos.php">
+                                                <span class="sub-item">Consultar</span>
+                                            </a>
+                                        </li>
+    
+                                        <li>
+                                        <a href="alunos_desligados.php">
+                                            <span class="sub-item">Desligados</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                    <a href="relatorio_alunos.php">
+                                        <span class="sub-item">Relatórios</span>
+                                    </a>
+                                </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+
+
+
+                            <li class="nav-item">
+                            <a data-toggle="collapse" href="#consultas">
+                            <i class="fas fa-user"></i>
+                                <p>Comandantes</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="consultas">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="cadastrar_monitores.php">
+                                            <span class="sub-item">Cadastrar</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="consultar_monitores.php">
+                                            <span class="sub-item">Consultar</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>                
+                        
+                        <li class="nav-item">
+                        <a data-toggle="collapse" href="#cargos">
+                            <i class="fas fa-plus-square"></i>
+                            <p>Encontro</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="cargos">
+                            <ul class="nav nav-collapse">
+                                <li>
+                                    <a href="cadastrar_encontro.php">
+                                        <span class="sub-item">Cadastrar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="consultar_encontros.php">
+                                        <span class="sub-item">Consultar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                            
+                            
+                            <li class="nav-item">
                             <a data-toggle="collapse" href="#pacientes">
                             <i class="fas fa-map-marker-alt"></i>
                                 <p>Polos</p>
@@ -221,76 +331,9 @@ if (isset($_SESSION['nomeUsuario'])) {
                         </li>
 
                      
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#consultas">
-                            <i class="fas fa-user"></i>
-                                <p>Comandantes</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="consultas">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a href="cadastrar_monitores.php">
-                                            <span class="sub-item">Cadastrar</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="consultar_monitores.php">
-                                            <span class="sub-item">Consultar</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>                        
+                       
 
-                        <li class="nav-item">
-                            <a data-toggle="collapse" href="#alunos">
-                            <i class="fas fa-users"></i>
-                                <p>Alunos</p>
-                                <span class="caret"></span>
-                            </a>
-                            <div class="collapse" id="alunos">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a href="cadastrar_alunos.php">
-                                            <span class="sub-item">Cadastrar</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="consultar_alunos.php">
-                                            <span class="sub-item">Consultar</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                    <a href="alunos_desligados.php">
-                                        <span class="sub-item">Desligados</span>
-                                    </a>
-                                </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                        <a data-toggle="collapse" href="#cargos">
-                            <i class="fas fa-plus-square"></i>
-                            <p>Encontro</p>
-                            <span class="caret"></span>
-                        </a>
-                        <div class="collapse" id="cargos">
-                            <ul class="nav nav-collapse">
-                                <li>
-                                    <a href="cadastrar_encontro.php">
-                                        <span class="sub-item">Cadastrar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="consultar_encontros.php">
-                                        <span class="sub-item">Consultar</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>'
+                   '
                         ;
                         } ?>
   
@@ -336,8 +379,35 @@ if (isset($_SESSION['nomeUsuario'])) {
                 </div>
             </div>
         </div>
-        <!-- modal -->
 
+
+        <!-- modal -->
+     <div aria-hidden="true" aria-labelledby="alterar_foto" role="dialog" tabindex="-1" id="alterar_foto" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Alterar foto de prefil.</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <form action="alterar_foto.php" method="post" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <p>Foto de Perfil</p>
+                            <input type="file" name="foto" autocomplete="off" class="form-control placeholder-no-fix" required>
+                        </div>
+
+                       
+                            <input type="text" hidden name="idUsuario" autocomplete="off" class="form-control placeholder-no-fix" value=" <?php echo $_SESSION['idUsuario'];?>" >
+                        
+
+                     
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+                            <button class="btn btn-theme" type="submit" type="button">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- Modal 
         <div aria-hidden="true" aria-labelledby="procurar_prontuario" role="dialog" tabindex="-1" id="procurar_prontuario" class="modal fade">
             <div class="modal-dialog">
@@ -346,6 +416,11 @@ if (isset($_SESSION['nomeUsuario'])) {
                         <h4 class="modal-title">Procurar prontuário</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
+                    <li>
+                                        <a href="ficha_socioeconomica.php">
+                                            <span class="sub-item">Ficha socioeconômica</span>
+                                        </a>
+                                    </li>
                     <form action="./prontuario.php" method="get">
                         <div class="modal-body">
                             <p>Selecione um paciente</p>

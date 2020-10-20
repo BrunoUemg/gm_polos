@@ -17,7 +17,7 @@ $date = date("d/m/y");
 $sql1 = "UPDATE lista_chamda SET idEncontro = '$idEncontro', presenca = '$presenca', idMonitor = '$idMonitor' where
 idAluno = '$idAluno' and dataChamada = '$date' ";
 if ($con->query($sql1) === TRUE){
-echo "<script>alert('Falta retirara ou dada para aluno');window.location='chamada_alunos.php'</script>";
+echo "<script>alert('Falta retirara ou dada para aluno');window.location='chamada_alunos.php?idEncontro=$idEncontro'</script>";
 	
 } else {
 	echo "Erro para inserir: " . $con->error; 

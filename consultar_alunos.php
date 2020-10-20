@@ -12,6 +12,7 @@ A.profissaoMae,
 A.sexo,
 A.enderecoResidencial,
 A.bairro,
+A.numeroEndereco,
 A.telefoneContato,
 A.escola,
 A.anoEscola,
@@ -26,11 +27,48 @@ A.cpfAluno,
 A.rgResponsavel,
 A.cpfResponsavel,
 A.dtMatricula,
+A.tipoSanguineo,
+A.fatorRh,
+A.altura,
+A.peso,
+A.equipamentosAuxilio,
+A.permicao,
+A.emergenciasMedicas,
+A.avisarEmergencia,
+A.telefoneEmergencia,
+A.medContinuos,
+A.alergia,
+A.planoMedico,
+A.numCarteira,
+A.nadar,
+A.sonambulo,
+A.cardiaco,
+A.restricoesAlimentos,
+A.impedimentoFisico,
+A.distubioComportamento,
+A.disturbioAlimentar,
+A.disturbioAnsiedade,
+A.deficiencia,
+A.rgalunodigi,
+A.cpfalunodigi,
+A.cpfrespdigi,
+A.cpfresp2digi,
+A.rgrespdigi,
+A.rgresp2digi,
+A.comprovanteresidigi,
+A.atestadoescolardigi,
+A.outro,
+A.fotoAluno,
+A.desArquivo1,
 P.idPolo,
 P.nomePolo
+
 from aluno A, polo P
-where A.idPolo = P.idPolo and A.status = 1 ";
+where A.idPolo = P.idPolo and A.status = 1  ";
 $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
+
+$result_Escola ="SELECT * FROM escola ";
+$resultado_Escola= mysqli_query($con, $result_Escola);
 ?>
 
 <div class="main-panel">
@@ -67,9 +105,12 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                         <td><?php echo $rows_consultaAluno['nomePolo']; ?></td>
 
                         <td>
-                          <?php echo "<a class='btn btn-default' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                          <?php echo "<a class='btn btn-default' title='Desativar' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
-
+                        <?php echo "<a class='btn btn-default' title='Vizualizar Tudo' href='visualizar_alunos.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-search"></i><?php echo "</a>"; ?>
+                          <?php echo "<a class='btn btn-default' title='Desativar' href='consultar_alunos.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-minus-square"></i><?php echo "</a>"; ?>
+                          <?php echo "<a class='btn btn-default' title='Imprimir ficha completa' href='imprimir_alunos.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-file-pdf"></i><?php echo "</a>"; ?>
+                          <?php echo "<a class='btn btn-default' title='Imprimir histórico' href='imprimir_historico.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-file-archive"></i><?php echo "</a>"; ?>
+                        
+                     
 
                           <!-- Modal-->
 
@@ -151,7 +192,15 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                                     <label>Sexo</label>
                                     <input type="text" class="form-control" required name="sexo" value="<?php echo $rows_consultaAluno['sexo']; ?>">
                                     <label>Escola</label>
-                                    <input type="text" class="form-control" required name="escola" value="<?php echo $rows_consultaAluno['escola']; ?>">
+                                    <select class="form-control" required name="escola">
+                                      <option value="">Selecione a Escola</option>
+                                      <?php
+                                        $resultado_Escola = mysqli_query($con, "SELECT * FROM escola");
+                                        while ($row_Escola = mysqli_fetch_assoc($resultado_Escola)) { ?>
+                                        <option value="<?php echo $row_Escola['nomeEscola']; ?>" <?php if ($rows_consultaAluno['escola'] == $row_Escola['nomeEscola']) echo 'selected'; ?>><?php echo $row_Escola['nomeEscola']; ?></option>
+                                      <?php } ?> 
+                                    </select>
+
 
                                     <label>Ano de Escola</label>
                                     <input type="text" class="form-control" required name="anoEscola" value="<?php echo $rows_consultaAluno['anoEscola']; ?>">
@@ -176,6 +225,71 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                                       <?php } ?> } ?>
                                     </select>
 
+                                    <label>Tipo Sanguineo</label>
+                                    <input type="text" class="form-control" required name="tipoSanguineo" value="<?php echo $rows_consultaAluno['tipoSanguineo']; ?>">
+
+                                    <label>Fator RH</label>
+                                    <input type="text" class="form-control" required name="fatorRh" value="<?php echo $rows_consultaAluno['fatorRh']; ?>">
+
+                                    <label>Altura</label>
+                                    <input type="text" class="form-control" required name="altura" value="<?php echo $rows_consultaAluno['altura']; ?>">
+
+                                    <label>peso</label>
+                                    <input type="text" class="form-control" required name="peso" value="<?php echo $rows_consultaAluno['peso']; ?>">
+
+                                    <label>Equipamentos Auxilio</label>
+                                    <input type="text" class="form-control" required name="equipamentosAuxilio" value="<?php echo $rows_consultaAluno['equipamentosAuxilio']; ?>">
+
+                                    <label>Permição</label>
+                                    <input type="text" class="form-control" required name="permicao" value="<?php echo $rows_consultaAluno['permicao']; ?>">
+
+                                    <label>Emergências Médicas</label>
+                                    <input type="text" class="form-control" required name="emergenciasMedicas" value="<?php echo $rows_consultaAluno['emergenciasMedicas']; ?>">
+
+                                    <label>Avisar Emergências</label>
+                                    <input type="text" class="form-control" required name="avisarEmergencia" value="<?php echo $rows_consultaAluno['avisarEmergencia']; ?>">
+
+                                    <label>Telefone Emergência</label>
+                                    <input type="text" class="form-control" required name="telefoneEmergencia" value="<?php echo $rows_consultaAluno['telefoneEmergencia']; ?>">
+
+                                    <label>Medicação Continua</label>
+                                    <input type="text" class="form-control" required name="medContinuos" value="<?php echo $rows_consultaAluno['medContinuos']; ?>">
+
+                                    <label>Alergia</label>
+                                    <input type="text" class="form-control" required name="alergia" value="<?php echo $rows_consultaAluno['alergia']; ?>">
+
+                                    <label>plano Médico</label>
+                                    <input type="text" class="form-control" required name="planoMedico" value="<?php echo $rows_consultaAluno['planoMedico']; ?>">
+
+                                    <label>Número Carteira</label>
+                                    <input type="text" class="form-control" required name="numCarteira" value="<?php echo $rows_consultaAluno['numCarteira']; ?>">
+
+                                    <label>Nadar</label>
+                                    <input type="text" class="form-control" required name="nadar" value="<?php echo $rows_consultaAluno['nadar']; ?>">
+
+                                    <label>Sonambulo</label>
+                                    <input type="text" class="form-control" required name="sonambulo" value="<?php echo $rows_consultaAluno['sonambulo']; ?>">
+
+                                    <label>Cardiaco</label>
+                                    <input type="text" class="form-control" required name="cardiaco" value="<?php echo $rows_consultaAluno['cardiaco']; ?>">
+
+                                    <label>Restrições alimentos</label>
+                                    <input type="text" class="form-control" required name="restricoesAlimentos" value="<?php echo $rows_consultaAluno['restricoesAlimentos']; ?>">
+
+                                    <label>Impedimento Fisíco</label>
+                                    <input type="text" class="form-control" required name="impedimentoFisico" value="<?php echo $rows_consultaAluno['impedimentoFisico']; ?>">
+
+                                    <label>Disturbio Comportamento</label>
+                                    <input type="text" class="form-control" required name="distubioComportamento" value="<?php echo $rows_consultaAluno['distubioComportamento']; ?>">
+
+                                    <label>Disturbio Alimentar</label>
+                                    <input type="text" class="form-control" required name="disturbioAlimentar" value="<?php echo $rows_consultaAluno['disturbioAlimentar']; ?>">
+
+                                    <label>Disturbio Ansiedade</label>
+                                    <input type="text" class="form-control" required name="disturbioAnsiedade" value="<?php echo $rows_consultaAluno['disturbioAnsiedade']; ?>">
+                                    <label>Deficiência</label>
+                                    <input type="text" class="form-control" required name="deficiencia" value="<?php echo $rows_consultaAluno['deficiencia']; ?>">
+
                                 </div>
                                 <div class="modal-footer">
                                   <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
@@ -199,7 +313,7 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                                 </button>
                               </div>
                               <div class="modal-body">
-                                <form action="alterar_aluno.php" method="POST">
+                                <form action="desligar_aluno.php" method="POST">
 <label >Status</label>
                                 <Select class="form-control col-md-7 col-xs-12"  name="status" maxlength="50" required="required" type="text">
                  
@@ -301,6 +415,121 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
                           </div>
                         </div>
                         </td>
+                        <div class="modal fade" id="Modaldocu<?php echo $rows_consultaAluno['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <form action="alterar_documentos.php" method="POST" enctype="multipart/form-data">
+
+                  <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaAluno['idAluno']; ?>">
+                  
+                  <label>RG aluno</label>
+                                    <input type="file" class="form-control"  name="rgalunodigi"  >
+
+                                    <label>CPF Aluno</label>
+                                    <input type="file" class="form-control"  name="cpfalunodigi" value="<?php echo $rows_consultaAluno['cpfalunodigi']; ?>" >
+
+                                    <label>CPF Responsavel</label>
+                                    <input type="file" class="form-control"  name="cpfrespdigi" value="<?php echo $rows_consultaAluno['cpfrespdigi']; ?>" >
+
+                                    <label>CPF responsável</label>
+                                    <input type="file" class="form-control"  name="cpfresp2digi" >
+
+                                    <label>RG Responsável</label>
+                                    <input type="file" class="form-control"  name="rgrespdigi" >
+
+                                    <label>RG Reponsável segundo</label>
+                                    <input type="file" class="form-control"  name="rgresp2digi" >
+
+                                    <label>Comprovante Residência</label>
+                                    <input type="file" class="form-control"  name="comprovanteresidigi" >
+
+                                    <label>Atestado Escolar</label>
+                                    <input type="file" class="form-control"  name="atestadoescolardigi" >
+
+                                    <label>Outro</label>
+                                    <input type="file" class="form-control"  name="outro" >
+
+                                    <label>Foto Aluno</label>
+                                    <input type="file" class="form-control"  name="fotoAluno" >
+
+
+
+                              </div>
+                              <div class="modal-footer">
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
+                                <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
+                                </form>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </td>
+
+                        <div class="modal fade" id="Modalvisu<?php echo $rows_consultaAluno['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <form action="alterar_documentos.php" method="POST" enctype="multipart/form-data">
+
+                  <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaAluno['idAluno']; ?>">
+                  
+                  <label><?php echo $rows_consultaAluno['desArquivo1'] ?></label>
+                  <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['rgalunodigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+                  
+                                    <label><?php echo $rows_consultaAluno['desArquivo2'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['cpfalunodigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+                                    <label><?php echo $rows_consultaAluno['desArquivo3'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['cpfrespdigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+                                    <label><?php echo $rows_consultaAluno['desArquivo4'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['cpfresp2digi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+                                    <label><?php echo $rows_consultaAluno['desArquivo5'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['rgrespdigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+                                    <label><?php echo $rows_consultaAluno['desArquivo6'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['rgresp2digi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+                                    <label><?php echo $rows_consultaAluno['desArquivo7'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['comprovanteresidigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+                                    <label><?php echo $rows_consultaAluno['desArquivo8'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['atestadoescolardigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+                                    <label><?php echo $rows_consultaAluno['desArquivo9'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['fotoAluno'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+                                    <label><?php echo $rows_consultaAluno['desArquivo10'] ?></label>
+                                    <embed src="<?php echo 'digitalizados/'. $rows_consultaAluno['outro'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+
+
+
+                              </div>
+                              <div class="modal-footer">
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
+                                <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
+                                </form>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </td>
+
 
                       
 
@@ -316,14 +545,13 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
       </div>
     </div>
   </div>
+  
 
   <script src="jquery/jquery-3.4.1.min.js"></script>
   <script src="js/states.js"></script>
   <script src="js/mascaras.js"></script>
 
-  <?php
-  include_once "footer.php"
-  ?>
+  
   <script>
     $(document).ready(function() {
       $('#basic-datatables').DataTable({
@@ -353,3 +581,10 @@ $resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
       });
     });
   </script>
+
+
+
+  <?php
+include_once("footer.php");
+
+?>

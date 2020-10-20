@@ -1,7 +1,7 @@
 <?php
 include_once "dao/conexao.php";
 include_once "header.php";
-$profile = mysqli_query($con,"SELECT U.idUsuario, U.nomeUsuario, U.userAcesso, M.idPolo  FROM usuario U, monitor M , polo P WHERE idUsuario = $_SESSION[idUsuario]  and M.idPolo = P.idPolo");
+$profile = mysqli_query($con,"SELECT U.idUsuario, U.nomeUsuario, U.userAcesso, M.idPolo, U.foto  FROM usuario U, monitor M , polo P WHERE idUsuario = $_SESSION[idUsuario]  and M.idPolo = P.idPolo");
 $result_profile = mysqli_fetch_array($profile);
 ?>
 <div class="main-panel">
@@ -14,7 +14,7 @@ $result_profile = mysqli_fetch_array($profile);
               <!-- Start Content -->
               <div class="card-title">Meu Perfil</div>
             </div>
-            <form class="form-horizontal style-form" action="alterar_perfilMonitor.php" method="post">
+            <form class="form-horizontal style-form" action="alterar_perfilMonitor.php" method="post" enctype="multipart/form-data">
              
 
               <input type="text" hidden readonly class="form-control" name="idUsuario" required="required" value="<?php echo $result_profile['idUsuario'];?>">
@@ -31,7 +31,9 @@ $result_profile = mysqli_fetch_array($profile);
                 <label class="col-sm-2 col-sm-2 control-label">Usuario de acesso</label>
                   <input type="text" class="form-control" name="userAcesso" required="required" value="<?php echo $result_profile['userAcesso'];?>">
               </div>
+             
 
+             
               <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Polo</label>
                   <select class="form-control" name="idPolo" readonly>
