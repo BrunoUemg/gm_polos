@@ -98,6 +98,7 @@ A.visual,
 A.auditiva,
 A.intectual,
 A.restricoesAlimentosDesc,
+A.fichaDigitalizada,
 A.outro,
 P.idPolo,
 P.nomePolo
@@ -115,7 +116,7 @@ C.profissao,
 C.escolaridade,
 C.idade,
 C.estadoCivil,
-C.cpfAluno_composicao,
+C.cpfIntegrante_composicao,
 C.status
 
 from composicao_familiar C
@@ -179,6 +180,9 @@ $linha6 = $res->fetch_assoc();
 $result_profissao ="SELECT * FROM profissao ";
 $resultado_profissao = mysqli_query($con, $result_profissao);
 
+$result_repositorio = "SELECT * FROM repositorio_aluno where idAluno = '$idAluno'";
+$resultado_repositorio = mysqli_query($con, $result_repositorio);
+
 ?>
 
          
@@ -213,7 +217,7 @@ $resultado_profissao = mysqli_query($con, $result_profissao);
                       <th>Nome Integrante</th>
                     <th>Parentesco</th>
 					<th>Idade</th>
-					<th>CPF do Aluno</th>
+					<th>CPF do Integrante</th>
                     </tr>
                   </thead>
 				  <tbody>
@@ -224,7 +228,7 @@ $resultado_profissao = mysqli_query($con, $result_profissao);
                        
                         <td><?php echo $rows_consultaComposicao['parentesco']; ?></td>
                         <td><?php echo $rows_consultaComposicao['idade']; ?></td>
-						<td><?php echo $rows_consultaComposicao['cpfAluno_composicao']; ?></td>
+						<td><?php echo $rows_consultaComposicao['cpfIntegrante_composicao']; ?></td>
 					    
 						</tr>
 					
@@ -1741,14 +1745,20 @@ $(document).ready(function(){
 
         </section>
 
-       
-
-        
-        <h3>Documentos digitalizados</h3>
+		<h3>Documentos digitalizados</h3>
             <section>
 
             <center>   <h5>Documentos</h5> </center>
+            <div class="row">
 
+
+
+<div class="form-group col-md-8 ">
+<label for="">Inserir novos documentos</label>
+<h5>Máximo 20 documentos</h5>
+<input type="file" name="arquivo[]" multiple="multiple" class="form-control"  id="">
+</div>
+</div>
             <div class="row">
 			<div class="col-md-12">
           <div class="card">
@@ -1756,774 +1766,53 @@ $(document).ready(function(){
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table id="basic-datatables" class="display table table-striped table-hover">
+                <table id="basic-datatables8" class="display table table-striped table-hover">
                   <thead>
 				  <tr>
                       <th>Descrição</th>
-                    <th>Inserir Novo</th>
-					<th>Visualizar</th>
+                    <th>Visualizar</th>
                     </tr>
                   </thead>
+				  <tbody>
+				  <?php while($rows_repositorio = mysqli_fetch_assoc($resultado_repositorio)){ 
+					 
+					  ?>
+					  
 					  <tr>
-		<td>	<div class="form-group">
+					  <td><label for=""><?php echo $rows_repositorio['descricao']; ?></label></td>
+					  <td>   <a  class='btn btn-default' target="_blank" href="<?php  echo 'digitalizados/'.  $rows_repositorio['srcDocumento'] . '' ; ?>">Visualizar</a>
+					  </td>
+						</tr>
+					
+<?php }  ?>
   
-		<select class="form-control"  name="desArquivo1">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo1'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="rgalunodigi" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu' maxlength="100" name="nomeAluno"  type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo1'] ?></label>
-                  <embed src="<?php echo 'digitalizados/'. $linha['rgalunodigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo2">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo2'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="cpfalunodigi" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu2' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo2'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['cpfalunodigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
 
 
   <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo3">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo3'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="cpfrespdigi" >
-			  </div></td> 
+		<td> Foto Jovem	</td>
+      
 			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu3' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
+     
+			 
+			  <a  class='btn btn-default' target="_blank" href="<?php  echo 'digitalizados/'.  $linha['outro'] . '' ; ?>">Visualizar</a>
+	
 
-	<div class="modal fade" id="ModalvisuDocu3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo3'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['cpfrespdigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo4">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo4'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="cpfresp2digi" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu4' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo4'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['cpfresp2digi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
+	
+                      
 			  </td>
 			  
   </tr>
   <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo5">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo5'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="rgrespdigi" >
-			  </div></td> 
+		<td> Ficha digitalizada	</td>
+      
 			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu5' maxlength="100" name="nomeAluno"  type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo5'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['rgrespdigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
+     
 			  
-  </tr>
+			  <a  class='btn btn-default' target="_blank" href="<?php  echo 'digitalizados/'.  $linha['fichaDigitalizada'] . '' ; ?>">Visualizar</a>
+	
 
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo6">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo6'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="rgresp2digi" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu6' maxlength="100" name="nomeAluno"  type="button" value="Ver Documento">
-	</div>
 
-	<div class="modal fade" id="ModalvisuDocu6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo6'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['rgresp2digi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo7">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo7'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="comprovanteresidigi" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu7' maxlength="100" name="nomeAluno"  type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo7'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['comprovanteresidigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo8">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo8'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="atestadoescolardigi" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu8' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo8'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['atestadoescolardigi'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo9">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo9'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="fotoAluno" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu9' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo9'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['fotoAluno'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo10">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo10'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="arquivo10" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu10' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo10'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['arquivo10'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo11">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo11'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="arquivo11" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu11' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo11'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['arquivo11'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-		<select class="form-control"  name="desArquivo12">
-                                      <option value="">Selecione a descrição</option>
-                                      <?php
-                                        $resultado_documentos = mysqli_query($con, "SELECT * FROM documentos");
-                                        while ($row_documentos = mysqli_fetch_assoc($resultado_documentos)) { ?>
-                                        <option value="<?php echo $row_documentos['nomeDocumento']; ?>" <?php if ($linha['desArquivo12'] == $row_documentos['nomeDocumento']) echo 'selected'; ?>><?php echo $row_documentos['nomeDocumento']; ?></option>
-                                      <?php } ?> 
-                                    </select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="arquivo12" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu12' maxlength="100" name="nomeAluno" type="button" value="Ver Documento">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                  <label><?php echo $linha['desArquivo12'] ?></label>
-                  <embed src="<?php  echo 'digitalizados/'. $linha['arquivo12'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-			  </td>
-			  
-  </tr>
-
-
-  <tr>
-  <td>
-  ___________________________
-  </td>
-
-  <td>
-  ________________________________________________
-  </td>
-  <td>
-  __________________________
-  </td>
-  </tr>
-
-  <tr>
-		<td><h3>Inserir Foto Aluno:</h3>	</td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="outro" >
-			  </div></td> 
-			  <td>
-			  <div class="form-group ">
-			  <input class="form-control" class="btn btn-default" data-toggle='modal' data-target='#ModalvisuDocu10' maxlength="100" name="nomeAluno" type="button" value="Ver Foto">
-	</div>
-
-	<div class="modal fade" id="ModalvisuDocu10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Documentos digitalizados</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                              
-                 
-                  
-                 
-                  <embed src="<?php  echo 'digitalizados/'. $linha['outro'] .  '' ?>"  width="445" height="400" type='application/pdf' >
-                  
-                                  
-
-                              
-
-
-
-                              </div>
-                              <div class="modal-footer">
-                                <button class="btn btn-danger" type="button" data-dismiss="modal">Fechar</button>
-                               
-                            
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
+                      
 			  </td>
 			  
   </tr>
@@ -2541,7 +1830,15 @@ $(document).ready(function(){
 
 
 
+
+
+    
+
+
         </section>
+
+        
+    
 
         </div>
     </form>
@@ -2562,9 +1859,9 @@ $(document).ready(function(){
 								<input type="text" hidden	 name="idAluno" class="form-control"  value=" <?php echo $linha['idAluno']; ?>" >
 								<input type="text" hidden name="status" class="form-control"  value=" <?php echo $linha['status']; ?>" >
 								
-								<label for="">CPF do Aluno</label>
+								<label for="">CPF do Integrante</label>
 
-                  <input type="text" name="cpfAluno_composicao"  class="form-control" onkeyup="mascara('###.###.###-##',this,event,true)" value=" <?php echo $linha['cpfAluno']; ?>" >
+                  <input type="text" name="cpfIntegrante_composicao"  class="form-control" onkeyup="mascara('###.###.###-##',this,event,true)" > 
 
 <label for="">Nome integrante</label>
                   <input type="text"  name="nomeIntegrante" class="form-control" >

@@ -20,7 +20,7 @@ $resultado_consultaPolos = mysqli_query($con, $result_consultaPolos);
   <div class="content">
     <div class="page-inner">
       <div class="page-header">
-        <h4 class="page-title">Consultar Polos</h4>
+        <h4 class="page-title">Consultar PROJOC</h4>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -32,7 +32,7 @@ $resultado_consultaPolos = mysqli_query($con, $result_consultaPolos);
                 <table id="basic-datatables" class="display table table-striped table-hover">
                   <thead>
                     <tr>
-                      <th>Nome Polo</th>
+                      <th>Nome PROJOC</th>
                    
                       <th></th>
                     </tr>

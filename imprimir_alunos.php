@@ -138,7 +138,7 @@ $idAluno = $_GET["idAluno"];
   C.escolaridade,
   C.idade,
   C.estadoCivil,
-  C.cpfAluno_composicao,
+  C.cpfIntegrante_composicao,
   C.status
   
   from composicao_familiar C

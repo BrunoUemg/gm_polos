@@ -16,9 +16,10 @@ M.cep,
 M.telefone,
 M.celular,
 P.idPolo,
-P.nomePolo
-from monitor M, polo P
-where M.idPolo = P.idPolo";
+P.nomePolo,
+U.tipoAcesso
+from monitor M, polo P,usuario U
+where M.idPolo = P.idPolo and M.idMonitor = U.idMonitor";
 $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
 ?>
 
@@ -41,7 +42,8 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                       <th>Nome</th>
                       <th>CPF</th>
                       <th>Data de Nascimento</th>
-                      <th>Polo</th>
+                      <th>PROJOC</th>
+                      <th>Tipo Acesso</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -55,10 +57,11 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                         <td><?php echo $rows_consultaMonitor['cpf']; ?></td>
                         <td><?php echo $rows_consultaMonitor['dtNascimento']; ?></td>
                         <td><?php echo $rows_consultaMonitor['nomePolo']; ?></td>
+                        <td><?php echo $rows_consultaMonitor['tipoAcesso']; ?></td>
 
                         <td>
                           <?php echo "<a class='btn btn-default' href='consultar_monitores.php?id=" . $rows_consultaMonitor['idMonitor'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaMonitor['idMonitor'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                          <?php echo "<a class='btn btn-default' href='excluir_monitores.php?idMonitor=" . $rows_consultaMonitor['idMonitor'] . "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
+                     
                           <?php  echo "<a  class='btn btn-default' title='Excluir ' href='excluir_monitores.php?idMonitor=" .$rows_consultaMonitor['idMonitor']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
 
                           <!-- Modal-->
@@ -156,6 +159,19 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                                         <option value="<?php echo $row_Polos['idPolo']; ?>" <?php if ($rows_consultaMonitor['idPolo'] == $row_Polos['idPolo']) echo 'selected'; ?>><?php echo $row_Polos['nomePolo']; ?></option>
                                       <?php } ?> } ?>
                                     </select>
+
+                                
+                <label>Nível acesso</label>
+                
+                    <select class="form-control" name="tipoAcesso" required="required">
+                      <option value="">Selecione</option>
+                      <option value="Comandante"<?php if($rows_consultaMonitor['tipoAcesso'] == 'Comandante') echo 'selected'; ?>>Comandante</option>
+                      <option value="Subcomandante" <?php if($rows_consultaMonitor['tipoAcesso'] == 'Subcomandante') echo 'selected'; ?>>Subcomandante</option>
+                    </select>
+                  
+                
+
+
 
                                 </div>
                                 <div class="modal-footer">

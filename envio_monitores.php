@@ -15,6 +15,7 @@ $bairro = $_POST["bairro"];
 $estado = $_POST["estado"];
 $cidade = $_POST["cidade"];
 $idPolo = $_POST["idPolo"];
+$tipoAcesso = $_POST['tipoAcesso'];
 
 
 $sql = "INSERT INTO monitor ( nomeMonitor, dtNascimento, cpf, email, telefone, celular, cep, rua, numero, 
@@ -30,7 +31,7 @@ if ($con->query($sql) === TRUE){
 
 $idMonitor = $result['codigo'];
 
-$sql2 = "INSERT INTO usuario (nomeUsuario, userAcesso, senha, idMonitor) VALUES ('$nomeMonitor', '$cpf', '$cpf','$idMonitor' )";
+$sql2 = "INSERT INTO usuario (nomeUsuario, userAcesso, senha, idMonitor,tipoAcesso) VALUES ('$nomeMonitor', '$cpf', '$cpf','$idMonitor','$tipoAcesso' )";
 if ($con->query($sql2) === TRUE)
 echo "<script>alert('Cadastro realizado com sucesso!');window.location='cadastrar_monitores.php'</script>";
 else 

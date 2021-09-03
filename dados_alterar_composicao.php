@@ -88,7 +88,7 @@ C.profissao,
 C.escolaridade,
 C.idade,
 C.estadoCivil,
-C.cpfAluno_composicao
+C.cpfIntegrante_composicao
 
 from composicao_familiar C
 where C.idAluno = '$idAluno' and status = 1  ";
@@ -153,8 +153,8 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
                                 </div>
                                 <div class="modal-body">
                                   <form action="alterar_composicao.php" method="POST">
-                                     <label for="">CPF aluno</label>
-                                    <input type="text"  name="cpfAluno_composicao" class="form-control" value="<?php echo $rows_consultaComposicao['cpfAluno_composicao']; ?>" onkeyup="mascara('###.###.###-##',this,event,true)">
+                                     <label for="">CPF do Integrante</label>
+                                    <input type="text"  name="cpfIntegrante_composicao" class="form-control" value="<?php echo $rows_consultaComposicao['cpfIntegrante_composicao']; ?>" onkeyup="mascara('###.###.###-##',this,event,true)">
                                     <input type="text" readonly hidden name="idComposicao_familiar" class="form-control" value="<?php echo $rows_consultaComposicao['idComposicao_familiar']; ?>">
                                     <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaComposicao['idAluno']; ?>">
 

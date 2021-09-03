@@ -59,6 +59,7 @@ $date_hoje = date("d/m/y");
       <div class="page-header">
         <h4 class="page-title">Consultar Chamada</h4>
       </div>
+    
       <div class="row">
         <div class="col-md-12">
           <div class="card">
@@ -68,7 +69,9 @@ $date_hoje = date("d/m/y");
               
             <div class="card-body">
          <!--   <form action="" method="POST" name="button" enctype="multipart/form-data"  > -->
-                <table id="basic-datatables" class="display table table-striped table-hover">
+        
+                      <form action="envio_chamada_alunos.php" method="POST" enctype="multipart/form-data">
+                <table id="basic" class="display table table-striped table-hover">
                
                   <thead>
                     <tr>
@@ -76,9 +79,9 @@ $date_hoje = date("d/m/y");
                       <th>Nome Aluno</th>
                       <th>Data de Nascimento</th>
                       
+                     <th>Status Presença</th>
                      
-                     
-                      <th>Presença</th>
+                      <th>Presente</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -90,31 +93,50 @@ $date_hoje = date("d/m/y");
                   </tfoot>
                   
                   <tbody>
-                  
-
-                    <?php while ($rows_consultaChamada = mysqli_fetch_assoc($resultado_consultaChamada)) {
+                  <?php while ($rows_consultaChamada = mysqli_fetch_assoc($resultado_consultaChamada)) {
                       ?>
+
+                   
                       <tr>
                      
-                      <td><?php echo $rows_consultaChamada['idAluno']; ?>  
-                        <td><?php echo $rows_consultaChamada['nomeAluno']; ?>  </td>
-                        <td><?php echo $rows_consultaChamada['dtNascimento']; ?>  </td>
+                      <td><?php echo $rows_consultaChamada['idAluno']; ?> <input type="hidden" name="idAluno" value="<?php echo $rows_consultaChamada['idAluno']; ?>"></td> 
+                        <td><?php echo $rows_consultaChamada['nomeAluno']; ?> <input type="hidden" name="idMonitor" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">  </td>
+                        <td><?php echo $rows_consultaChamada['dtNascimento']; ?> <input type="hidden" name="idEncontro" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">  <input type="hidden" name="idPolo" value="<?php echo $rows_consultaChamada['idPolo']; ?>">  </td>
                        
-                        
+                      <td>
+                      <?php 
+                      $date = date("d/m/y");
+
+                      $result_consultaStatus = "SELECT L.idAluno,
+                      L.dataChamada    
+      from lista_chamda L
+      where L.idAluno = '$rows_consultaChamada[idAluno]' and L.idEncontro = '$rows_consultaChamada[idEncontro]'   ";
+$resultado_consultaStatus = mysqli_query($con, $result_consultaStatus);
+if(mysqli_num_rows($resultado_consultaStatus) > 0){
+echo " <a class='btn btn-success' title='Chamada'> Concluido   </a>";
+
+}else{
+  echo "<a class='btn btn-danger' title='Chamada'> Pendente a presença   </a>";
+}
+
+                      ?>
+                      
+                      </td>
 
                      <td>
                    
         
 
-                    <!--  <label for="1">Sim</label>
-                          <input type='radio' name='presenca' value="1" > </input>
-                          <label for="0">Não</label>
-                         <input type='radio' name="presenca" id="idAluno" value="0" > </input>
-                          <input type='submit' name='button' value='Guardar' class="btn btn-success" > -->
-                          <?php echo "<a class='btn btn-success' title='Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaChamada['idAluno'] . "'>" ?>Guardar<?php echo "</a>"; ?>
+                      <label for="1">Não</label>
+                          <input type='checkBox' name='pres[]' value="<?php echo $rows_consultaChamada['idAluno'] ?>" > </input>
+                          <label for=""></label>
+                          <label for=""></label>
+                        
+                         
+                          <?php //echo "<a class='btn btn-success' title='Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalMaisInfo" . $rows_consultaChamada['idAluno'] . "'>" ?><!--Guardar--><?php //echo "</a>"; ?>
             
-                    <?php echo "<a class='btn btn-success' title='Editar Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#editarPresenca" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                    <?php echo "<a class='btn btn-success' title='Sansção diciplinar' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalSancao" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fa fa-exclamation-triangle"></i><?php echo "</a>"; ?>
+                    <?php // echo "<a class='btn btn-success' title='Editar Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#editarPresenca" . $rows_consultaChamada['idAluno'] . "'>" ?> <!--<i  class="fas fa-edit"></i><?php //echo "</a>"; ?>
+                    <?php //echo "<a class='btn btn-success' title='Sansção diciplinar' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalSancao" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fa fa-exclamation-triangle"></i>--><?php //echo "</a>"; ?>
                     <input type="text" readonly hidden name="idPolo" id="idPolo"class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
                                   <input type="text" readonly hidden name="idMonitor" id="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
                                   <input type="text" readonly hidden name="idEncontro" id="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
@@ -228,7 +250,10 @@ $date_hoje = date("d/m/y");
                                   <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
                                   </form>
 
-
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
 
 
@@ -250,10 +275,10 @@ $date_hoje = date("d/m/y");
                   </tbody>
                   
                 </table>
-<?php
-               
+              <center> <input type='submit' name='button' value='Salvar Chamada' class="btn btn-success" ></center>  
+              <br>
+                </form>
 
-?>
 
                <center> <a  class='btn btn-success' title='Finalizar'  data-toggle='modal' data-target='#finalizar'> Encerrar Chamada</a> </center>
                 <div class="modal fade" id="finalizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -291,18 +316,7 @@ $date_hoje = date("d/m/y");
 
 <!-- </form> -->
 
-<?php
-        if(isset($_POST['enviar'])){
-$idAluno = $_POST["idAluno"];
-
-$presenca = $_POST["presenca"];
-$data_hoje = date("d/m/y");
- 
-
-  $sql1 = "INSERT INTO lista_chamda (dataChamada, idAluno, idEncontro, presenca, idMonitor) VALUES ('$date_hoje', '$idAluno', 1, '$presenca', 1 )";
-
-        }  
-               ?>        
+       
 
       <div class="modal fade" id="RequisicaoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

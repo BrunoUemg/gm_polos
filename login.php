@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8" />
-    <title>POLOS</title>
+    <title>PROJOC</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="img/logo.png" type="image/x-icon" />
 	<meta name="theme-color" content="#f9f9f9">
@@ -50,16 +50,16 @@
 	<div class="wrapper wrapper-login wrapper-login-full p-0">
 		<div class="login-aside w-50 d-flex flex-column align-items-center justify-content-center text-center bg-secondary-gradient">
 			<img src="img/logo1.png">
-			<p class="subtitle text-white op-7">Sistema de polos</p>
+			<p class="subtitle text-white op-7">SISTEMA PROJOC</p>
 		</div>
 		<div class="login-aside w-50 d-flex align-items-center justify-content-center bg-white">
 			<div class="container container-login container-transparent animated fadeIn">
-				<h3 class="text-center">Seja bem-vindo!</h3>
+				<h3 class="text-center">Seja bem-vindo ao PROJOC!</h3>
 				<div class="login-form">
 					<div class="form-group">
 					<form action="dao/valida.php" method="POST">
 						<label for="username" class="placeholder"><b>Usuário</b></label>
-						<input id="username" name="user" type="text" class="form-control" required>
+						<input id="username" name="user" type="text" class="form-control" required onkeyup="mascara('###.###.###-##',this,event,true)">
 					</div>
 					<div class="form-group">
 						<label for="password" class="placeholder"><b>Senha</b></label>
@@ -144,6 +144,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/mascaras.js"></script>
 	<!--   Core JS Files   -->
 	<script src="js/core/jquery.3.2.1.min.js"></script>
 	<script src="js/core/popper.min.js"></script>

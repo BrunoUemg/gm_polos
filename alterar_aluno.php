@@ -51,18 +51,6 @@ $disturbioAnsiedade = $_POST["disturbioAnsiedade"];
 $deficiencia = $_POST["deficiencia"];
 $telefoneEmergencia = $_POST["telefoneEmergencia"];
 $numeroEndereco = $_POST["numeroEndereco"];
-$desArquivo1 = $_POST["desArquivo1"];
-$desArquivo2 = $_POST["desArquivo2"];
-$desArquivo3 = $_POST["desArquivo3"];
-$desArquivo4 = $_POST["desArquivo4"];
-$desArquivo5 = $_POST["desArquivo5"];
-$desArquivo6 = $_POST["desArquivo6"];
-$desArquivo7 = $_POST["desArquivo7"];
-$desArquivo8 = $_POST["desArquivo8"];
-$desArquivo9 = $_POST["desArquivo9"];
-$desArquivo10 = $_POST["desArquivo10"];
-$desArquivo11 = $_POST["desArquivo11"];
-$desArquivo12 = $_POST["desArquivo12"];
 $oculos = $_POST["oculos"];
 $aparelhoDentario = $_POST["aparelhoDentario"];
 $marcapasso = $_POST["marcapasso"];
@@ -72,7 +60,6 @@ $lentesContato = $_POST["lentesContato"];
 $outroEquipamento = $_POST["outroEquipamento"];
 $picadaInseto = $_POST["picadaInseto"];
 $alergiaMedicamentos = $_POST["alergiaMedicamentos"];
-$plantas = $_POST["plantas"];
 $alimentos = $_POST["alimentos"];
 $outraAlergia = $_POST["outraAlergia"];
 $outraAlergiaDesc = $_POST["outraAlergiaDesc"];
@@ -123,9 +110,7 @@ nomePai = '$nomePai', profissaoPai = '$profissaoPai', nomeMae = '$nomeMae', prof
   avisarEmergencia = '$avisarEmergencia', medContinuos = '$medContinuos', alergia = '$alergia', planoMedico = '$planoMedico',
   numCarteira = '$numCarteira', nadar = '$nadar', sonambulo = '$sonambulo', cardiaco = '$cardiaco', restricoesAlimentos = '$restricoesAlimentos',
   impedimentoFisico = '$impedimentoFisico', distubioComportamento = '$distubioComportamento', disturbioAlimentar = '$disturbioAlimentar',
-  disturbioAnsiedade = '$disturbioAnsiedade', deficiencia = '$deficiencia', telefoneEmergencia = '$telefoneEmergencia', desArquivo1 = '$desArquivo1', desArquivo2 = '$desArquivo2',
-desArquivo3 = '$desArquivo3', desArquivo4 = '$desArquivo4', desArquivo5 = '$desArquivo5', desArquivo6 = '$desArquivo6',
-desArquivo7 = '$desArquivo7', desArquivo8 = '$desArquivo8', desArquivo9 = '$desArquivo9', desArquivo10 = '$desArquivo10', desArquivo11 = '$desArquivo11', desArquivo12 = '$desArquivo12',
+  disturbioAnsiedade = '$disturbioAnsiedade', deficiencia = '$deficiencia', telefoneEmergencia = '$telefoneEmergencia',
  oculos = '$oculos', aparelhoDentario = '$aparelhoDentario', marcapasso = '$marcapasso',
 sonda = '$sonda', aparelhoAudicao = '$aparelhoAudicao', lentesContato = '$lentesContato', outroEquipamento = '$outroEquipamento',
 picadaInseto = '$picadaInseto', alimentos = '$alimentos', alergiaMedicamentos = '$alergiaMedicamentos', outraAlergia = '$outraAlergia', outraAlergiaDesc = '$outraAlergiaDesc',
@@ -165,12 +150,45 @@ if($con->query($sql1)=== true){
 if($con->query($sql2)=== true){
   $data = date ("Y-m-d");
 
-  $sql7 = "INSERT INTO movimentacao (dataMovimentacao, descricao,idAluno) VALUES ('$data', 'Atualização ficha do Jovem', '$idAluno' )";
+  $sql7 = "INSERT INTO movimentacao (dataMovimentacao, descricao,idAluno) VALUES ('$data', 'Atualização ficha do aluno', '$idAluno' )";
 
 
 }
 
 if($con->query($sql7)===TRUE){
+
+  $diretorio = "digitalizados/";
+
+    if(!is_dir($diretorio)){ 
+      echo "Pasta $diretorio nao existe";
+    }else{
+      $arquivo = isset($_FILES['arquivo']) ? $_FILES['arquivo'] : FALSE;
+  
+      for($controle1 = 0; $controle1 < count($arquivo['name']); $controle1++){
+  
+        $destino = $diretorio."/".$idAluno."-".$arquivo['name'][$controle1];
+        if(move_uploaded_file($arquivo['tmp_name'][$controle1], $destino)){
+        $doc = $idAluno."-".$arquivo['name'][$controle1];
+         
+        }
+        if($doc != NULL || $doc != ""){
+        $sql = "INSERT INTO repositorio_aluno (idAluno,srcDocumento,descricao)VALUES('$idAluno','$doc','$doc')";
+        
+        if($con->query($sql)===TRUE){
+          echo "<script>alert('Cadastro alterado com sucesso!');window.location='consultar_alunos.php'</script>";
+        }
+        }else {
+          echo "<script>alert('Cadastro alterado com sucesso!');window.location='consultar_alunos.php'</script>";
+        }
+         
+     
+    
+    
+       
+    } 
+  }
+
+
   echo "<script>alert('Cadastro alterado com sucesso!');window.location='consultar_alunos.php'</script>";
 
 }

@@ -1,10 +1,14 @@
 <?php
 include_once "dao/conexao.php";
 session_start();
-if (isset($_SESSION['nomeUsuario'])) {
+if (isset($_SESSION['projoc'])) {
     //login ok!
 } else {
     header('location: ./login.php');
+    header('Content-type: application/pdf');
+    header('Content-Disposition: inline; filename="' .$filename. '"');
+    header('Content-Transfer-Encoding; binary');
+    header('Accept-Ranges; bytes');
 }
 
 $result = mysqli_query($con, "SELECT foto from usuario where idUsuario = '$_SESSION[idUsuario] '");
@@ -18,9 +22,10 @@ $resultado_final = mysqli_fetch_array($result);
 
 <head>
     <meta charset="UTF-8" />
-    <title>POLOS</title>
+    <title>PROJOC</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-  <link rel="icon" href="img/logo.png" type="image/x-icon" /> 
+ 
+    <link rel="icon" href="img/logo.png" type="image/x-icon" /> 
 
     <!-- Fonts and icons -->
     <script src="js/plugin/webfont/webfont.min.js"></script>
@@ -52,6 +57,24 @@ $resultado_final = mysqli_fetch_array($result);
     <script src="js/select2.min.js"></script>
 
 </head>
+<style>
+	.loader {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: url('https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif') 50% 40% no-repeat transparent;
+		border-color: transparent;
+	}
+</style>
+<div id="loader" class="loader"></div>
+<script>
+	window.onload = function(){
+		$(".loader").fadeOut("slow");
+	};
+</script>
 
 <body data-background-color="white">
     <div class="wrapper">
@@ -61,7 +84,7 @@ $resultado_final = mysqli_fetch_array($result);
 
                 <a href="pagina_principal.php" class="logo">
             <!--        <img src="img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
-                    <font color="white"> <strong>POLOS</strong></font>
+                    <font color="white"> <strong>PROJOC</strong></font>
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -150,30 +173,164 @@ $resultado_final = mysqli_fetch_array($result);
                         <?php
                         if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] != 0) {
                             echo '<li class="nav-item">
-                            <a data-toggle="collapse" href="#pacientes">
-                            <i class="fas fa-procedures"></i>
-                                <p>Cadastrar </p>
+                            <a data-toggle="collapse" href="#faltas">
+                          
+                                <p>Minhas presenças </p>
                                 <span class="caret"></span>
                             </a>
-                            <div class="collapse" id="pacientes">
+                            <div class="collapse" id="faltas">
                                 <ul class="nav nav-collapse">
                                     <li>
-                                        <a href="cadastrar_polos.php">
-                                            <span class="sub-item">Cadastrar</span>
+                                        <a href="minha_presenca.php">
+                                            <span class="sub-item">Consultar</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#historico">
+                          
+                                <p>Histórico </p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="historico">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="meu_historico.php">
+                                            <span class="sub-item">Consultar</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                        <a data-toggle="collapse" href="#tarefas">
+                      
+                            <p>Tarefas </p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="tarefas">
+                            <ul class="nav nav-collapse">
+                            
+                            <li>
+                            <a href="tarefas_atribuidas.php">
+                                <span class="sub-item">Atribuídas</span>
+                            </a>
+                        </li>
+                            
+                            
+                            <li>
+                                    <a href="tarefas_concluidas.php">
+                                        <span class="sub-item">Concluídas</span>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </li>
+
+                        <li class="nav-item">
+                        <a data-toggle="collapse" href="#boletim">
+                      
+                            <p>Boletim </p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="boletim">
+                            <ul class="nav nav-collapse">
+                            
+                            <li>
+                            <a href="cadastrar_boletim.php">
+                                <span class="sub-item">Cadastrar</span>
+                            </a>
+                        </li>
+                            
+                            
+                          
+                               
+                            </ul>
+                        </div>
+                    </li>
+
+                       ';
+                        } 
+
+                        if ($_SESSION['idMonitor'] != 0 && $_SESSION['idAluno'] == 0 && $_SESSION['tipoAcesso'] == 'Comandante') {
+                            echo '
+                        <li class="nav-item">
+                            <a data-toggle="collapse" href="#consultas">
+                            <i class="fas fa-user"></i>
+                                <p>Alunos</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="consultas">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="presenca_alunos.php">
+                                            <span class="sub-item">Presença</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="consultar_paciente.php">
-                                            <span class="sub-item">Consultar</span>
+                                        <a href="consultar_boletim.php">
+                                            <span class="sub-item">Consultar boletim</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                        </li>
-                       ';
-                        } 
+                        </li> 
+                        
+                        <li class="nav-item">
+                        <a data-toggle="collapse" href="#atividades">
+                        <i class="fa fa-address-book"></i>
+                            <p>Atividades</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="atividades">
+                            <ul class="nav nav-collapse">
+                                <li>
+                                    <a href="cadastrar_atividades.php">
+                                        <span class="sub-item">Cadastrar</span>
+                                    </a>
+                                </li>
 
-                        if ($_SESSION['idMonitor'] != 0 && $_SESSION['idAluno'] == 0) {
+                                <li>
+                                <a href="consultar_atividade.php">
+                                    <span class="sub-item">Consultar</span>
+                                </a>
+                            </li>
+
+                                
+                           
+                       
+                            </ul>
+                        </div>
+                    </li>
+                        
+                        <li class="nav-item">
+                        <a data-toggle="collapse" href="#cargos">
+                            <i class="fas fa-plus-square"></i>
+                            <p>Encontros</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="cargos">
+                            <ul class="nav nav-collapse">
+                                <li>
+                                    <a href="consultar_encontros.php">
+                                        <span class="sub-item">Ver Encontros</span>
+                                    </a>
+                                </li>
+                              
+                            </ul>
+                        </div>
+                    </li>
+                        ';
+                        }
+
+                        if ($_SESSION['idMonitor'] != 0 && $_SESSION['idAluno'] == 0 && $_SESSION['tipoAcesso'] == 'Subcomandante') {
                             echo '
                         <li class="nav-item">
                             <a data-toggle="collapse" href="#consultas">
@@ -195,7 +352,10 @@ $resultado_final = mysqli_fetch_array($result);
                                     </li>
                                 </ul>
                             </div>
-                        </li>                   
+                        </li> 
+                        
+                      
+                        
                         <li class="nav-item">
                         <a data-toggle="collapse" href="#cargos">
                             <i class="fas fa-plus-square"></i>
@@ -216,9 +376,13 @@ $resultado_final = mysqli_fetch_array($result);
                         ';
                         }
                         
-                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0)
+                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0  )
                         {
                             echo ' 
+
+                        
+                           
+
                             <li class="nav-item">
                                 <a data-toggle="collapse" href="#alunos">
                                 <i class="fas fa-users"></i>
@@ -230,6 +394,11 @@ $resultado_final = mysqli_fetch_array($result);
                                         <li>
                                             <a href="cadastrar_alunos.php">
                                                 <span class="sub-item">Cadastrar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="cadastro_aluno_pendente.php">
+                                                <span class="sub-item">Cadastros pendentes</span>
                                             </a>
                                         </li>
     
@@ -251,9 +420,48 @@ $resultado_final = mysqli_fetch_array($result);
                                         <span class="sub-item">Relatórios</span>
                                     </a>
                                 </li>
+
+                                <li>
+                                <a href="consultar_boletim.php">
+                                    <span class="sub-item">Consultar Boletim</span>
+                                </a>
+                            </li>
                                     </ul>
                                 </div>
                             </li>
+
+                            <li class="nav-item">
+                            <a data-toggle="collapse" href="#atividades">
+                            <i class="fa fa-address-book"></i>
+                                <p>Atividades</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="atividades">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="cadastrar_atividades_gerais.php">
+                                            <span class="sub-item">Cadastrar atividades gerais</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="cadastrar_atividades.php">
+                                            <span class="sub-item">Cadastrar atividades para polo especifico</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                    <a href="consultar_atividade_gerais.php">
+                                        <span class="sub-item">Consultar todas</span>
+                                    </a>
+                                </li>
+                                 
+    
+                                    
+                               
+                           
+                                </ul>
+                            </div>
+                        </li>
 
 
 
@@ -306,7 +514,7 @@ $resultado_final = mysqli_fetch_array($result);
                             <li class="nav-item">
                             <a data-toggle="collapse" href="#pacientes">
                             <i class="fas fa-map-marker-alt"></i>
-                                <p>Polos</p>
+                                <p>PROJOC</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="pacientes">

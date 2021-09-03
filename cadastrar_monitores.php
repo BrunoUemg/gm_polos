@@ -115,9 +115,9 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
                 </div>
 
               <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Polo do Comandante</label>
+                <label class="col-sm-2 col-sm-2 control-label">PROJOC do Comandante ou subcomandante</label>
                   <select class="form-control" name="idPolo">
-                    <option value="">Selecione o Polo</option>
+                    <option value="">Selecione o PROJOC</option>
                     <?php
                    
                     while ($row_Polo = mysqli_fetch_assoc($resultado_Polo)) { ?>
@@ -125,6 +125,20 @@ $resultado_Polo= mysqli_query($con, $result_Polo);
                     <?php } ?> } ?>
                   </select>
                 </div>
+
+                <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">Nível acesso</label>
+                
+                    <select class="form-control" name="tipoAcesso" required="required">
+                      <option value="">Selecione</option>
+                      <option value="Comandante">Comandante</option>
+                      <option value="Subcomandante">Subcomandante</option>
+                    </select>
+                  </div>
+                
+
+
+
               <div class="card-action">
                 <button type="submit" class="btn btn-danger" onClick="window.location.href='Index.php'">Cancelar</button>
 

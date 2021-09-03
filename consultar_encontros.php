@@ -16,18 +16,8 @@ from monitor M, encontro E
 where M.idMonitor = '$_SESSION[idMonitor]' and M.idPolo = E.idPolo ";
 $resultado_consultaEncontro = mysqli_query($con, $result_consultaEncontro);
 
-$result_consultaEncontroAdm = "SELECT E.idEncontro,
-E.nomeEncontro,
-E.descricao,
-E.dt,
-E.horaInicio,
-E.horaFinal,
-E.idPolo,
-M.idMonitor,
-M.idPolo,
-M.nomeMonitor
-from monitor M, encontro E 
-where M.idMonitor = 25 " ;
+$result_consultaEncontroAdm = "SELECT *
+from  encontro E " ;
 $resultado_consultaEncontroAdm = mysqli_query($con, $result_consultaEncontroAdm);
 ?>
 
@@ -64,17 +54,21 @@ $resultado_consultaEncontroAdm = mysqli_query($con, $result_consultaEncontroAdm)
                       <tr>
                         <td><?php echo $rows_consultaEncontro['nomeEncontro']; ?></td>
                         <td><?php echo $rows_consultaEncontro['descricao']; ?></td>
-                        <td><?php echo $rows_consultaEncontro['dt']; ?></td>
+                        <td><?php 
+                        $dataBanco =  $rows_consultaEncontro['dt'];
+                        $dataNova =  date("d/m/Y", strtotime($dataBanco));
+                        echo $dataNova; ?></td>
                         <td><?php echo $rows_consultaEncontro['funcionamento']; ?></td>
 
                         <td>
                           <?php echo "<a class='btn btn-default'title='Alterar encontro' href='consultar_encontros.php?id=" . $rows_consultaEncontro['idEncontro'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaEncontro['idEncontro'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
                           <?php if( $rows_consultaEncontro['funcionamento'] == 'Encerrado') {?>
                           <?php  echo "<a class='btn btn-default' title='Chamada'> Encerrado   </a>"; ?>
+                          <?php  echo "<a class='btn btn-default' title='Dados do encontro' href='dados_encontro.php?idEncontro=".$rows_consultaEncontro['idEncontro'] .  "'>" ?>dados<?php echo "</a>"; ?>
                           <?php }  else {?>
                             <?php  echo "<a class='btn btn-default' title='Chamada' href='chamada_alunos.php?idEncontro=".$rows_consultaEncontro['idEncontro'] .  "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
                           <?php } ?>
-
+                            
 
                           <!-- Modal-->
 
@@ -146,13 +140,15 @@ while ($rows_consultaEncontroAdm = mysqli_fetch_assoc($resultado_consultaEncontr
   <tr>
     <td><?php echo $rows_consultaEncontroAdm['nomeEncontro']; ?></td>
     <td><?php echo $rows_consultaEncontroAdm['descricao']; ?></td>
-    <td><?php echo $rows_consultaEncontroAdm['dt']; ?></td>
+    <td><?php  $dataBanco =  $rows_consultaEncontroAdm['dt'];
+                        $dataNova =  date("d/m/Y", strtotime($dataBanco));
+                        echo $dataNova; ?></td>
   
 
     <td>
       <?php echo "<a class='btn btn-default'title='Alterar encontro' href='consultar_encontros.php?id=" . $rows_consultaEncontroAdm['idEncontro'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaEncontroAdm['idEncontro'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-     
-
+      <?php  echo "<a  class='btn btn-default' title='Excluir ' href='excluir_encontros.php?idEncontro=" .$rows_consultaEncontroAdm['idEncontro']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
+      <?php  echo "<a class='btn btn-default' title='Dados do encontro' href='dados_encontro.php?idEncontro=".$rows_consultaEncontroAdm['idEncontro'] .  "&idPolo=".$rows_consultaEncontroAdm['idPolo']."'>" ?>dados<?php echo "</a>"; ?>
 
       <!-- Modal-->
 

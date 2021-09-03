@@ -12,10 +12,10 @@ include_once "dao/conexao.php";
 
 
 $result_Presenca = "SELECT M.idPolo, M.idMonitor, L.idAluno, A.nomeAluno, A.idPolo, A.status, A.dtNascimento, 
-SUM(l.presenca) AS faltas 
+SUM(L.presenca) AS faltas 
 from monitor M, aluno A, lista_chamda L 
-where M.idMonitor = '$_SESSION[idMonitor]' and M.idPolo = A.idPolo and A.status = 1 and l.idAluno = A.idAluno 
-GROUP BY l.idAluno  
+where M.idMonitor = '$_SESSION[idMonitor]' and M.idPolo = A.idPolo and A.status = 1 and L.idAluno = A.idAluno 
+GROUP BY L.idAluno  
   ";
 $result_Final = mysqli_query($con, $result_Presenca);
 

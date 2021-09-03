@@ -50,10 +50,10 @@ $resultado_documentos11= mysqli_query($con, $result_documentos11);
 $result_documentos12 ="SELECT * FROM documentos ORDER BY nomeDocumento ";
 $resultado_documentos12= mysqli_query($con, $result_documentos12);
 
-$query = mysqli_query($con, "SELECT Max(cpfAluno_composicao)  AS codigo FROM composicao_familiar WHERE status = 0 ");
+$query = mysqli_query($con, "SELECT Max(cpfIntegrante_composicao)  AS codigo FROM composicao_familiar WHERE status = 0 ");
 $result = mysqli_fetch_array($query);
 
-$cpfAluno_composicao = $result['codigo'];
+$cpfIntegrante_composicao = $result['codigo'];
 
 $result_consultaComposicao = "SELECT C.idComposicao_familiar,
 C.idAluno,
@@ -64,7 +64,7 @@ C.profissao,
 C.escolaridade,
 C.idade,
 C.estadoCivil,
-C.cpfAluno_composicao,
+C.cpfIntegrante_composicao,
 C.status
 
 from composicao_familiar C
@@ -73,6 +73,9 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
 
 $res = $con-> query($result_consultaComposicao);
 $linha = $res->fetch_assoc();
+
+
+
 
 ?>
 
@@ -88,309 +91,7 @@ $linha = $res->fetch_assoc();
 
 
 
-		<h3>Socioeconomica</h3>
-            <section>
-		 <a class='btn btn-default'  href='cadastrar_alunos.php'  data-toggle='modal' data-target='#Modalvisu'> Inserir Integrantes </a> 
-		 <?php echo "<a class='btn btn-default' title='Alterar' href='cadastrar_composicao.php?cpfAluno_composicao=" . $linha['cpfAluno_composicao'] .  "'>" ?>Visualizar e modificar</a>
-         
-
-
-
-<div class="row">
-			<div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-            </div>
-			<center><div class="card-title">Composição familiar </div></center>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table id="basic-datatables"  class="display table table-striped table-hover">
-                  <thead>
-				  <tr>
-                      <th>Nome Integrante</th>
-                    <th>Parentesco</th>
-					<th>Idade</th>
-					<th>CPF Aluno</th>
-                    </tr>
-                  </thead>
-				  <tbody>
-				  <?php while ($rows_consultaComposicao = mysqli_fetch_assoc($resultado_consultaComposicao)) {
-                      ?>
-                      <tr>
-                        <td><?php echo $rows_consultaComposicao['nomeIntegrante']; ?></td>
-                       
-                        <td><?php echo $rows_consultaComposicao['parentesco']; ?></td>
-                        <td><?php echo $rows_consultaComposicao['idade']; ?></td>
-						<td><?php echo $rows_consultaComposicao['cpfAluno_composicao']; ?></td>
-						
-						</tr>
-<?php }  ?>
-				  
-				  </tbody>
-
-				  </table>
-				  </div>
-				  </div>
-				  </div>
-				  </div>
-
-</div>
-<center><div class="card-title">Ficha Social </div></center>
-<div class="row">
-
-
-
-
-<div class="form-group col-md-4">
-<label>Integrante familiar sem Documento ? </label><br>
-<select name="semDocumento" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-</div>
-
-<div class="form-group col-md-4">
-<label>Gestante na Família ? </label><br>
-<select name="gestante" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-			  <label for="">Parentesco gestante</label>
-			  <select class="form-control" name="parentescoGestante" id="">
-				  <option value="">Selecione</option>
-			
-				  <option value="Mãe">Mãe</option>
-				  <option value="Filho(a)">Filho(a)</option>
-				 
-				  <option value="Irmã">Irmã</option>
-				 
-				 
-				  <option value="Tia">Tia</option>
-				
-				  <option value="Prima">Prima</option>
-				 
-				  </select>
-
-              
-</div>
-
-<div class="form-group col-md-4">
-<label>Dependente Químico na familia ? </label><br>
-<select name="dependenteQuimico" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-              
-              
-              <label for="">Nome do dependente Químico</label>
-              <input class="form-control " maxlength="100"  name="nomeDependenteQui"   type="text"  placeholder="Cite"  >
-              
-</div>
-
-</div>
-<div class="row">
-<div class="form-group col-md-4">
-<label>Gastos Medicamentos ? </label><br>
-<select name="gastosMedicamentos" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim" >Sim</option>
-<option value="Não" >Não</option>
-</select>
-            
-              
-              
-			  <label for="">Valor Medicamento</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control col-md-7 col-xs-12" maxlength="100"  name="gastosMedicamentosValor"  type="number"  placeholder="Valor"  >
-</div>
-</div>
-
-<div class="form-group col-md-4">
-<label>Deficiênte ou doença Crônica ? </label><br>
-<select name="doencaFamilia" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-              
-              
-			  <label for="">Nome enfermo</label>
-              <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nomeDoencaFamilia"   type="text"  placeholder="Cite">
-</div>
-
-<div class="form-group col-md-4">
-<label>Possui energia elétrcia ?</label><br>
-  
-<select name="energia" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim" >Sim</option>
-<option value="Não" >Não</option>
-</select>
-              
-              
-			  <label for="">Valor Energia</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control col-md-7 col-xs-12l" maxlength="100"   name="valorEnergia"   type="text"  placeholder="Valor" onKeyPress="return(moeda(this,'.',',',event))" >
-</div>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<div class="row">
-<div class="form-group col-md-4">
-<label>Tipo residência ? </label><br>
-<select name="residencia" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Residência própria">Residência própria</option>
-<option value="Alugada" >Alugada</option>
-<option value="Cedida" >Cedida</option>
-<option value="A favor">A favor</option>
-<option value="Financiada">Financiada</option>
-</select>
-			  <label for="">Valor gasto com residência</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control col-md-7 col-xs-12l" maxlength="100"  name="valorResidencia"   type="text" placeholder="Valor" onKeyPress="return(moeda(this,'.',',',event))"  >
-</div>
-
-</div>
-
-<div class="form-group col-md-4">
-<label>Tipo de Água ?</label><br>
-<select name="agua" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Água encanada"  >Água encanda</option>
-<option value="Sisterna" >Sisterna</option>
-<option value="Poço"  >Poço</option>
-</select>
-              
-              
-			  <label for="">Valor Água</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control col-md-7 col-xs-12l" maxlength="100"   name="valorAgua"   type="text"  placeholder="Valor" onKeyPress="return(moeda(this,'.',',',event))" >
-</div>
-</div>
-<div class="form-group col-md-4">
-<label>Escola Publica ou Privada ?</label><br>
-  
-<select name="tipoEscola" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Pública"  >Pública</option>
-<option value="Privada" >Privada</option>
-</select>
-              
-              
-			  <label for="">Gastos com Escola</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control " maxlength="100" name="valorEscola"   type="number"  placeholder="Gastos"    >
-</div>
-</div>
-</div>
-
-<div class="row">
-
-            
-
-			  <div class="form-group col-md-4">
-			  <label for="">Valor gasto com idioma</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control   " maxlength="5"  name="valorIdioma"  required="required" type="number"   >
-              </div>
-			  </div>
-
-			  
-              <div class="form-group col-md-4">
-			  
-			  <label for="">Valor gasto com curso de informática</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control  " maxlength="5"  name="valorInformatica"  required="required" type="number" >
-              </div>
-			  </div>
-
-			  <div class="form-group col-md-4">
-			  <label for="">Gastos com Alimentação</label>
-			  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-    <span class="input-group-text">R$</span>
-    
-  </div>
-              <input class="form-control  " maxlength="5"  name="valorAlimentacao"  required="required" type="number"  >
-              </div>
-			  </div>
-
-			  <div class="form-group col-md-4">
-			  <label for="">Número Quartos</label>
-              <input class="form-control  " maxlength="100"  name="numQuartos"  required="required" type="number"   >
-              </div>
-
-			  
-              <div class="form-group col-md-4">
-			  <label for="">Número Banheiros</label>
-              <input class="form-control  " maxlength="100"  name="numBanheiros"  required="required" type="number"  >
-              </div>
-
-			  <div class="form-group col-md-4">
-<label title="cadastro único" >Cadastrado no CAD único ?  </label><br>
-<select name="cadUnico" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-</div>
-
-<div class="form-group col-md-4">
-<label>Possui bolsa família ? </label><br>
-<select name="bolsaFamilia" id="" class="form-control">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-</div>
-			  
-			  </div>
-          
-
-
-        </section>
-
-
+	
 
 
 
@@ -405,6 +106,7 @@ $linha = $res->fetch_assoc();
               <div class="form-group col-md-8">
               <label>Nome Completo </label>
               <input class="form-control" maxlength="100" name="nomeAluno"  required="required" type="text">
+              <input class="form-control" maxlength="100" hidden name="cadastrar_aluno"  required="required" value="1" type="text">
               </div>
             
 
@@ -433,7 +135,7 @@ $linha = $res->fetch_assoc();
             
             <div class="form-group col-md-4">
               <label>CPF Aluno</label>
-                <input class="form-control"  name="cpfAluno" maxlength="15"  required="required" type="text" onkeyup="mascara('###.###.###-##',this,event,true)" value="<?php echo $linha['cpfAluno_composicao']; ?>">
+                <input class="form-control"  name="cpfAluno" maxlength="15"  required="required" type="text" onkeyup="mascara('###.###.###-##',this,event,true)" value="<?php echo $linha['cpfIntegrante_composicao']; ?>">
               </div>
             </div>
 
@@ -1105,10 +807,10 @@ while($rows_profissao = mysqli_fetch_assoc($resultado_profissao)){ ?>
 
 
 <div class="form-group col-md-4">
-<label for="">Polo do Aluno</label>
+<label for="">PROJOC do Aluno</label>
 	<select class="form-control"  name="idPolo" required="required"  >
 
-	<option>Selecione o Polo</option>
+	<option>Selecione o PROJOC</option>
 <?php while($rows_Polo = mysqli_fetch_assoc($resultado_Polo)){ ?>
 
 <option value="<?php echo $rows_Polo['idPolo'];?>"><?php echo ($rows_Polo['nomePolo']);?></option>
@@ -1117,6 +819,28 @@ while($rows_profissao = mysqli_fetch_assoc($resultado_profissao)){ ?>
 
 </select>
 	  </div>
+	  <div class="form-group col-md-4">
+<label>Graduação do GM</label>
+<select name="graduacao" class="form-control" id="">
+<option value="">Selecione</option>
+<option value="Guarda-Mirim de 1° Classe - GM 1° Cl">Guarda-Mirim de 1° Classe - GM 1° Cl</option>
+<option value="Guarda-Mirim de 2° Classe - GM 2° Cl">Guarda-Mirim de 2° Classe - GM 2° Cl</option>
+<option value="Taifero - Taf GM">Taifero - Taf GM</option>
+<option value="Monitor - Mon GM">Monitor - Mon GM</option>
+<option value="Sub-Inspetor - Sub-Insp">Sub-Inspetor - Sub-Insp</option>
+<option value="Guarda-Mirim-A-Oficial">Guarda-Mirim-A-Oficial</option>
+<option value="Inspetor - Insp GM">Inspetor - Insp GM</option>
+<option value="Inspetor-Capitão - Insp-Cap GM">Inspetor-Capitão - Insp-Cap GM</option>
+<option value="Sub-Oficial">Sub-Oficial</option>
+<option value="Oficial - OF GM">Oficial - OF GM</option>
+</select>
+</div>
+
+<div class="form-group col-md-4">
+<label for="">Data início graduação</label>
+<input type="date" name="dataInicioGraduacao" class="form-control" id="">
+
+</div>
 
 </div>
 
@@ -1126,819 +850,70 @@ while($rows_profissao = mysqli_fetch_assoc($resultado_profissao)){ ?>
 
           
 
-        <h3>Ficha Médica</h3>
-            <section>
-
-            <center>   <h3>Ficha Médica</h3> </center>
-
-            <div class="row">
-            <div class="form-group col-md-4">
-              <label>Tipo sanguíneo</label>
-                <Select class="form-control"  name="tipoSanguineo" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="A">A</option>
-                  <option value="B">B</option>
-                  <option value="AB">AB</option>
-                  <option value="O">O</option>
-</select>
-</div>
-<div class="form-group col-md-4">
-              <label>Fator RH</label>
-                <Select class="form-control"  name="fatorRh" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Positivo">Positivo</option>
-                  <option value="Negativo">Negativo</option>
-                  
-</select>
-</div>
-
-
-<div class="form-group col-md-4">
-<label>Altura</label>
-  <input class="form-control"  maxlength="100" name="altura" required="required" type="text" onkeyup="mascara('#,## m',this,event,true)">
-</div>
-
-<div class="form-group col-md-4">
-<label>Peso</label>
-  <input class="form-control"  maxlength="100" name="peso" required="required" type="text" >
-</div>
-
-
-
-
-<div class="form-group col-md-4">
-              <label>Emergências Médicas</label>
-                <Select class="form-control"  name="emergenciasMedicas" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Aguardar Acompanhamento dos Pais/Responsavel">Aguardar Acompanhamento dos Pais/Responsável</option>
-                  <option value="Aceitar decisões médicas">Aceitar decisões médicas</option>
-                  
-</select>
-</div>
-      
-
-
-<div class="form-group col-md-10">
-              <label>Permitir administrar medicamentos por profissionais em sáude que atuam no Grupo</label>
-                <Select class="form-control"  name="permicao" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Sim">Sim</option>
-                  <option value="Não">Não</option>
-</select>
-</div>
-
-
-
-<div class="form-group col-md-4">
-              <label>Avisar em Emergências</label>
-                <Select class="form-control"  name="avisarEmergencia" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Pais/Responsavel">Pais/Responsável</option>
-                  <option value="Outro">Outro</option>
-                  
-                  
-</select>
-</div>
-
-<div class="form-group col-md-4">
-<label>Telefone Emergência</label>
-  <input class="form-control"  maxlength="100" name="telefoneEmergencia" required="required" type="text" onkeyup="mascara('(##) #####-####',this,event,true)" >
-</div>
-  </div>
-<h3>Medicamentos continuos ?</h3>
-  <div class="row">
-<div class="form-group col-md-2">
-	
-<label>sim</label>
-  <input class="form-control"  maxlength="100" name="medContinuos" value="Sim" required="required" type="radio" onclick="undisableTxt()"  >
-</div>
-<div class="form-group col-md-2">
-	
-<label>Não</label>
-  <input class="form-control"  maxlength="100" name="medContinuos" value="Não" required="required" type="radio" onclick="disableTxt()" >
-</div>
-
-
-<div class="form-group col-md-4">
-<label for="">Nome Medicamento</label>
-  <input class="form-control"  maxlength="100" id="myText" value="" name="nomeMedicamento"  disabled placeholder="Nome medicamento" type="text">
-</div> 
-
-<div class="form-group col-md-4">
-<label>Equipamentos Auxílio</label>
-<select class="form-control" name="equipamentosAuxilio" id="select2">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-</div>
-<div id="pai2">
-<div id="Sim">
-
-<label for=""> Óculos</label>
-<input   maxlength="100" hidden checked="checked" name="oculos" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="oculos" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Aparelho Dentário</label>
-  <input   maxlength="100" hidden checked="checked" name="aparelhoDentario" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="aparelhoDentario" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Marcapasso</label>
-  <input   maxlength="100" hidden checked="checked" name="marcapasso" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="marcapasso" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Sonda</label>
-  <input   maxlength="100" hidden checked="checked" name="sonda" value="Não"  type="checkbox" >
-  <input  maxlength="100" name="sonda" value="Sim" type="checkbox" >
-  <label for=""></label>
-  <label for=""> Aparelho Audição</label>
-  <input   maxlength="100" hidden checked="checked" name="aparelhoAudicao" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="aparelhoAudicao" value="Sim" type="checkbox" >
-  <label for=""></label>
-  <label for=""> Lentes Contato</label>
-  <input   maxlength="100" hidden checked="checked" name="lentesContato" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="lentesContato" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  
- 
-  <input  class="form-control" maxlength="100" name="outroEquipamento"  type="text" placeholder="Outro " >
-  
-  </div>
-</div>
-
-
-<div class="form-group col-md-6">
-<label>Plano médico</label>
-  <input class="form-control"  maxlength="100" name="planoMedico" required="required" type="text">
-</div>
-
-<div class="form-group col-md-6">
-<label>Número carteirinha</label>
-  <input class="form-control"  maxlength="100" name="numCarteira"  type="text">
-</div>
-
-<div class="form-group col-md-4">
-<label>Alergia</label>
-<select class="form-control" name="alergia" id="select">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-</div>
-<div id="pai">
-<div id="Sim">
-
-<label for=""> Picada inseto</label>
-<input   maxlength="100" hidden checked="checked" name="picadaInseto" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="picadaInseto" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Medicamento</label>
-  <input   maxlength="100" hidden checked="checked" name="alergiaMedicamentos" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="alergiaMedicamentos" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Plantas</label>
-  <input   maxlength="100" hidden checked="checked" name="plantas" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="plantas" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Alimentos</label>
-  <input   maxlength="100" hidden checked="checked" name="alimentos" value="Não"  type="checkbox" >
-  <input  maxlength="100" name="alimentos" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> outro</label>
-  <input   maxlength="100" hidden checked="checked" name="outraAlergia" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="outraAlergia" value="Sim"  type="checkbox" >
- 
- 
-  <label for=""></label>
-  
- 
-  <input  class="form-control" maxlength="100" name="outraAlergiaDesc"  type="text" placeholder="Descrever " >
-  
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-<style>
-#pai div{
-	display:  none;
-}
-</style>
-
-<style>
-#pai2 div{
-	display:  none;
-}
-</style>
-
-<Script>
-
-$(document).ready(function(){
-
-	$('#select').on('change',function(){
-
-		var selectValor = '#'+$(this).val();
-		$('#pai').children('div').hide();
-		$('#pai').children(selectValor).show();
-	});
-});
-
-</Script>
-
-<Script>
-
-$(document).ready(function(){
-
-	$('#select2').on('change',function(){
-
-		var selectValor = '#'+$(this).val();
-		$('#pai2').children('div').hide();
-		$('#pai2').children(selectValor).show();
-	});
-});
-
-</Script>
-
-
-
-                  </div>
-
-
-				  <center>   <h3>Ficha Médica Finalização</h3> </center>
-            <div class="row">
-            <div class="form-group col-md-4">
-              <label>Sabe nadar ?</label>
-                <Select class="form-control"  name="nadar" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Sim">Sim</option>
-                  <option value="Não">Não</option>
-                  
-</select>
-</div>
-
-<div class="form-group col-md-4">
-              <label>É sonâmbulo ?</label>
-                <Select class="form-control"  name="sonambulo" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Sim">Sim</option>
-                  <option value="Não">Não</option>
-                  
-</select>
-</div>
-
-<div class="form-group col-md-4">
-              <label>Problemas cardíacos</label>
-                <Select class="form-control"  name="cardiaco" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Sim">Sim</option>
-                  <option value="Não">Não</option>
-                  
-</select>
-</div>
-
-
-<div class="form-group col-md-4">
-<label>Restrições a alimentos ?</label>
-
-
-  <select class="form-control" name="restricoesAlimentos" id="select7">
-  <option value="">Selecione</option>
-  <option value="Sim">Sim</option>
-  <option value="Não">Não</option>
-  </select>
-  <div id="pai7">
-<div id="Sim">
-<input class="form-control"  maxlength="100" name="restricoesAlimentosDesc"  type="text"  >
-</div>
-</div>
-</div>
-
-<div class="form-group col-md-4">
-<label>Possui impedimento Físico ?</label>
-<select class="form-control" name="impedimentoFisico" id="">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-
- 
-</div>
-  </div>
-  <center><h3>Distúbios psico e deficiências (colocar não se não possuir)</h3></center>
-  <div class="row">
-    
-  <div class="form-group col-md-10">
-<label>Apresenta Distúbio de comportamento ?</label>
-  
-  <select class="form-control" name="distubioComportamento" id="select4"> 
-  <option value="">Selecione</option>
-  <option value="Sim">Sim</option>
-  <option value="Não">Não</option></select>
- 
-
-
-<div id="pai4">
-<div id="Sim">
-
-<input class="form-control"  maxlength="100" name="disturbioComportamentoDesc"  type="text" placeholder="ex: Conduta, hiperatividade por déficit de atenção etc. " >
- 
-  
-  </div>
-</div>
-</div>
-
-<div class="form-group col-md-10">
-<label>Apresenta Distúbio de Alimentar ?</label>
-<select class="form-control" name="disturbioAlimentar" id="select5">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-<div id="pai5">
-<div id="Sim">
-
-<input class="form-control"  maxlength="100" name="disturbioAlimentarDesc"  type="text" placeholder="ex: ex: Anorexia nervosa, bulimia nervosa, etc. " >
- 
-  
-  </div>
-</div>
-  
-</div>
-      
-<div class="form-group col-md-10">
-<label>Apresenta Distúbio de Ansiedade Fóbica ?</label>
-<select class="form-control" name="disturbioAnsiedade" id="select6">
-<option value="">Selecione</option>
-<option value="Sim">Sim</option>
-<option value="Não">Não</option>
-</select>
-<div id="pai6">
-<div id="Sim">
-  <input class="form-control"  maxlength="100" name="disturbioAnsiedadeDesc"  type="text" placeholder="ex: Distúrbio do pânico, agorafobia, etc " >
-  
-  </div>
-  </div>
-</div>
-
-<div class="form-group col-md-10">
-<label>Deficiências</label>
- 
-  <select class="form-control" name="deficiencia" id="select3">
-  <option value="">Selecione</option>
-  <option value="Sim">Sim</option>
-  <option value="Não">Não</option>
-  </select>
-
-</div>
-
-<div id="pai3">
-<div id="Sim">
-
-<label for=""> Física</label>
-<input   maxlength="100" hidden checked="checked" name="fisica" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="fisica" value="Sim" type="checkbox" >
-  <label for=""></label>
-  <label for=""> Visual</label>
-  <input   maxlength="100" hidden checked="checked" name="visual" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="visual" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Auditiva</label>
-  <input   maxlength="100" hidden checked="checked" name="auditiva" value="Não"  type="checkbox" >
-  <input   maxlength="100" name="auditiva" value="Sim"  type="checkbox" >
-  <label for=""></label>
-  <label for=""> Intelectual</label>
-  <input   maxlength="100" hidden checked="checked" name="intectual" value="Não"  type="checkbox" >
-  <input  maxlength="100" name="intectual" value="Sim"  type="checkbox" >
- 
-  
-  </div>
-</div>
-
-<style>
-#pai3 div{
-	display:  none;
-}
-</style>
-
-<Script>
-
-$(document).ready(function(){
-
-	$('#select3').on('change',function(){
-
-		var selectValor = '#'+$(this).val();
-		$('#pai3').children('div').hide();
-		$('#pai3').children(selectValor).show();
-	});
-});
-
-</Script>
-
-<style>
-#pai4 div{
-	display:  none;
-}
-</style>
-
-<Script>
-
-$(document).ready(function(){
-
-	$('#select4').on('change',function(){
-
-		var selectValor = '#'+$(this).val();
-		$('#pai4').children('div').hide();
-		$('#pai4').children(selectValor).show();
-	});
-});
-
-</Script>
-
-<style>
-#pai5 div{
-	display:  none;
-}
-</style>
-
-<Script>
-
-$(document).ready(function(){
-
-	$('#select5').on('change',function(){
-
-		var selectValor = '#'+$(this).val();
-		$('#pai5').children('div').hide();
-		$('#pai5').children(selectValor).show();
-	});
-});
-
-</Script>
-
-<style>
-#pai6 div{
-	display:  none;
-}
-</style>
-
-<Script>
-
-$(document).ready(function(){
-
-	$('#select6').on('change',function(){
-
-		var selectValor = '#'+$(this).val();
-		$('#pai6').children('div').hide();
-		$('#pai6').children(selectValor).show();
-	});
-});
-
-</Script>
-
-
-<style>
-#pai7 div{
-	display:  none;
-}
-</style>
-
-<Script>
-
-$(document).ready(function(){
-
-	$('#select7').on('change',function(){
-
-		var selectValor = '#'+$(this).val();
-		$('#pai7').children('div').hide();
-		$('#pai7').children(selectValor).show();
-	});
-});
-
-</Script>
-
-
-
-
-                  </div>
-
-        </section>
-
+       
       
 
         
         <h3>Documentos digitalizados</h3>
-            <section>
-
-            <center>   <h5>Documentos</h5> </center>
-
-            <div class="row">
-			<div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table id="basic-datatables" class="display table table-striped table-hover">
-                  <thead>
-				  <tr>
-                      <th>Descrição</th>
-                    <th>Documentos</th>
-                    </tr>
-                  </thead>
-					  <tr>
-		<td>	<div class="form-group">
-  
-                <select class="form-control"  name="desArquivo1"  >
-        
-                <option>Nenhum Documento</option>
-  <?php while($rows_documento = mysqli_fetch_assoc($resultado_documentos)){ ?>
-
-<option value="<?php echo $rows_documento['nomeDocumento'];?>"><?php echo ($rows_documento['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-                  </div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="rgalunodigi" >
-			  </div></td> 
-			  
-  </tr>
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo2"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento2 = mysqli_fetch_assoc($resultado_documentos2)){ ?>
-
-<option value="<?php echo $rows_documento2['nomeDocumento'];?>"><?php echo ($rows_documento2['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="cpfalunodigi" >
-			  </div></td> 
-			  
-  </tr>
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo3"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento3 = mysqli_fetch_assoc($resultado_documentos3)){ ?>
-
-<option value="<?php echo $rows_documento3['nomeDocumento'];?>"><?php echo ($rows_documento3['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="cpfrespdigi" >
-			  </div></td> 
-			  
-  </tr>
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo4"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento4 = mysqli_fetch_assoc($resultado_documentos4)){ ?>
-
-<option value="<?php echo $rows_documento4['nomeDocumento'];?>"><?php echo ($rows_documento4['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="cpfresp2digi" >
-			  </div></td> 
-			  
-  </tr>
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo5"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento5 = mysqli_fetch_assoc($resultado_documentos5)){ ?>
-
-<option value="<?php echo $rows_documento5['nomeDocumento'];?>"><?php echo ($rows_documento5['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="rgrespdigi" >
-			  </div></td> 
-			  
-  </tr>
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo6"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento6 = mysqli_fetch_assoc($resultado_documentos6)){ ?>
-
-<option value="<?php echo $rows_documento6['nomeDocumento'];?>"><?php echo ($rows_documento6['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="rgresp2digi" >
-			  </div></td> 
-			  
-  </tr>
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo7"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento7 = mysqli_fetch_assoc($resultado_documentos7)){ ?>
-
-<option value="<?php echo $rows_documento7['nomeDocumento'];?>"><?php echo ($rows_documento7['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="comprovanteresidigi" >
-			  </div></td> 
-			  
-  </tr>
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo8"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento8 = mysqli_fetch_assoc($resultado_documentos8)){ ?>
-
-<option value="<?php echo $rows_documento8['nomeDocumento'];?>"><?php echo ($rows_documento8['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="atestadoescolardigi" >
-			  </div></td> 
-			  
-  </tr>
-
-
-  <tr>
-		<td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo9"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento9 = mysqli_fetch_assoc($resultado_documentos9)){ ?>
-
-<option value="<?php echo $rows_documento9['nomeDocumento'];?>"><?php echo ($rows_documento9['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="fotoAluno" >
-			  </div></td> 
-			  
-  </tr>
-
-
-  <td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo10"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento10 = mysqli_fetch_assoc($resultado_documentos10)){ ?>
-
-<option value="<?php echo $rows_documento10['nomeDocumento'];?>"><?php echo ($rows_documento10['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="arquivo10" >
-			  </div></td> 
-			  
-  </tr>
-
-
-  <td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo11"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento11 = mysqli_fetch_assoc($resultado_documentos11)){ ?>
-
-<option value="<?php echo $rows_documento11['nomeDocumento'];?>"><?php echo ($rows_documento11['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="arquivo11" >
-			  </div></td> 
-			  
-  </tr>
-
-
-  <td>	<div class="form-group">
-  
-  <select class="form-control"  name="desArquivo12"  >
-
-  <option>Nenhum Documento</option>
-<?php while($rows_documento12 = mysqli_fetch_assoc($resultado_documentos12)){ ?>
-
-<option value="<?php echo $rows_documento12['nomeDocumento'];?>"><?php echo ($rows_documento12['nomeDocumento']);?></option>
-
-<?php } ?>  
-
-</select>
-	</div></td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="arquivo12" >
-			  </div></td> 
-			  
-  </tr>
-
-  <tr>
-  <td>
-  ___________________________
-  </td>
-
-  <td>
-  ________________________________________________
-  </td>
-  
-  </tr>
-
-  <tr>
-		<td><h3>Inserir Foto Aluno: </h3>	</td>
-         <td>  <div class="form-group ">
-                
-                  <input type="file" class="form-control"  name="outro" >
-			  </div></td> 
-			  
-  </tr>
-		
-  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+		<section>
+
+<center>   <h2>Documentos</h2> </center>
+
+<div class="row">
+<div class="col-md-12">
+<div class="card">
+<div class="card-header">
+</div>
+<div class="card-body">
+  <div class="table-responsive">
+	<table id="basic-datatables2" class="display table table-striped table-hover">
+	  <thead>
+	  <tr>
+		  <th>Descrição</th>
+		<th>Inserir</th>
+		</tr>
+	  </thead>
+	  <tbody>
+	  <?php while($rows_documentos = mysqli_fetch_assoc($resultado_documentos)){ 
+		 if($rows_documentos['obrigatorio'] == 'Sim'){
+		  ?>
+		  
+		  <tr>
+		  <td><label for=""><?php echo $rows_documentos['nomeDocumento']; ?></label></td>
+		  <td><input type="file" name="<?php echo $rows_documentos['variavelDocumento']; ?>" class="form-control" required="required" id="">
+		  </td>
+			</tr>
+			<?php } else { ?>
+			<tr><td><label for=""><?php echo $rows_documentos['nomeDocumento']; ?></label></td>
+			<td><input type="file" name="<?php echo $rows_documentos['variavelDocumento']; ?>" class="form-control"  id=""></td>
+			</tr>
+<?php } }?>
+
+
+</tbody>
+	</table>
+  </div>
+</div>
+</div>
+</div>
 
 
 </div>
 
+<div class="row">
 
 
 
-        </section>
+<div class="form-group col-md-8 ">
+<label for="">Inserir foto</label>   
+<input type="file" class="form-control"  name="outro" >
+</div>
+
+</div>
+
+
+</section>
+        
 
         </div>
     </form>
@@ -1960,9 +935,9 @@ $result_profissao ="SELECT * FROM profissao ";
 $resultado_profissao = mysqli_query($con, $result_profissao); ?>
 
 
-							    <form action="envio_cadastrar_composicao.php" method="POST" enctype="multipart/form-data">
-								<label for="">CPF do Aluno</label>
-                  <input type="text"  name="cpfAluno_composicao" class="form-control" onkeyup="mascara('###.###.###-##',this,event,true)" value=" <?php echo $linha['cpfAluno_composicao']; ?>" >
+							    <form action="cadastrar_alunos.php" method="POST" >
+								<label for="">CPF do Integrante</label>
+                  <input type="text"  name="cpfIntegrante_composicao" class="form-control" onkeyup="mascara('###.###.###-##',this,event,true)"  >
 				  
 <label for="">Nome integrante</label>
                   <input type="text"  name="nomeIntegrante" class="form-control" >
@@ -2049,10 +1024,36 @@ $resultado_profissao = mysqli_query($con, $result_profissao); ?>
     <script src="js/jquery.steps.js"></script>
     <script src="js/script.js"></script>
     <script src="js/states.js"></script>
+
+	<style>
+	.loader {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: url('https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif') 50% 40% no-repeat transparent;
+		border-color: transparent;
+	}
+</style>
+<div id="loader" class="loader"></div>
+<script>
+	window.onload = function(){
+		$(".loader").fadeOut("slow");
+	};
+</script>
+
+
+
+
 	<script>function disableTxt() {
   document.getElementById("myText").disabled = true;
   document.getElementById("myText").value = "Não possui";
 }
+
+
+
 
 function undisableTxt() {
   document.getElementById("myText").disabled = false;

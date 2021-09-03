@@ -18,7 +18,7 @@ include_once("header.php");
                 <form action="envio_cadastro_polo.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
 
                 <div class="item form-group">
-              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nome do Polo
+              <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nome do PROJOC
               </label>
               <div class="col-md-10 col-sm-6 col-xs-12">
                 <input class="form-control col-md-7 col-xs-12" maxlength="100" name="nomePolo" required="required" type="text">
