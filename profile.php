@@ -29,7 +29,7 @@ $result_profile = mysqli_fetch_array($profile);
 
               <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Usuario de acesso</label>
-                  <input type="text" class="form-control" name="userAcesso" required="required" value="<?php echo $result_profile['userAcesso'];?>">
+                  <input type="text" class="form-control" readonly name="userAcesso" required="required" value="<?php echo $result_profile['userAcesso'];?>">
               </div>
              
 
@@ -40,7 +40,7 @@ $result_profile = mysqli_fetch_array($profile);
                     <option value="">Selecione o Cargo</option>
                     <?php
                     $resultado_cargos = mysqli_query($con, "SELECT * FROM polo");
-                    while ($row_cargos = mysqli_fetch_assoc($resultado_cargos)) { ?>
+                    while ($row_polos = mysqli_fetch_assoc($resultado_polos)) { ?>
                       <option value="<?php echo utf8_encode($row_cargos['idPolo']); ?>"<?php if($result_profile['idPolo']==$row_cargos['idPolo'])echo 'selected';?>><?php echo $row_cargos['nomePolo']; ?></option>
                     <?php } ?> } ?>
                   </select>
@@ -58,12 +58,7 @@ $result_profile = mysqli_fetch_array($profile);
     </div>
   </div>
 </div>
-<script>
-window.onload = function(){
-	document.getElementById("cep").focus();
-	document.getElementById("cep").blur();
-}
-</script>
+
 
 <script src="jquery/jquery-3.4.1.min.js"></script>
 <script src="js/states.js"></script>

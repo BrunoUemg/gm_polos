@@ -83,7 +83,8 @@ $linha2 = $res->fetch_assoc();
                 <input class="form-control col-md-7 col-xs-12" maxlength="100" readonly name="dataEntrega" required="required" type="date" value="<?php echo $linha2["dataEntrega"] ?>" >
               </div>
             </div>
-            <embed  src="<?php  echo 'tarefas_concluidas/'. $linha2['pdfAtividade'] .  '' ?>"  width="445" height="400" type='application/pdf' >
+            <a class="btn btn-primary" href="<?php  echo 'tarefas_concluidas/'. $linha2['pdfAtividade'] .  '' ?>" target="_blank" rel="noopener noreferrer">Visualizar tarefa</a>
+            
 
 
 

@@ -11,6 +11,15 @@ $Result_atividades = "SELECT * FROM atividades where idAtividades = '$idAtividad
 $res = $con->query($Result_atividades);
 $linha2 = $res->fetch_assoc();
 ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+
+a{
+   text-decoration: none;
+	   
+}
+
+</style>
         
 <div class="main-panel">
   <div class="content">
@@ -31,7 +40,7 @@ $linha2 = $res->fetch_assoc();
               <div class="col-md-10 col-sm-6 col-xs-12">
                 <input class="form-control col-md-7 col-xs-12" maxlength="100"  readonly name="nomeAtividade" required="required" type="text" value="<?php echo $linha2["nomeAtividade"]; ?>">
               <input type="text" name="idPolo" hidden value="<?php echo $linha2['idPolo']; ?>">
-              <input type="text" name="idUsuario" hidden value="<?php echo $linha2['idUsuario']; ?>">
+              <input type="text" name="idUsuario" hidden value="<?php echo $_SESSION['idUsuario']; ?>">
               <input type="text" name="idAtividades" hidden value="<?php echo $idAtividades; ?>">
               </div>
             </div>
@@ -53,7 +62,12 @@ $linha2 = $res->fetch_assoc();
          </div>
          </div>
 
-<?php if($linha2['documentoApoio'] ==  'documentoApoio-'.$linha2['idAtividades'].'..pdf'){ ?>
+<?php 
+
+$documento = substr($linha2['documentoApoio'],0,29);
+
+
+if($linha2['documentoApoio'] ==  $documento.'.pdf'){ ?>
   <div class="item form-group">
               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Documento de apoio
               </label>
@@ -76,6 +90,27 @@ $linha2 = $res->fetch_assoc();
             </div>
 
 
+            <div class="progress">
+		<div class="progress-bar"  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+	</div>
+<div class="modal fade" id="carregar" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Por favor aguarde carregamento...</h5>
+        
+      </div>
+      <div class="modal-body">
+	  <div class="progress">
+		<div class="progress-bar"  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+	</div>
+      </div>
+      <div class="modal-footer">
+       
+      </div>
+    </div>
+  </div>
+</div>
 
 
            
@@ -124,8 +159,41 @@ $linha2 = $res->fetch_assoc();
 </div> 
 
 <script src="js/mascaras.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/jquery.steps.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/states.js"></script>
     
-
+<script>
+			$(document).on('submit', 'form', function (e) {
+				e.preventDefault();
+				//Receber os dados
+				$form = $(this);				
+				var formdata = new FormData($form[0]);
+				
+				//Criar a conexao com o servidor
+				var request = new XMLHttpRequest();
+				
+				//Progresso do Upload
+				$('#carregar').modal('show');
+				request.upload.addEventListener('progress', function (e) {
+					var percent = Math.round(e.loaded / e.total * 100);
+					$form.find('.progress-bar').width(percent + '%').html(percent + '%');
+				});
+				
+				//Upload completo limpar a barra de progresso
+				request.addEventListener('load', function(e){
+					$form.find('.progress-bar').addClass('progress-bar-success').html('upload completo...');
+					//Atualizar a página após o upload completo
+					window.location.href= 'tarefas_atribuidas.php';
+				});
+				
+				//Arquivo responsável em fazer o upload da imagem
+				request.open('post', 'envio_tarefa.php');
+				request.send(formdata);
+			});
+		</script>
 
 
 

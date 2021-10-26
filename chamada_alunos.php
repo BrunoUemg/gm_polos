@@ -5,6 +5,7 @@ $idEncontros = $_GET['idEncontro'];
 
 
 include_once "dao/conexao.php";
+if(!empty($_SESSION['idMonitor'])){
 $result_consultaChamada = "SELECT E.idEncontro,
 E.nomeEncontro,
 E.descricao,
@@ -43,6 +44,18 @@ A.dtNascimento
 from monitor M, encontro E, aluno A
 where M.idMonitor = '$_SESSION[idMonitor]'   and A.idPolo = E.idPolo and M.idPolo = A.idPolo and  E.idPolo = M.idPolo and A.status = 1   ");
 $resultFinal = mysqli_fetch_array($result_Chamada);
+}
+
+
+if(empty($_SESSION['idMonitor'])){
+  $resultado_consultaChamada = mysqli_query($con,"SELECT A.nomeAluno,A.dtNascimento, A.idAluno, E.idEncontro, P.idPolo FROM aluno A INNER JOIN polo P ON P.idPolo = A.idPolo INNER JOIN encontro E ON E.idPolo = P.idPolo where E.idEncontro = $idEncontros");
+  $linha2 = mysqli_fetch_array($resultado_consultaChamada);
+  $idPolo = $linha2['idPolo'];
+  $result_chamada = mysqli_query($con,"SELECT * FROM monitor where idPolo = $idPolo");
+  $linha3 = mysqli_fetch_array($result_chamada);
+  $idMonitorEncerramento = $linha3['idMonitor'];
+
+}
 
 
 
@@ -94,14 +107,22 @@ $date_hoje = date("d/m/y");
                   
                   <tbody>
                   <?php while ($rows_consultaChamada = mysqli_fetch_assoc($resultado_consultaChamada)) {
+
+                    if($_SESSION['idMonitor'] == 0){
+                      $select_monitor = mysqli_query($con,"SELECT * FROM monitor where idPolo = $rows_consultaChamada[idPolo]");
+                      $resultM = mysqli_fetch_array($select_monitor);
+                      $idMonitor = $resultM['idMonitor'];
+                    }
+
+
                       ?>
 
                    
                       <tr>
                      
-                      <td><?php echo $rows_consultaChamada['idAluno']; ?> <input type="hidden" name="idAluno" value="<?php echo $rows_consultaChamada['idAluno']; ?>"></td> 
-                        <td><?php echo $rows_consultaChamada['nomeAluno']; ?> <input type="hidden" name="idMonitor" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">  </td>
-                        <td><?php echo $rows_consultaChamada['dtNascimento']; ?> <input type="hidden" name="idEncontro" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">  <input type="hidden" name="idPolo" value="<?php echo $rows_consultaChamada['idPolo']; ?>">  </td>
+                      <td><?php echo $rows_consultaChamada['idAluno']; ?> </td> 
+                        <td><?php echo $rows_consultaChamada['nomeAluno']; ?> </td>
+                        <td><?php echo $rows_consultaChamada['dtNascimento']; ?> </td>
                        
                       <td>
                       <?php 
@@ -138,128 +159,12 @@ echo " <a class='btn btn-success' title='Chamada'> Concluido   </a>";
                     <?php // echo "<a class='btn btn-success' title='Editar Presença' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#editarPresenca" . $rows_consultaChamada['idAluno'] . "'>" ?> <!--<i  class="fas fa-edit"></i><?php //echo "</a>"; ?>
                     <?php //echo "<a class='btn btn-success' title='Sansção diciplinar' href='consultar_alunos.php?id=" . $rows_consultaChamada['idAluno'] . "' data-toggle='modal' data-target='#ModalSancao" . $rows_consultaChamada['idAluno'] . "'>" ?><i class="fa fa-exclamation-triangle"></i>--><?php //echo "</a>"; ?>
                     <input type="text" readonly hidden name="idPolo" id="idPolo"class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
-                                  <input type="text" readonly hidden name="idMonitor" id="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
+                                  <input type="text" readonly hidden name="idMonitor" id="idMonitor" class="form-control" value="<?php if(!empty($_SESSION['idMonitor'])){ echo $rows_consultaChamada['idMonitor']; } else{ echo $idMonitor; } ?>">
                                   <input type="text" readonly hidden name="idEncontro" id="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
                                     <input type="text" readonly hidden name="idAluno" id="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
 
                  
                   
-                  
-                  
-             
-                          <!-- Modal-->
-
-                          <div class="modal fade" id="ModalMaisInfo<?php echo $rows_consultaChamada['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Chamada</h5>
-                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <form action="envio_chamada_alunos.php" method="POST">
-                                  <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
-                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
-                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
-                                  <input type="text" readonly hidden name="nomeEncontro" class="form-control" value="<?php echo $rows_consultaChamada['nomeEncontro']; ?>">
-                                    <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
-                                   <label for="">Presença</label>
-                                    <Select class="form-control col-md-7 col-xs-12"  name="presenca" maxlength="50" required="required" type="text">
-                 
-                 <option value='0'>Presente</option>
-                   <option value='1'>Falta</option>
-                   </select>
-                                  
-
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-                                  <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
-                                  </form>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <div class="modal fade" id="editarPresenca<?php echo $rows_consultaChamada['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Chamada</h5>
-                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <form action="alterar_chamada_alunos.php" method="POST">
-                                 
-                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
-                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
-                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
-                                    <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
-                                   <label for="">Retirar ou dar presença</label>
-                                    <Select class="form-control col-md-7 col-xs-12"  name="presenca" maxlength="50" required="required" type="text">
-                 
-                 <option value='0'>Dar presença</option>
-                   <option value='1'>Retirar</option>
-                   </select>
-                                  
-
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-                                  <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
-                                  </form>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="modal fade" id="ModalSancao<?php echo $rows_consultaChamada['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Chamada</h5>
-                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <form action="envio_chamada_alunos.php" method="POST">
-                                  <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $rows_consultaChamada['idPolo']; ?>">
-                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
-                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
-                                    <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
-                                   <label for="">Dar Sanção Disciplinar</label>
-                                    <Select class="form-control col-md-7 col-xs-12"  name="presenca" maxlength="50" required="required" type="text">
-                 
-                 <option value='Advertência'>Advertência</option>
-                 <option value='Advertência'>Suspenção</option>
-                   <option value='Expulsão'>Falta</option>
-                   </select>
-                                  
-
-                                </div>
-                                <div class="modal-footer">
-                                  <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-                                  <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
-                                  </form>
-
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-
-
-
 
                         </td>
 
@@ -293,9 +198,9 @@ echo " <a class='btn btn-success' title='Chamada'> Concluido   </a>";
                                 <div class="modal-body">
                                   <form action="envio_chamada.php" method="POST" enctype="multipart/form-data">
                                  
-                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $resultFinal['idMonitor']; ?>">
-                                  <input type="text" readonly hidden name="idPolo" class="form-control" value="<?php echo $resultFinal['idPolo']; ?>">
-                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $linha['idEncontro']; ?>">
+                                  <input type="text" readonly hidden  name="idMonitor" class="form-control" value="<?php if($_SESSION['idMonitor'] != 0){ echo $resultFinal['idMonitor'];} else{ echo $idMonitorEncerramento; } ?>">
+                                  <input type="text" readonly  name="idPolo" class="form-control" value="<?php if($_SESSION['idMonitor'] != 0) { echo $resultFinal['idPolo'];} else{ echo $idPolo; } ?>">
+                                  <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $idEncontros; ?>">
                                  
                                <label for="">Foto do dia</label>
                                <input type="file"  name="foto" class="form-control" >

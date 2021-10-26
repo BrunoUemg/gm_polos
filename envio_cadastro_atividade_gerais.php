@@ -12,7 +12,7 @@ $result_polo = "SELECT * FROM  polo";
 $resultado_consultaPolo = mysqli_query($con, $result_polo);
 $res = $con->query($result_polo);
 $linha = $res->fetch_assoc();
-
+$nomeDocumento = uniqid();
 
     
 while ($rows_consultaPolo = mysqli_fetch_assoc($resultado_consultaPolo)) {
@@ -32,7 +32,7 @@ if($con->query($sql) === true){
         $extensao1 = strtolower(substr($_FILES['documentoApoio']['name'], -4));
         
     
-        $novo_nome1 = "documentoApoio-".$idAtividades.".".$extensao1; //define o nome do arquivo
+        $novo_nome1 = "documentoApoio-".$nomeDocumento.".".$extensao1; //define o nome do arquivo
      
     
         $diretorio ="documento_apoio/"; 

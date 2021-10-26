@@ -537,6 +537,23 @@ $resultado_final = mysqli_fetch_array($result);
                                 </ul>
                             </div>
                         </li>
+                            <li class="nav-item">
+                            <a data-toggle="collapse" href="#rela">
+                            <i class="fas fa-file-pdf"></i>
+                                <p>Relatórios</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="rela">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="relatorio_geral_aluno.php">
+                                            <span class="sub-item">Relatório geral dos alunos</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
 
                      
                        

@@ -135,24 +135,31 @@ $resultado_consultaEncontroAdm = mysqli_query($con, $result_consultaEncontroAdm)
 
                     <?php }} else {
 
-while ($rows_consultaEncontroAdm = mysqli_fetch_assoc($resultado_consultaEncontroAdm)) {
+while ($rows_consultaEncontro = mysqli_fetch_assoc($resultado_consultaEncontroAdm)) {
   ?>
   <tr>
-    <td><?php echo $rows_consultaEncontroAdm['nomeEncontro']; ?></td>
-    <td><?php echo $rows_consultaEncontroAdm['descricao']; ?></td>
-    <td><?php  $dataBanco =  $rows_consultaEncontroAdm['dt'];
-                        $dataNova =  date("d/m/Y", strtotime($dataBanco));
-                        echo $dataNova; ?></td>
-  
+    <td><?php echo $rows_consultaEncontro['nomeEncontro']; ?></td>
+    <td><?php echo $rows_consultaEncontro['descricao']; ?></td>
+    <td><?php 
+    $dataBanco =  $rows_consultaEncontro['dt'];
+    $dataNova =  date("d/m/Y", strtotime($dataBanco));
+    echo $dataNova; ?></td>
+    <td><?php echo $rows_consultaEncontro['funcionamento']; ?></td>
 
     <td>
-      <?php echo "<a class='btn btn-default'title='Alterar encontro' href='consultar_encontros.php?id=" . $rows_consultaEncontroAdm['idEncontro'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaEncontroAdm['idEncontro'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-      <?php  echo "<a  class='btn btn-default' title='Excluir ' href='excluir_encontros.php?idEncontro=" .$rows_consultaEncontroAdm['idEncontro']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
-      <?php  echo "<a class='btn btn-default' title='Dados do encontro' href='dados_encontro.php?idEncontro=".$rows_consultaEncontroAdm['idEncontro'] .  "&idPolo=".$rows_consultaEncontroAdm['idPolo']."'>" ?>dados<?php echo "</a>"; ?>
+      <?php echo "<a class='btn btn-default'title='Alterar encontro' href='consultar_encontros.php?id=" . $rows_consultaEncontro['idEncontro'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaEncontro['idEncontro'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
+      <?php  echo "<a  class='btn btn-default' title='Excluir ' href='excluir_encontros.php?idEncontro=" .$rows_consultaEncontro['idEncontro']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
+      <?php if( $rows_consultaEncontro['funcionamento'] == 'Encerrado') {?>
+      <?php  echo "<a class='btn btn-default' title='Chamada'> Encerrado   </a>"; ?>
+      <?php  echo "<a class='btn btn-default' title='Dados do encontro' href='dados_encontro.php?idEncontro=".$rows_consultaEncontro['idEncontro'] .  "'>" ?>dados<?php echo "</a>"; ?>
+      <?php }  else {?>
+        <?php  echo "<a class='btn btn-default' title='Chamada' href='chamada_alunos.php?idEncontro=".$rows_consultaEncontro['idEncontro'] .  "'>" ?><i class="fas fa-plus-square"></i><?php echo "</a>"; ?>
+      <?php } ?>
+        
 
       <!-- Modal-->
 
-      <div class="modal fade" id="ModalAlterar<?php echo $rows_consultaEncontroAdm['idEncontro']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="ModalAlterar<?php echo $rows_consultaEncontro['idEncontro']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -164,34 +171,34 @@ while ($rows_consultaEncontroAdm = mysqli_fetch_assoc($resultado_consultaEncontr
             <div class="modal-body">
               <form action="alterar_encontros.php" method="POST">
 
-                <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaEncontroAdm['idEncontro']; ?>">
+                <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaEncontro['idEncontro']; ?>">
 
                 <label>Nome Encontro</label>
-                <input type="text"  class="form-control" required name="nomeEncontro" value="<?php echo $rows_consultaEncontroAdm['nomeEncontro']; ?>">
+                <input type="text" readonly class="form-control" required name="nomeEncontro" value="<?php echo $rows_consultaEncontro['nomeEncontro']; ?>">
 
               
 
                 <label>Descrição</label>
-                <input type="text" class="form-control" required name="descricao" value="<?php echo $rows_consultaEncontroAdm['descricao']; ?>">
+                <input type="text" class="form-control" required name="descricao" value="<?php echo $rows_consultaEncontro['descricao']; ?>">
 
                 <label>Data do Encontro</label>
-                <input type="date" class="form-control" required name="dt" value="<?php echo $rows_consultaEncontroAdm['dt']; ?>">
+                <input type="date" class="form-control" required name="dt" value="<?php echo $rows_consultaEncontro['dt']; ?>">
              
 
                 <label>Horário de Início</label>
-                <input type="time" class="form-control" required name="horaInicio"  value="<?php echo $rows_consultaEncontroAdm['horaInicio']; ?>">
+                <input type="time" class="form-control" required name="horaInicio"  value="<?php echo $rows_consultaEncontro['horaInicio']; ?>">
 
               
                 <label>Horário Final</label>
-                <input type="time" class="form-control" required name="horaFinal" value="<?php echo $rows_consultaEncontroAdm['horaFinal']; ?>">
+                <input type="time" class="form-control" required name="horaFinal" value="<?php echo $rows_consultaEncontro['horaFinal']; ?>">
 
                 <label>Polo</label>
-                <select class="form-control" required name="idPolo" >
+                <select class="form-control" required name="idPolo" readonly>
                   <option value="">Selecione o Polo</option>
                   <?php
                     $resultado_Polos = mysqli_query($con, "SELECT * FROM polo");
                     while ($row_Polos = mysqli_fetch_assoc($resultado_Polos)) { ?>
-                    <option value="<?php echo $row_Polos['idPolo']; ?>" <?php if ($rows_consultaEncontroAdm['idPolo'] == $row_Polos['idPolo']) echo 'selected'; ?>><?php echo $row_Polos['nomePolo']; ?></option>
+                    <option value="<?php echo $row_Polos['idPolo']; ?>" <?php if ($rows_consultaEncontro['idPolo'] == $row_Polos['idPolo']) echo 'selected'; ?>><?php echo $row_Polos['nomePolo']; ?></option>
                   <?php } ?> } ?>
                 </select>
 
@@ -212,7 +219,8 @@ while ($rows_consultaEncontroAdm = mysqli_fetch_assoc($resultado_consultaEncontr
 
     
   </tr>
-                  <?php  } }?>
+
+<?php } }?>
                   </tbody>
                 </table>
               </div>

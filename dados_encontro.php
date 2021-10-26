@@ -51,23 +51,9 @@ $res = $con-> query($result_consultaChamada);
 $linha = $res->fetch_assoc();
 
 }else{
-  $idPolo = $_GET['idPolo'];
-  $result_consultaChamada = "SELECT E.idEncontro,
-E.nomeEncontro,
-E.descricao,
-E.dt,
-E.horaInicio,
-E.horaFinal,
-E.idPolo,
-M.idMonitor,
-A.idAluno,
-A.nomeAluno,
-A.idPolo,
-A.status,
-A.dtNascimento
-from encontro E, aluno A monitor M
-where  A.idPolo = E.idPolo and M.idPolo = E.idPolo and A.status = 1 and E.idEncontro = $idEncontros   ";
-$resultado_consultaChamada = mysqli_query($con, $result_consultaChamada);
+
+    $resultado_consultaChamada = mysqli_query($con,"SELECT A.nomeAluno,A.dtNascimento, A.idAluno, E.idEncontro, P.idPolo FROM aluno A INNER JOIN polo P ON P.idPolo = A.idPolo INNER JOIN encontro E ON E.idPolo = P.idPolo where E.idEncontro = $idEncontros");
+  
 }
 
 
@@ -218,8 +204,8 @@ if($linha2['presenca'] == 0){
                                 <div class="modal-body">
                                   <form action="alterar_chamada_alunos.php" method="POST">
                                  
-                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
-                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php echo $rows_consultaChamada['idMonitor']; ?>">
+                                 
+                                  <input type="text" readonly hidden name="idMonitor" class="form-control" value="<?php if(!empty($_SESSION['idMonitor'])){ echo $rows_consultaChamada['idMonitor']; } else{ echo '27'; } ?>">
                                   <input type="text" readonly hidden name="idEncontro" class="form-control" value="<?php echo $rows_consultaChamada['idEncontro']; ?>">
                                     <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaChamada['idAluno']; ?>">
                                    
