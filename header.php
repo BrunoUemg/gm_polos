@@ -550,6 +550,11 @@ $resultado_final = mysqli_fetch_array($result);
                                             <span class="sub-item">Relatório geral dos alunos</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="relatorio_aniversariante_mes.php">
+                                            <span class="sub-item">Relatório aniversariante do mês</span>
+                                        </a>
+                                    </li>
                                     
                                 </ul>
                             </div>
