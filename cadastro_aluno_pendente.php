@@ -3,31 +3,30 @@ include_once "header.php";
 
 include_once "dao/conexao.php";
 
-if(isset($_POST['idAluno'])){
-if(!empty($_FILES["fichaDigitalizada"]["name"])){
-  $pasta_arquivo = "digitalizados/";
-  
-  $idAluno = $_POST['idAluno'];
+if (isset($_POST['idAluno'])) {
+  if (!empty($_FILES["fichaDigitalizada"]["name"])) {
+    $pasta_arquivo = "digitalizados/";
 
-  $formatos = array("png","jpeg","jpg","pdf","PNG","JPEG","JPG");
-  $extensao = pathinfo($_FILES['fichaDigitalizada']['name'], PATHINFO_EXTENSION);
+    $idAluno = $_POST['idAluno'];
 
-  if(in_array($extensao, $formatos)){
-    $pasta = "digitalizados/";
-    $temporario = $_FILES['fichaDigitalizada']['tmp_name'];
-    $arquivo = uniqid().".$extensao";
+    $formatos = array("png", "jpeg", "jpg", "pdf", "PNG", "JPEG", "JPG");
+    $extensao = pathinfo($_FILES['fichaDigitalizada']['name'], PATHINFO_EXTENSION);
 
-    if(move_uploaded_file($temporario, $pasta.$arquivo)){
-      $sql = "UPDATE aluno SET fichaDigitalizada = '$arquivo' where idAluno = '$idAluno'";
-      $con->query("UPDATE processamento_cadastro set etapa = 'Concluído', status = 1 where idAluno = '$idAluno'");
+    if (in_array($extensao, $formatos)) {
+      $pasta = "digitalizados/";
+      $temporario = $_FILES['fichaDigitalizada']['tmp_name'];
+      $arquivo = uniqid() . ".$extensao";
+
+      if (move_uploaded_file($temporario, $pasta . $arquivo)) {
+        $sql = "UPDATE aluno SET fichaDigitalizada = '$arquivo' where idAluno = '$idAluno'";
+        $con->query("UPDATE processamento_cadastro set etapa = 'Concluído', status = 1 where idAluno = '$idAluno'");
+      }
+    }
+    if ($con->query($sql) === true) {
+    } else {
+      echo "Erro para inserir: " . $con->error;
     }
   }
-if($con->query($sql)=== true){ 
-  
-} else {
-     echo "Erro para inserir: " . $con->error; }
-
-}
 }
 
 $result_consultaAlunoAdm = "SELECT * FROM processamento_cadastro P INNER JOIN aluno A ON  A.idAluno = P.idAluno where A.status = 1 and P.status = 0 ";
@@ -54,52 +53,56 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
                       <th>Nome</th>
                       <th>Data de Nascimento</th>
                       <th>Etapa</th>
-                   
+
                       <th></th>
                     </tr>
                   </thead>
-                
+
                   <tbody>
 
-                    <?php 
-                    if($_SESSION['idMonitor'] != 0){
-                    while ($rows_consultaAluno = mysqli_fetch_assoc($resultado_consultaAluno)) {
+                    <?php
+                    if ($_SESSION['idMonitor'] != 0) {
+                      while ($rows_consultaAluno = mysqli_fetch_assoc($resultado_consultaAluno)) {
+                    ?>
+                        <tr>
+                          <td><?php echo $rows_consultaAluno['nomeAluno']; ?></td>
+
+                          <td><?php echo $rows_consultaAluno['dtNascimento']; ?></td>
+
+
+                          <td>
+                            <?php echo "<a class='btn btn-default' title='Vizualizar boletim' href='visualizar_boletim.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-search"></i><?php echo "</a>"; ?>
+
+                          </td>
+
+
+
+                        </tr>
+                      <?php }
+                    } else {
+                      while ($rows_consultaAluno = mysqli_fetch_assoc($resultado_consultaAlunoAdm)) {
                       ?>
-                      <tr>
-                        <td><?php echo $rows_consultaAluno['nomeAluno']; ?></td>
-                       
-                        <td><?php echo $rows_consultaAluno['dtNascimento']; ?></td>
-                     
+                        <tr>
+                          <td><?php echo $rows_consultaAluno['nomeAluno']; ?></td>
 
-                        <td>
-                        <?php echo "<a class='btn btn-default' title='Vizualizar boletim' href='visualizar_boletim.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-search"></i><?php echo "</a>"; ?>
-                   
-                        </td>
+                          <td><?php echo $rows_consultaAluno['dtNascimento']; ?></td>
+                          <td><?php echo $rows_consultaAluno['etapa']; ?></td>
 
 
-                        
-                      </tr>
-                    <?php } } else{
-                          while ($rows_consultaAluno = mysqli_fetch_assoc($resultado_consultaAlunoAdm)) {
-                            ?>
-                             <tr>
-                        <td><?php echo $rows_consultaAluno['nomeAluno']; ?></td>
-                       
-                        <td><?php echo $rows_consultaAluno['dtNascimento']; ?></td>
-                        <td><?php echo $rows_consultaAluno['etapa']; ?></td>
-                            
+                          <td>
 
-                        <td>
+                            <?php
+                            if ($rows_consultaAluno['etapa'] == 'Finalização') {
+                              echo "<a class='btn btn-default' title='Finalização' href='processamento_alunos_pendentes.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?>Continuar<?php echo "</a>";
+                            } elseif ($rows_consultaAluno['etapa'] == 'Continuação cadastro') {
+                            echo "<a class='btn btn-default' title='Cadastro' href='cadastrar_alunos.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?>Continuar<?php echo "</a>";
+                            } else {
 
-                        <?php 
-                        if($rows_consultaAluno['etapa'] == 'Finalização' ){
-                        echo "<a class='btn btn-default' title='Vizualizar boletim' href='processamento_alunos_pendentes.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?>Continuar<?php echo "</a>"; }
-                        else{
-                        
-                        echo "<a class='btn btn-default' title='Alterar' href='cadastro_aluno_pendente.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalInserir" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-upload"></i><?php echo "</a>"; } ?>
-                        
-                   
-                        <div class="modal fade" id="ModalInserir<?php echo $rows_consultaAluno['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            echo "<a class='btn btn-default' title='Alterar' href='cadastro_aluno_pendente.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalInserir" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-upload"></i><?php echo "</a>";
+                                                                                                                                                                                                                                                                            } ?>
+
+
+                          <div class="modal fade" id="ModalInserir<?php echo $rows_consultaAluno['idAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -111,12 +114,12 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
                                 <div class="modal-body">
                                   <form action="" method="POST" enctype="multipart/form-data">
 
-                                    <input type="text" readonly hidden  name="idAluno" class="form-control" value="<?php echo $rows_consultaAluno['idAluno']; ?>">
-                                  
-                                  
-                                 <label for="">Ficha</label>
-                                 <input type="file" name="fichaDigitalizada" class="form-control" id="">
-                     
+                                    <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaAluno['idAluno']; ?>">
+
+
+                                    <label for="">Ficha</label>
+                                    <input type="file" name="fichaDigitalizada" class="form-control" id="">
+
                                 </div>
                                 <div class="modal-footer">
                                   <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
@@ -127,12 +130,13 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
                               </div>
                             </div>
                           </div>
-                        </td>
+                          </td>
 
 
-                      </tr>
-                        
-                    <?php } }  ?>
+                        </tr>
+
+                    <?php }
+                    }  ?>
                   </tbody>
                 </table>
               </div>
@@ -142,13 +146,13 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
       </div>
     </div>
   </div>
-  
+
 
   <script src="jquery/jquery-3.4.1.min.js"></script>
   <script src="js/states.js"></script>
   <script src="js/mascaras.js"></script>
 
-  
+
   <script>
     $(document).ready(function() {
       $('#basic-datatables').DataTable({
@@ -182,6 +186,6 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
 
 
   <?php
-include_once("footer.php");
+  include_once("footer.php");
 
-?>
+  ?>

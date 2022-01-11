@@ -19,6 +19,7 @@
 
 include_once "dao/conexao.php";
 session_start();
+$idAluno = $_POST['idAluno'];
 $nomeAluno = $_POST["nomeAluno"];
 $dtNascimento = $_POST["dtNascimento"];
 $sexo = $_POST["sexo"];
@@ -27,6 +28,7 @@ $profissaoPai = $_POST["profissaoPai"];
 $nomeMae = $_POST["nomeMae"];
 $profissaoMae = $_POST["profissaoMae"];
 $enderecoResidencial = $_POST["enderecoResidencial"];
+$cep = $_POST["cep"];
 $bairro = $_POST["bairro"];
 $telefoneContato = $_POST["telefoneContato"];
 $idPolo = $_POST["idPolo"];
@@ -45,32 +47,18 @@ $numeroEndereco = $_POST["numeroEndereco"];
 $graduacao = $_POST['graduacao'];
 $dataInicioGraduacao = $_POST['dataInicioGraduacao'];
 
-if(isset($_POST['cadastrar_aluno'])){
-  $select = mysqli_query($con, "SELECT * FROM aluno where cpfAluno = '$cpfAluno'");
-
-  if(mysqli_num_rows($select) > 1){
-    echo "<script>alert('Jovem ja cadastrado!');window.location='cadastrar_alunos.php'</script>";
-    exit();
-  }
-}
 
 
-$con->query("INSERT INTO aluno ( nomeAluno, dtNascimento, nomePai, profissaoPai, nomeMae, profissaoMae, sexo, enderecoResidencial, bairro, idPolo, telefoneContato, escola, anoEscola, turmaEscola, turnoEscola,
-nacionalidadeAluno, nacionalidadeResponsavel, rgAluno, cpfAluno, rgResponsavel, cpfResponsavel, dtMatricula, status, numeroEndereco, graduacao ) VALUES ('$nomeAluno', '$dtNascimento', '$nomePai', '$profissaoPai', '$nomeMae', '$profissaoMae', 
-'$sexo', '$enderecoResidencial', '$bairro', '$idPolo', '$telefoneContato','$escola', '$anoEscola', '$turmaEscola', '$turnoEscola',
-'$nacionalidadeAluno', '$nacionalidadeResponsavel', '$rgAluno', '$cpfAluno', '$rgResponsavel', '$cpfResponsavel','$dtMatricula', 1, '$numeroEndereco', '$graduacao' )");
+$con->query("UPDATE  aluno SET nomeAluno = '$nomeAluno', dtNascimento = '$dtNascimento', 
+enderecoResidencial = '$enderecoResidencial' , bairro = '$bairro', numeroEndereco = '$numeroEndereco',
+nomePai = '$nomePai', profissaoPai = '$profissaoPai', nomeMae = '$nomeMae', profissaoMae = '$profissaoMae' , telefoneContato = '$telefoneContato',
+sexo = '$sexo', escola = '$escola', anoEscola = '$anoEscola', turmaEscola = '$turmaEscola', turnoEscola = '$turnoEscola',
+idPolo = '$idPolo', status = '1', 
+dataDesligamento = '$dataDesligamento', nacionalidadeAluno = '$nacionalidadeAluno', nacionalidadeResponsavel = '$nacionalidadeResponsavel',
+rgAluno = '$rgAluno', cpfAluno = '$cpfAluno', rgResponsavel = '$rgResponsavel', cpfResponsavel = '$cpfResponsavel',
+dtMatricula = '$dtMatricula', graduacao = '$graduacao', cep = '$cep'  where idAluno ='$idAluno'");
 
-
-
-
-
-  $query = mysqli_query($con, "SELECT Max(idAluno)  AS codigo FROM aluno");
-  $result = mysqli_fetch_array($query);
   
-  $idAluno = $result['codigo'];
-  
-  
-    
   $sql_documentos = "SELECT * FROM documentos";
   $sql_resultado_documento = mysqli_query($con, $sql_documentos);
   
@@ -111,7 +99,7 @@ $sql7 = "INSERT INTO movimentacao (dataMovimentacao, descricao,idAluno) VALUES (
 if ($con->query($sql7)=== TRUE ){
 
 
-$con->query("INSERT INTO processamento_cadastro (etapa, status, idAluno)VALUES('Finalização', '0', '$idAluno')");
+$con->query("UPDATE processamento_cadastro set etapa = 'Finalização' where idAluno = '$idAluno'");
 
 
   } 

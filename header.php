@@ -392,10 +392,11 @@ $resultado_final = mysqli_fetch_array($result);
                                 <div class="collapse" id="alunos">
                                     <ul class="nav nav-collapse">
                                         <li>
-                                            <a href="cadastrar_alunos.php">
-                                                <span class="sub-item">Cadastrar</span>
+                                            <a href="cadastro_aluno_inicial.php">
+                                                <span class="sub-item">Inicial</span>
                                             </a>
                                         </li>
+                                       
                                         <li>
                                             <a href="cadastro_aluno_pendente.php">
                                                 <span class="sub-item">Cadastros pendentes</span>
