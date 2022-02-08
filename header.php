@@ -6,7 +6,7 @@ if (isset($_SESSION['projoc'])) {
 } else {
     header('location: ./login.php');
     header('Content-type: application/pdf');
-    header('Content-Disposition: inline; filename="' .$filename. '"');
+    header('Content-Disposition: inline; filename="' . $filename . '"');
     header('Content-Transfer-Encoding; binary');
     header('Accept-Ranges; bytes');
 }
@@ -24,8 +24,8 @@ $resultado_final = mysqli_fetch_array($result);
     <meta charset="UTF-8" />
     <title>PROJOC</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
- 
-    <link rel="icon" href="img/logo.png" type="image/x-icon" /> 
+
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
 
     <!-- Fonts and icons -->
     <script src="js/plugin/webfont/webfont.min.js"></script>
@@ -51,29 +51,29 @@ $resultado_final = mysqli_fetch_array($result);
     <link rel="stylesheet" href="css/select2-bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="datatables/dataTables.bootstrap4.min.css">
-    
+
 
     <script src="jquery/jquery.min.js"></script>
     <script src="js/select2.min.js"></script>
 
 </head>
 <style>
-	.loader {
-		position: fixed;
-		left: 0px;
-		top: 0px;
-		width: 100%;
-		height: 100%;
-		z-index: 9999;
-		background: url('https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif') 50% 40% no-repeat transparent;
-		border-color: transparent;
-	}
+    .loader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url('https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif') 50% 40% no-repeat transparent;
+        border-color: transparent;
+    }
 </style>
 <div id="loader" class="loader"></div>
 <script>
-	window.onload = function(){
-		$(".loader").fadeOut("slow");
-	};
+    window.onload = function() {
+        $(".loader").fadeOut("slow");
+    };
 </script>
 
 <body data-background-color="white">
@@ -83,7 +83,7 @@ $resultado_final = mysqli_fetch_array($result);
             <div class="logo-header" data-background-color="dark2">
 
                 <a href="pagina_principal.php" class="logo">
-            <!--        <img src="img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
+                    <!--        <img src="img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
                     <font color="white"> <strong>PROJOC</strong></font>
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,10 +120,10 @@ $resultado_final = mysqli_fetch_array($result);
                                 <div class="dropdown-user-scroll scrollbar-outer">
                                     <li>
                                         <div class="user-box">
-                                            <div class="avatar-lg"><img src="<?php echo 'upload/'. $resultado_final['foto'] .'' ?>" alt="image profile" class="avatar-img rounded"></div>
+                                            <div class="avatar-lg"><img src="<?php echo 'upload/' . $resultado_final['foto'] . '' ?>" alt="image profile" class="avatar-img rounded"></div>
                                             <div class="u-text">
                                                 <h4><?php echo $_SESSION['nomeUsuario']; ?></h4>
-                                             <!--   <p class="text-muted"><?php echo $_SESSION['email']; ?> -->
+                                                <!--   <p class="text-muted"><?php echo $_SESSION['email']; ?> -->
                                             </div>
                                         </div>
                                     </li>
@@ -150,13 +150,13 @@ $resultado_final = mysqli_fetch_array($result);
                 <div class="sidebar-content">
                     <div class="user">
                         <div class="avatar-sm float-left mr-2">
-                            <img src="<?php echo 'upload/'. $resultado_final['foto'] .'' ?>" alt="..." class="avatar-img rounded-circle">
+                            <img src="<?php echo 'upload/' . $resultado_final['foto'] . '' ?>" alt="..." class="avatar-img rounded-circle">
                         </div>
                         <div class="info">
                             <a data-toggle="collapse" aria-expanded="true">
                                 <span>
                                     <?php echo $_SESSION['nomeUsuario']; ?>
-                                    
+
                                 </span>
                             </a>
                             <div class="clearfix"></div>
@@ -257,7 +257,7 @@ $resultado_final = mysqli_fetch_array($result);
                     </li>
 
                        ';
-                        } 
+                        }
 
                         if ($_SESSION['idMonitor'] != 0 && $_SESSION['idAluno'] == 0 && $_SESSION['tipoAcesso'] == 'Comandante') {
                             echo '
@@ -375,9 +375,8 @@ $resultado_final = mysqli_fetch_array($result);
                     </li>
                         ';
                         }
-                        
-                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0  )
-                        {
+
+                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) {
                             echo ' 
 
                         
@@ -391,6 +390,16 @@ $resultado_final = mysqli_fetch_array($result);
                                 </a>
                                 <div class="collapse" id="alunos">
                                     <ul class="nav nav-collapse">
+                                        <li>
+                                            <a style="cursor:pointer" data-toggle="modal" data-target="#gerar_cadastro">
+                                                <span class="sub-item">Gerar Link para Cadastro</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="consultar_link.php">
+                                                <span class="sub-item">Consultar Link</span>
+                                            </a>
+                                        </li>
                                         <li>
                                             <a href="cadastro_aluno_inicial.php">
                                                 <span class="sub-item">Inicial</span>
@@ -564,11 +573,10 @@ $resultado_final = mysqli_fetch_array($result);
                      
                        
 
-                   '
-                        ;
+                   ';
                         } ?>
-  
-                     
+
+
 
 
 
@@ -579,6 +587,52 @@ $resultado_final = mysqli_fetch_array($result);
             </div>
         </div>
         <!-- End Sidebar -->
+        <!-- Modal Gerador Link para Cadastro --->
+        <div aria-hidden="true" aria-labelledby="gerar_cadastro" role="dialog" tabindex="-1" id="gerar_cadastro" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Gerar Link para Cadastro</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="dao/gerar_link.php" method="POST">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="">Data Inicial</label>
+                                    <input required name="dataInicial" type="date" class="form-control">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="">Horário Inicial</label>
+                                    <input required name="horaInicial" type="time" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="">Data Final</label>
+                                    <input required name="dataFinal" type="date" class="form-control">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="">Horário Final</label>
+                                    <input required name="horaFinal" type="time" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="">Quantidade Cadastro</label>
+                                    <input required name="quantidadeMax" type="number" class="form-control">
+                                </div>                                
+                            </div>
+                            <input type="text" hidden name="idUsuario" autocomplete="off" class="form-control placeholder-no-fix" value=" <?php echo $_SESSION['idUsuario']; ?>">
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-danger" type="button">Cancelar</button>
+                                <button class="btn btn-default" type="submit" type="button">Gerar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Modal -->
         <div aria-hidden="true" aria-labelledby="alterar_senha" role="dialog" tabindex="-1" id="alterar_senha" class="modal fade">
             <div class="modal-dialog">
@@ -613,7 +667,7 @@ $resultado_final = mysqli_fetch_array($result);
 
 
         <!-- modal -->
-     <div aria-hidden="true" aria-labelledby="alterar_foto" role="dialog" tabindex="-1" id="alterar_foto" class="modal fade">
+        <div aria-hidden="true" aria-labelledby="alterar_foto" role="dialog" tabindex="-1" id="alterar_foto" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -626,11 +680,11 @@ $resultado_final = mysqli_fetch_array($result);
                             <input type="file" name="foto" autocomplete="off" class="form-control placeholder-no-fix" required>
                         </div>
 
-                       
-                            <input type="text" hidden name="idUsuario" autocomplete="off" class="form-control placeholder-no-fix" value=" <?php echo $_SESSION['idUsuario'];?>" >
-                        
 
-                     
+                        <input type="text" hidden name="idUsuario" autocomplete="off" class="form-control placeholder-no-fix" value=" <?php echo $_SESSION['idUsuario']; ?>">
+
+
+
                         <div class="modal-footer">
                             <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
                             <button class="btn btn-theme" type="submit" type="button">Enviar</button>
@@ -679,7 +733,7 @@ $resultado_final = mysqli_fetch_array($result);
                 allowClear: true,
                 theme: "bootstrap"
             });
-        </script> 
+        </script>
         <script>
             var password = document.getElementById("nova_senha"),
                 confirm_password = document.getElementById("confirma_senha");
