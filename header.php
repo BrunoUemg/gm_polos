@@ -376,7 +376,7 @@ $resultado_final = mysqli_fetch_array($result);
                         ';
                         }
 
-                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) {
+                        if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0 && $_SESSION['tipoAcesso'] != 'administrativo') {
                             echo ' 
 
                         
@@ -497,6 +497,27 @@ $resultado_final = mysqli_fetch_array($result);
                                 </ul>
                             </div>
                         </li>                
+                            <li class="nav-item">
+                            <a data-toggle="collapse" href="#administrativo">
+                            <i class="fas fa-user"></i>
+                                <p>Administrativos</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="administrativo">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="cadastrar_administrativo.php">
+                                            <span class="sub-item">Cadastrar</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="consultar_administrativo.php">
+                                            <span class="sub-item">Consultar</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>                
                         
                         <li class="nav-item">
                         <a data-toggle="collapse" href="#cargos">
@@ -569,6 +590,55 @@ $resultado_final = mysqli_fetch_array($result);
                                 </ul>
                             </div>
                         </li>
+
+                     
+                       
+
+                   ';
+                        } 
+                        if ($_SESSION['tipoAcesso'] == 'administrativo') {
+                            echo ' 
+
+                        
+                           
+
+                            <li class="nav-item">
+                                <a data-toggle="collapse" href="#alunos">
+                                <i class="fas fa-users"></i>
+                                    <p>Alunos</p>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="alunos">
+                                    <ul class="nav nav-collapse">
+                                        <li>
+                                            <a style="cursor:pointer" data-toggle="modal" data-target="#gerar_cadastro">
+                                                <span class="sub-item">Gerar Link para Cadastro</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="consultar_link.php">
+                                                <span class="sub-item">Consultar Link</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="cadastro_aluno_inicial.php">
+                                                <span class="sub-item">Inicial</span>
+                                            </a>
+                                        </li>
+                                       
+                                        <li>
+                                            <a href="cadastro_aluno_pendente.php">
+                                                <span class="sub-item">Cadastros pendentes</span>
+                                            </a>
+                                        </li>
+    
+                                        
+                                       
+                                    </ul>
+                                </div>
+                            </li>
+
+                          
 
                      
                        
