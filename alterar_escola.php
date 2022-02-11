@@ -4,12 +4,12 @@ include_once "dao/conexao.php";
 
 $idEscola = $_POST["idEscola"];
 $nomeEscola = $_POST["nomeEscola"];
+$idCidade = $_POST['idCidade'];
 
 
 
 
-
-$sql = "UPDATE  escola SET nomeEscola = '$nomeEscola'  where idEscola ='$idEscola' "; 
+$sql = "UPDATE  escola SET nomeEscola = '$nomeEscola', idCidade = '$idCidade'  where idEscola ='$idEscola' "; 
 
 
 

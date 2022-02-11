@@ -183,7 +183,7 @@ $hora_hoje = date("H:i:s");
                                             <select class="form-control" name="escola" required="required">
                                                 <option>Selecione a Escola</option>
                                                 <?php
-                                                $resultado_escola = mysqli_query($con, "SELECT * FROM escola");
+                                                $resultado_escola = mysqli_query($con, "SELECT * FROM escola where idCidade = '$linha_validade[idCidade]'");
                                                 while ($rows_Escola = mysqli_fetch_assoc($resultado_escola)) { ?>
                                                     <option value="<?php echo $rows_Escola['nomeEscola']; ?>"><?php echo ($rows_Escola['nomeEscola']); ?></option>
                                                 <?php } ?>
@@ -194,7 +194,7 @@ $hora_hoje = date("H:i:s");
                                             <select class="form-control" name="idPolo" required="required">
                                                 <option>Selecione o pelotão</option>
                                                 <?php
-                                                $resultado_Polo = mysqli_query($con, "SELECT * FROM polo where status = 1");
+                                                $resultado_Polo = mysqli_query($con, "SELECT * FROM polo where status = 1 and idCidade = '$linha_validade[idCidade]'");
                                                 while ($rows_Polo = mysqli_fetch_assoc($resultado_Polo)) { ?>
                                                     <option value="<?php echo $rows_Polo['idPolo']; ?>"><?php echo $rows_Polo['nomePolo'] . ' - ' . $rows_Polo['localFuncionamento'] . ' - ' . $rows_Polo['enderecoFuncionamento']; ?></option>
                                                 <?php } ?>

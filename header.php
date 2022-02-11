@@ -595,7 +595,7 @@ $resultado_final = mysqli_fetch_array($result);
                        
 
                    ';
-                        } 
+                        }
                         if ($_SESSION['tipoAcesso'] == 'administrativo') {
                             echo ' 
 
@@ -610,21 +610,8 @@ $resultado_final = mysqli_fetch_array($result);
                                 </a>
                                 <div class="collapse" id="alunos">
                                     <ul class="nav nav-collapse">
-                                        <li>
-                                            <a style="cursor:pointer" data-toggle="modal" data-target="#gerar_cadastro">
-                                                <span class="sub-item">Gerar Link para Cadastro</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="consultar_link.php">
-                                                <span class="sub-item">Consultar Link</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cadastro_aluno_inicial.php">
-                                                <span class="sub-item">Inicial</span>
-                                            </a>
-                                        </li>
+                                     
+                                      
                                        
                                         <li>
                                             <a href="cadastro_aluno_pendente.php">
@@ -691,7 +678,19 @@ $resultado_final = mysqli_fetch_array($result);
                                 <div class="col form-group">
                                     <label for="">Quantidade Cadastro</label>
                                     <input required name="quantidadeMax" type="number" class="form-control">
-                                </div>                                
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="">Cidade</label>
+                                    <?php $select_cidade = mysqli_query($con,"SELECT * FROM cidade order by nomeCidade asc"); ?>
+                                   <select name="idCidade" class="form-control" required id="">
+                                       <option value="">Selecione</option>
+                                       <?php while($rows_cidade = mysqli_fetch_assoc($select_cidade)){ ?>
+                                        <option value="<?php echo $rows_cidade['idCidade'] ?>"><?php echo $rows_cidade['nomeCidade'] ?></option>
+                                        <?php } ?>
+                                   </select>
+                                </div>
                             </div>
                             <input type="text" hidden name="idUsuario" autocomplete="off" class="form-control placeholder-no-fix" value=" <?php echo $_SESSION['idUsuario']; ?>">
                             <div class="modal-footer">

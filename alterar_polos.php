@@ -11,13 +11,14 @@ $horaFuncionamento = $_POST["horaFuncionamento"];
 $diaFuncionamento = $_POST["diaFuncionamento"];
 $status = $_POST["status"];
 $dtDesativacao = $_POST["dtDesativacao"];
+$idCidade = $_POST["idCidade"];
 
 
 
 
 $sql = "UPDATE  polo SET nomePolo = '$nomePolo', dtCriacao = '$dtCriacao', enderecoFuncionamento = '$enderecoFuncionamento',
 localFuncionamento = '$localFuncionamento', horaFuncionamento = '$horaFuncionamento', diaFuncionamento = '$diaFuncionamento',
-status = '$status', dtDesativacao = '$dtDesativacao'  where idPolo ='$idPolo' "; 
+status = '$status', dtDesativacao = '$dtDesativacao', idCidade = '$idCidade'  where idPolo ='$idPolo' "; 
 
 
 
