@@ -20,6 +20,7 @@ $telefoneAluno = $_POST["telefoneAluno"];
 $telefoneResponsavel = $_POST["telefoneResponsavel"];
 $cep = $_POST["cep"];
 $token = $_POST['token'];
+$idCidade = $_POST['idCidade'];
 
 
 $select_validade = mysqli_query($con, "SELECT * FROM validade_cadastro where token = '$token'");
@@ -33,8 +34,8 @@ if ($linha_validade['quantidadeMax'] == $linha_validade['quantidadeCadastro']) {
 
 $confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, 
 enderecoResidencial,bairro,telefoneContato,idPolo,escola,dtMatricula,numeroEndereco,telefoneAluno,
-telefoneResponsavel,status,cep)VALUES('$nomeAluno','$dtNascimento','$sexo','$nomePai','$nomeMae','$enderecoResidencial',
-'$bairro','$telefoneContato','$idPolo','$escola','$dtMatricula','$numeroEndereco','$telefoneAluno','$telefoneResponsavel',1,'$cep')");
+telefoneResponsavel,status,cep,idCidade)VALUES('$nomeAluno','$dtNascimento','$sexo','$nomePai','$nomeMae','$enderecoResidencial',
+'$bairro','$telefoneContato','$idPolo','$escola','$dtMatricula','$numeroEndereco','$telefoneAluno','$telefoneResponsavel',1,'$cep','$idCidade')");
 $quantidadeNova = $linha_validade['quantidadeCadastro'] + 1;
 
 $update = $con->query("UPDATE validade_cadastro set quantidadeCadastro = '$quantidadeNova' where token = '$token'");

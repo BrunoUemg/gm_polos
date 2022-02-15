@@ -93,6 +93,7 @@ $hora_hoje = date("H:i:s");
                                             <input class="form-control" maxlength="100" hidden name="token" required="required" value="<?php echo $token ?>" type="text">
                                             <input class="form-control" maxlength="100" name="nomeAluno" required="required" type="text">
                                             <input class="form-control" maxlength="100" hidden name="cadastrar_aluno" required="required" value="1" type="text">
+                                            <input class="form-control" maxlength="100" hidden name="idCidade" required="required" value="<?php $linha_validade['idCidade'] ?>" type="text">
                                         </div>
                                         <div class="col form-group">
                                             <label>Data de Nascimento</label>

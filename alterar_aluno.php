@@ -95,6 +95,7 @@ $parentescoGestante = $_POST["parentescoGestante"];
 $restricoesAlimentosDesc = $_POST["restricoesAlimentosDesc"];
 $cadUnico = $_POST["cadUnico"];
 $bolsaFamilia = $_POST["bolsaFamilia"];
+$idCidade = $_POST["idCidade"];
 
 
 
@@ -116,7 +117,7 @@ sonda = '$sonda', aparelhoAudicao = '$aparelhoAudicao', lentesContato = '$lentes
 picadaInseto = '$picadaInseto', alimentos = '$alimentos', alergiaMedicamentos = '$alergiaMedicamentos', outraAlergia = '$outraAlergia', outraAlergiaDesc = '$outraAlergiaDesc',
 disturbioComportamentoDesc = '$distubioComportamento', disturbioAnsiedadeDesc = '$disturbioAnsiedadeDesc',
 disturbioAlimentarDesc = '$disturbioAlimentarDesc', fisica = '$fisica', intectual = '$intectual', visual = '$visual',
-auditiva = '$auditiva', restricoesAlimentosDesc = '$restricoesAlimentosDesc'  where idAluno ='$idAluno' "; 
+auditiva = '$auditiva', restricoesAlimentosDesc = '$restricoesAlimentosDesc', idCidade = '$idCidade'  where idAluno ='$idAluno' "; 
 
 
 

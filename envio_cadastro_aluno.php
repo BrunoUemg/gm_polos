@@ -46,6 +46,7 @@ $dtMatricula = $_POST["dtMatricula"];
 $numeroEndereco = $_POST["numeroEndereco"];
 $graduacao = $_POST['graduacao'];
 $dataInicioGraduacao = $_POST['dataInicioGraduacao'];
+$idCidade = $_POST['idCidade'];
 
 
 
@@ -56,7 +57,7 @@ sexo = '$sexo', escola = '$escola', anoEscola = '$anoEscola', turmaEscola = '$tu
 idPolo = '$idPolo', status = '1', 
 dataDesligamento = '$dataDesligamento', nacionalidadeAluno = '$nacionalidadeAluno', nacionalidadeResponsavel = '$nacionalidadeResponsavel',
 rgAluno = '$rgAluno', cpfAluno = '$cpfAluno', rgResponsavel = '$rgResponsavel', cpfResponsavel = '$cpfResponsavel',
-dtMatricula = '$dtMatricula', graduacao = '$graduacao', cep = '$cep'  where idAluno ='$idAluno'");
+dtMatricula = '$dtMatricula', graduacao = '$graduacao', cep = '$cep', idCidade = '$idCidade'  where idAluno ='$idAluno'");
 
   
   $sql_documentos = "SELECT * FROM documentos";

@@ -81,6 +81,9 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
                       <?php }
                     } else {
                       while ($rows_consultaAluno = mysqli_fetch_assoc($resultado_consultaAlunoAdm)) {
+
+                        if($_SESSION['idCidade'] = $rows_consultaAluno['idCidade'] || $_SESSION['tipoAcesso'] != 'administrativo'){
+
                       ?>
                         <tr>
                           <td><?php echo $rows_consultaAluno['nomeAluno']; ?></td>
@@ -135,7 +138,7 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
 
                         </tr>
 
-                    <?php }
+                    <?php } }
                     }  ?>
                   </tbody>
                 </table>

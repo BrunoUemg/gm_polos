@@ -17,12 +17,13 @@ $numeroEndereco = $_POST["numeroEndereco"];
 $telefoneAluno = $_POST["telefoneAluno"];
 $telefoneResponsavel = $_POST["telefoneResponsavel"];
 $cep = $_POST["cep"];
+$idCidade = $_POST["idCidade"];
 
 
 $confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, 
 enderecoResidencial,bairro,telefoneContato,idPolo,escola,dtMatricula,numeroEndereco,telefoneAluno,
-telefoneResponsavel,status,cep)VALUES('$nomeAluno','$dtNascimento','$sexo','$nomePai','$nomeMae','$enderecoResidencial',
-'$bairro','$telefoneContato','$idPolo','$escola','$dtMatricula','$numeroEndereco','$telefoneAluno','$telefoneResponsavel',1,'$cep')");
+telefoneResponsavel,status,cep,idCidade)VALUES('$nomeAluno','$dtNascimento','$sexo','$nomePai','$nomeMae','$enderecoResidencial',
+'$bairro','$telefoneContato','$idPolo','$escola','$dtMatricula','$numeroEndereco','$telefoneAluno','$telefoneResponsavel',1,'$cep','$idCidade')");
 
 $query = mysqli_query($con, "SELECT Max(idAluno)  AS codigo FROM aluno");
 $result = mysqli_fetch_array($query);

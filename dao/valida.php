@@ -18,7 +18,8 @@ $id = $linha['idUsuario'];
     $senha_db = $linha['senha'];
 	$idMonitor = $linha['idMonitor'];
 	$idAluno = $linha['idAluno'];	
-	$tipoAcesso = $linha['tipoAcesso'];	
+	$tipoAcesso = $linha['tipoAcesso'];
+    $idCidade = $linha['idCidade'];	
     
 
     if ($usuario == $user && $senha ==$senha_db  )
@@ -30,6 +31,7 @@ $id = $linha['idUsuario'];
 		$_SESSION['idAluno'] = $idAluno;
         $_SESSION['userAcesso'] = $user;
         $_SESSION['tipoAcesso'] = $tipoAcesso;
+        $_SESSION['idCidade'] = $idCidade;
         $_SESSION['projoc'] = true;
 	header('location: ../pagina_principal.php');
     }

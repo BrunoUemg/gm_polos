@@ -100,6 +100,7 @@ A.intectual,
 A.restricoesAlimentosDesc,
 A.fichaDigitalizada,
 A.outro,
+A.idCidade,
 P.idPolo,
 P.nomePolo
 from aluno A, polo P
@@ -1169,6 +1170,22 @@ _______________________
 <label>Número</label>
 <input class="form-control"  maxlength="10" name="numeroEndereco"  required="required" type="text" value="<?php echo $linha['numeroEndereco'];  ?>">
 </div>
+
+<div class="form-group col-md-4">
+                    <label class="col-sm-2 col-sm-2 control-label">Cidade</label>
+                    <select name="idCidade" class="form-control" id="">
+                        <option value="">Selecione</option>
+                        <?php $select_cidade = mysqli_query($con, "SELECT * FROM cidade order by nomeCidade asc");
+
+                        while ($rows_cidade = mysqli_fetch_assoc($select_cidade)) { ?>
+                            <option value="<?php echo $rows_cidade['idCidade'] ?>"<?php if($linha['idCidade'] == $rows_cidade['idCidade']) echo 'selected' ?>><?php echo $rows_cidade['nomeCidade']; ?></option>
+                        <?php  }
+
+                        ?>
+
+
+                    </select>
+                </div>
 
 
 <div class="form-group col-md-4">

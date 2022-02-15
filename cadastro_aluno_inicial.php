@@ -140,7 +140,7 @@ $linha = $res->fetch_assoc();
 
             <div class="row">
 
-                
+
                 <div class="form-group col-md-6">
                     <label>Nome Pai </label>
                     <input class="form-control" maxlength="50" name="nomePai" type="text">
@@ -171,7 +171,7 @@ $linha = $res->fetch_assoc();
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>CEP</label>
-                    <input type="text" class="form-control" id="cep" name="cep"  onkeyup="mascara('##.###-###',this,event,true)">
+                    <input type="text" class="form-control" id="cep" name="cep" onkeyup="mascara('##.###-###',this,event,true)">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -188,9 +188,24 @@ $linha = $res->fetch_assoc();
                     <label>Número</label>
                     <input class="form-control" maxlength="10" name="numeroEndereco" required="required" type="text">
                 </div>
+                <div class="form-group col-md-4">
+                    <label class="col-sm-2 col-sm-2 control-label">Cidade</label>
+                    <select name="idCidade" required class="form-control" id="">
+                        <option value="">Selecione</option>
+                        <?php $select_cidade = mysqli_query($con, "SELECT * FROM cidade order by nomeCidade asc");
+
+                        while ($rows_cidade = mysqli_fetch_assoc($select_cidade)) { ?>
+                            <option value="<?php echo $rows_cidade['idCidade'] ?>"><?php echo $rows_cidade['nomeCidade']; ?></option>
+                        <?php  }
+
+                        ?>
 
 
-               
+                    </select>
+                </div>
+
+
+
 
             </div>
 
@@ -220,9 +235,9 @@ $linha = $res->fetch_assoc();
                     </select>
                 </div>
 
-                
 
-              
+
+
 
 
                 <div class="form-group col-md-4">
@@ -238,7 +253,7 @@ $linha = $res->fetch_assoc();
 
                     </select>
                 </div>
-               
+
 
             </div>
 

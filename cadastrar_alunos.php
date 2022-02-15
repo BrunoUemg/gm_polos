@@ -696,6 +696,22 @@ $linha_aluno = mysqli_fetch_array($select_aluno);
 					<input class="form-control" maxlength="10" value="<?php echo $linha_aluno['numeroEndereco'] ?>" name="numeroEndereco" required="required" type="text">
 				</div>
 
+				<div class="form-group col-md-4">
+                    <label class="col-sm-2 col-sm-2 control-label">Cidade</label>
+                    <select name="idCidade" required class="form-control" id="">
+                        <option value="">Selecione</option>
+                        <?php $select_cidade = mysqli_query($con, "SELECT * FROM cidade order by nomeCidade asc");
+
+                        while ($rows_cidade = mysqli_fetch_assoc($select_cidade)) { ?>
+                            <option value="<?php echo $rows_cidade['idCidade'] ?>"<?php if($linha_aluno['idCidade'] == $rows_cidade['idCidade']) echo 'selected' ?>><?php echo $rows_cidade['nomeCidade']; ?></option>
+                        <?php  }
+
+                        ?>
+
+
+                    </select>
+                </div>
+
 
 				<div class="form-group col-md-4">
 					<label>Telefone</label>
