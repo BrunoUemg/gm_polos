@@ -27,7 +27,7 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
   <div class="content">
     <div class="page-inner">
       <div class="page-header">
-        <h4 class="page-title">Consultar Monitor</h4>
+        <h4 class="page-title">Consultar Comandante</h4>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -42,16 +42,16 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                       <th>Nome</th>
                       <th>CPF</th>
                       <th>Data de Nascimento</th>
-                      <th>PROJOC</th>
+                      <th>Pelotão</th>
                       <th>Tipo Acesso</th>
                       <th></th>
                     </tr>
                   </thead>
-                
+
                   <tbody>
 
                     <?php while ($rows_consultaMonitor = mysqli_fetch_assoc($resultado_consultaMonitor)) {
-                      ?>
+                    ?>
                       <tr>
                         <td><?php echo $rows_consultaMonitor['nomeMonitor']; ?></td>
                         <td><?php echo $rows_consultaMonitor['cpf']; ?></td>
@@ -61,8 +61,8 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
 
                         <td>
                           <?php echo "<a class='btn btn-default' href='consultar_monitores.php?id=" . $rows_consultaMonitor['idMonitor'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaMonitor['idMonitor'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
-                     
-                          <?php  echo "<a  class='btn btn-default' title='Excluir ' href='excluir_monitores.php?idMonitor=" .$rows_consultaMonitor['idMonitor']. "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">"?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
+
+                          <?php echo "<a  class='btn btn-default' title='Excluir ' href='excluir_monitores.php?idMonitor=" . $rows_consultaMonitor['idMonitor'] . "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">" ?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
 
                           <!-- Modal-->
 
@@ -83,7 +83,7 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                                     <label>Nome</label>
                                     <input type="text" class="form-control" required name="nomeMonitor" value="<?php echo $rows_consultaMonitor['nomeMonitor']; ?>">
 
-                                  
+
 
                                     <label>CPF</label>
                                     <input type="text" class="form-control" required name="cpf" value="<?php echo $rows_consultaMonitor['cpf']; ?>" onkeyup="mascara('###.###.###-##',this,event,true)">
@@ -91,9 +91,9 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                                     <label>Data de Nascimento</label>
                                     <input type="date" class="form-control" required name="dtNascimento" value="<?php echo $rows_consultaMonitor['dtNascimento']; ?>">
 
-                                   
 
-                                   
+
+
                                     <label>CEP</label>
                                     <input type="text" class="form-control" required id="cep" name="cep" value="<?php echo $rows_consultaMonitor['cep']; ?>" onkeyup="mascara('##.###-###',this,event,true)">
 
@@ -154,22 +154,22 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                                     <select class="form-control" required name="idPolo">
                                       <option value="">Selecione o Polo</option>
                                       <?php
-                                        $resultado_Polos = mysqli_query($con, "SELECT * FROM polo");
-                                        while ($row_Polos = mysqli_fetch_assoc($resultado_Polos)) { ?>
+                                      $resultado_Polos = mysqli_query($con, "SELECT * FROM polo");
+                                      while ($row_Polos = mysqli_fetch_assoc($resultado_Polos)) { ?>
                                         <option value="<?php echo $row_Polos['idPolo']; ?>" <?php if ($rows_consultaMonitor['idPolo'] == $row_Polos['idPolo']) echo 'selected'; ?>><?php echo $row_Polos['nomePolo']; ?></option>
                                       <?php } ?> } ?>
                                     </select>
 
-                                
-                <label>Nível acesso</label>
-                
-                    <select class="form-control" name="tipoAcesso" required="required">
-                      <option value="">Selecione</option>
-                      <option value="Comandante"<?php if($rows_consultaMonitor['tipoAcesso'] == 'Comandante') echo 'selected'; ?>>Comandante</option>
-                      <option value="Subcomandante" <?php if($rows_consultaMonitor['tipoAcesso'] == 'Subcomandante') echo 'selected'; ?>>Subcomandante</option>
-                    </select>
-                  
-                
+
+                                    <label>Nível acesso</label>
+
+                                    <select class="form-control" name="tipoAcesso" required="required">
+                                      <option value="">Selecione</option>
+                                      <option value="Comandante" <?php if ($rows_consultaMonitor['tipoAcesso'] == 'Comandante') echo 'selected'; ?>>Comandante</option>
+                                      <option value="Subcomandante" <?php if ($rows_consultaMonitor['tipoAcesso'] == 'Subcomandante') echo 'selected'; ?>>Subcomandante</option>
+                                    </select>
+
+
 
 
 
@@ -186,9 +186,9 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                         </td>
 
 
-                      
 
-                        
+
+
                       </tr>
                     <?php } ?>
                   </tbody>
@@ -205,12 +205,60 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
   <script src="js/states.js"></script>
   <script src="js/mascaras.js"></script>
 
-  <?php
-  include_once "footer.php"
-  ?>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+  <!--   Core JS Files   -->
+  <script src="js/core/jquery.3.2.1.min.js"></script>
+  <script src="js/core/popper.min.js"></script>
+  <script src="js/core/bootstrap.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="jquery/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="jquery/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+  <script class="include" type="text/javascript" src="jquery/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="jquery/jquery.scrollTo.min.js"></script>
+  <script src="jquery/jquery.nicescroll.js" type="text/javascript"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- Datatables -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.flash.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.html5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.print.min.js"></script>
+
+
+
+
+
   <script>
     $(document).ready(function() {
       $('#basic-datatables').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+          'print', {
+            extend: 'pdf',
+            text: 'PDF',
+            title: "Relatório geral do comandante",
+            exportOptions: {
+              columns: [0, 1, 2, 3, 4]
+            },
+            key: {
+              key: 'p',
+              altkey: true
+            }
+
+
+          },
+
+          'excel'
+
+        ],
         "language": {
           "sEmptyTable": "Nenhum registro encontrado",
           "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -237,3 +285,15 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
       });
     });
   </script>
+
+
+
+
+
+  <!-- Atlantis JS -->
+  <script src="js/atlantis.min.js"></script>
+
+
+  </body>
+
+  </html>
