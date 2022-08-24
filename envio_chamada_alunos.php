@@ -39,7 +39,7 @@ if(mysqli_num_rows($sql6) > 0){
  while ($rows_consultaJovem = mysqli_fetch_assoc($resultado_consultaJovem)) {
  
   
-$sql5 = "INSERT INTO lista_chamda (idAluno, presenca, dataChamada, idMonitor , idEncontro, idPolo ) VALUES ('$rows_consultaJovem[idAluno]', 0,'$data','$idMonitor',
+$sql5 = "INSERT INTO lista_chamda (idAluno, presenca, dataChamada, idMonitor , idEncontro, idPolo ) VALUES ('$rows_consultaJovem[idAluno]', 1,'$data','$idMonitor',
 '$rows_consultaJovem[idEncontro]',' $rows_consultaJovem[idPolo]'  )";
 
 
@@ -57,7 +57,7 @@ if($con->query($sql5)=== true){
 	 
 	 foreach($a['pres'] as $valor){
 		for ($controle = 0; $controle < $valor; $controle++){
-			$sql = "UPDATE lista_chamda set presenca = 1 where idAluno = $valor and idEncontro = '$idEncontros' ";
+			$sql = "UPDATE lista_chamda set presenca = 0 where idAluno = $valor and idEncontro = '$idEncontros' ";
 		}
 		if($con->query($sql) === true){
 		

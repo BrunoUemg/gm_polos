@@ -101,6 +101,7 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
                             echo "<a class='btn btn-default' title='Cadastro' href='cadastrar_alunos.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?>Continuar<?php echo "</a>";
                             } else {
 
+                            echo "<a class='btn btn-default' title='Imprimir ficha completa' href='imprimir_alunos.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-file-pdf"></i><?php echo "</a>";
                             echo "<a class='btn btn-default' title='Alterar' href='cadastro_aluno_pendente.php?id=" . $rows_consultaAluno['idAluno'] . "' data-toggle='modal' data-target='#ModalInserir" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fas fa-upload"></i><?php echo "</a>";
                                                                                                                                                                                                                                                                             } ?>
 

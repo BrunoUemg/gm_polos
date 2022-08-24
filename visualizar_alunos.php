@@ -1173,7 +1173,7 @@ _______________________
 
 <div class="form-group col-md-4">
                     <label class="col-sm-2 col-sm-2 control-label">Cidade</label>
-                    <select name="idCidade" class="form-control" id="">
+                    <select name="idCidade" required class="form-control" id="">
                         <option value="">Selecione</option>
                         <?php $select_cidade = mysqli_query($con, "SELECT * FROM cidade order by nomeCidade asc");
 
