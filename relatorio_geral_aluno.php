@@ -72,6 +72,7 @@ if(!empty($_POST['idPolo'])){
                       <th>Endereço</th>
                       <th>Bairro</th>
                       <th>idade</th>
+                      <th>Data Nascimento</th>
                       <th>Telefone</th>
                  
                     </tr>
@@ -102,6 +103,7 @@ if(!empty($_POST['idPolo'])){
                       <td><?php echo $rows_aluno['enderecoResidencial']; echo " ".$rows_aluno['numeroEndereco'] ?></td>
                       <td><?php echo $rows_aluno['bairro']; ?></td>
                       <td><?php echo  (calcularIdade($dtNascimento)); echo " anos" ?></td>
+                      <td><?php echo  date("d/m/Y", strtotime($rows_aluno['dtNascimento'])); ?></td>
                       <td><?php echo $rows_aluno['telefoneContato']; ?></td>
                      
                              
