@@ -19,8 +19,18 @@ $id = $linha['idUsuario'];
 	$idMonitor = $linha['idMonitor'];
 	$idAluno = $linha['idAluno'];	
 	$tipoAcesso = $linha['tipoAcesso'];
-    $idCidade = $linha['idCidade'];	
+    $idCidade = $linha['idCidade'];
     
+    // verificação monitor
+    if($idMonitor > 0){
+        $select_monitor = mysqli_query($con, "SELECT * FROM monitor where idMonitor = '$idMonitor' and status = 1");
+    
+        if(mysqli_num_rows($select_monitor) <  1){
+            echo "<script>alert('Usuário desativado!');window.location='../login.php'</script>";
+            exit;
+        }
+    }
+ 
 
     if ($usuario == $user && $senha ==$senha_db  )
     {
@@ -39,5 +49,3 @@ else
 {
 	echo "<script>alert('Usuário ou senha incorreta !');window.location='../login.php'</script>";
 }
-
-?>
