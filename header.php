@@ -69,12 +69,12 @@ $resultado_final = mysqli_fetch_array($result);
         border-color: transparent;
     }
 </style>
-<div id="loader" class="loader"></div>
+<!-- <div id="loader" class="loader"></div>
 <script>
     window.onload = function() {
         $(".loader").fadeOut("slow");
     };
-</script>
+</script> -->
 
 <body data-background-color="white">
     <div class="wrapper">

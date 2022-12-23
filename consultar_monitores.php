@@ -19,7 +19,7 @@ P.idPolo,
 P.nomePolo,
 U.tipoAcesso
 from monitor M, polo P,usuario U
-where M.idPolo = P.idPolo and M.idMonitor = U.idMonitor";
+where M.idPolo = P.idPolo and M.idMonitor = U.idMonitor and M.status = 1";
 $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
 ?>
 
@@ -62,7 +62,7 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                         <td>
                           <?php echo "<a class='btn btn-default' href='consultar_monitores.php?id=" . $rows_consultaMonitor['idMonitor'] . "' data-toggle='modal' data-target='#ModalAlterar" . $rows_consultaMonitor['idMonitor'] . "'>" ?><i class="fas fa-edit"></i><?php echo "</a>"; ?>
 
-                          <?php echo "<a  class='btn btn-default' title='Excluir ' href='excluir_monitores.php?idMonitor=" . $rows_consultaMonitor['idMonitor'] . "' onclick=\"return confirm('Tem certeza que deseja deletar esse registro?');\">" ?> <i class='fas fa-trash-alt'></i><?php echo "</a>";  ?>
+                          <?php echo "<a  class='btn btn-default' title='Desativar ' href='dao/desativar_monitor.php?idMonitor=" . $rows_consultaMonitor['idMonitor'] . "' onclick=\"return confirm('Tem certeza que deseja desativar esse registro?');\">" ?> <i class='fas fa-arrow-down'></i><?php echo "</a>";  ?>
 
                           <!-- Modal-->
 
@@ -177,7 +177,6 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                                 <div class="modal-footer">
                                   <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
                                   <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
-                                  <?php echo "<a class='btn btn-default' href='dao/desativar_monitor.php?idTurma=" . $rows_consultaMonitor['idMonitor'] . "'>" ?>Desativar<?php echo "</a>"; ?>
                                   </form>
 
                                 </div>
