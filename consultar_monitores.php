@@ -177,6 +177,7 @@ $resultado_consultaMonitor = mysqli_query($con, $result_consultaMonitor);
                                 <div class="modal-footer">
                                   <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
                                   <input type="submit" name="enviar" class="btn btn-success" value="Salvar">
+                                  <?php echo "<a class='btn btn-default' href='dao/desativar_monitor.php?idTurma=" . $rows_consultaMonitor['idMonitor'] . "'>" ?>Desativar<?php echo "</a>"; ?>
                                   </form>
 
                                 </div>
