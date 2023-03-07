@@ -11,6 +11,9 @@ $linha_validade = mysqli_fetch_array($select_validade);
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
 
+$result_documentos = "SELECT * FROM documentos  ORDER BY nomeDocumento ";
+$resultado_documentos = mysqli_query($con, $result_documentos);
+
 $data_hoje = date("Y-m-d");
 $hora_hoje = date("H:i:s");
 
@@ -74,7 +77,7 @@ $hora_hoje = date("H:i:s");
                         unset($_SESSION['msg']);
                     } else {
             ?>
-                        <form action="dao/envio_cadastro.php" method="POST">
+                        <form action="dao/envio_cadastro.php" method="POST" enctype="multipart/form-data">
                             <div class="row w-100">
                                 <div class="card">
                                     <div class="card-header">
@@ -93,7 +96,7 @@ $hora_hoje = date("H:i:s");
                                             <input class="form-control" maxlength="100" hidden name="token" required="required" value="<?php echo $token ?>" type="text">
                                             <input class="form-control" maxlength="100" name="nomeAluno" required="required" type="text">
                                             <input class="form-control" maxlength="100" hidden name="cadastrar_aluno" required="required" value="1" type="text">
-                                            <input class="form-control" maxlength="100" hidden name="idCidade" required="required" value="<?php $linha_validade['idCidade'] ?>" type="text">
+                                            <input class="form-control" maxlength="100" hidden name="idCidade" required="required" value="<?php echo $linha_validade['idCidade'] ?>" type="text">
                                         </div>
                                         <div class="col form-group">
                                             <label>Data de Nascimento</label>
@@ -112,6 +115,28 @@ $hora_hoje = date("H:i:s");
                                             </select>
                                         </div>
                                     </div>
+
+                                    <div class="row">
+                                        <div class="col form-group">
+                                            <label for="">CPF do aluno</label>
+                                            <input class="form-control" name="cpfAluno" maxlength="15" required="required" type="text" onkeyup="mascara('###.###.###-##',this,event,true)" value="">
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>RG Aluno (não obrigatório)</label>
+                                            <input class="form-control" name="rgAluno" maxlength="40" type="text">
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>CPF Responsavel</label>
+                                            <input class="form-control" maxlength="100" name="cpfResponsavel" required="required" type="text" onkeyup="mascara('###.###.###-##',this,event,true)">
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>RG Responsavel</label>
+                                            <input class="form-control" maxlength="40" name="rgResponsavel" required="required" type="text">
+                                        </div>
+
+                                    </div>
+
+
 
                                     <div class="row">
                                         <div class="col form-group">
@@ -200,6 +225,51 @@ $hora_hoje = date("H:i:s");
                                                     <option value="<?php echo $rows_Polo['idPolo']; ?>"><?php echo $rows_Polo['nomePolo'] . ' - ' . $rows_Polo['localFuncionamento'] . ' - ' . $rows_Polo['enderecoFuncionamento']; ?></option>
                                                 <?php } ?>
                                             </select>
+                                        </div>
+                                    </div>
+
+
+
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="row w-100">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <center>
+                                            <h3>Dados para matrícula</h3>
+                                        </center>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table id="basic-datatables2" class="display table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Descrição</th>
+                                                        <th>Inserir</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php while ($rows_documentos = mysqli_fetch_assoc($resultado_documentos)) {
+                                                        if ($rows_documentos['obrigatorio'] == 'Sim') {
+                                                    ?>
+
+                                                            <tr>
+                                                                <td><label for=""><?php echo $rows_documentos['nomeDocumento']; ?></label></td>
+                                                                <td><input type="file" name="<?php echo $rows_documentos['variavelDocumento']; ?>" class="form-control" required="required" id="">
+                                                                </td>
+                                                            </tr>
+                                                        <?php } else { ?>
+                                                            <tr>
+                                                                <td><label for=""><?php echo $rows_documentos['nomeDocumento']; ?></label></td>
+                                                                <td><input type="file" name="<?php echo $rows_documentos['variavelDocumento']; ?>" class="form-control" id=""></td>
+                                                            </tr>
+                                                    <?php }
+                                                    } ?>
+
+
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="row">
