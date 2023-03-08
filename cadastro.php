@@ -347,7 +347,7 @@ $hora_hoje = date("H:i:s");
                                         </div>
                                         <div class="col form-group">
                                             <label>Possui problemas cardíacos?</label>
-                                            <Select class="form-control"  name="proCardiaco" maxlength="20" required="required" type="">
+                                            <Select class="form-control"  name="cardiaco" maxlength="20" required="required" type="">
                                                 <option >Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
@@ -355,7 +355,7 @@ $hora_hoje = date("H:i:s");
                                         </div>
                                         <div class="col form-group">
                                             <label>Possui restrição alimentar?</label>
-                                            <Select class="form-control"  name="restricaoAlimentar" maxlength="20" required="required" type="">
+                                            <Select class="form-control"  name="restricoesAlimentos" maxlength="20" required="required" type="">
                                                 <option >Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
@@ -370,8 +370,10 @@ $hora_hoje = date("H:i:s");
                                             <input class="form-control"  maxlength="100" name="numCarteira"  type="text">
                                         </div>
                                         <div class="col form-group">
-                                            <label>Possui alguma condição de saúde mental?</label>
-                                            <input class="form-control" maxlength="50" name="condicaoMental" type="text" required = "required" placeholder="Responda 'Nenhuma' caso não possua">
+                                            <select class="form-control" name="distubioComportamento" id="select4"> 
+                                                <option value="">Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option></select>
                                         </div>
                                     </div>
                                 </div>

@@ -26,6 +26,33 @@ $rgAluno = $_POST['rgAluno'];
 $cpfResponsavel = $_POST['cpfResponsavel'];
 $rgResponsavel = $_POST['rgResponsavel'];
 
+$tipoSanguineo = $_POST['tipoSanguineo'];
+$fatorRh = $_POST['fatorRH'];
+$emergenciasMedicas = $_POST['emergenciasMedicas'];
+$telefoneEmergencia = $_POST['telefoneEmergencia'];
+$avisarEmergencia = $_POST['avisarEmergencia'];
+$permicao = $_POST['permicao'];
+$medContinuos = $_POST['medContinuos'];
+$nomeMedicamento = $_POST['nomeMedicamento'];
+$oculos = $_POST['oculos'];
+$aparelhoDentario = $_POST['aparelhoDentario'];
+$marcapasso = $_POST['nomeMedicamento'];
+$sonda = $_POST['sonda'];
+$aparelhoAudicao = $_POST['aparelhoAudicao'];
+$lentesContato = $_POST['lentesContato'];
+$alergia = $_POST['alergia'];
+$picadaInseto = $_POST['picadaInseto'];
+$alergiaMedicamentos = $_POST['alergiaMedicamentos'];
+$plantas = $_POST['plantas'];
+$alimentos = $_POST['alimentos'];
+$outraAlergia = $_POST['outraAlergia'];
+$outraAlergiaDesc = $_POST['outraAlergiaDesc'];
+$nadar = $_POST['nadar'];
+$cardiaco = $_POST['cardiaco'];
+$restricoesAlimentos = $_POST['restricoesAlimentos'];
+$planoMedico = $_POST['planoMedico'];
+$numCarteira = $_POST['numCarteira'];
+$distubioComportamento = $_POST['distubioComportamento'];
 
 $select_validade = mysqli_query($con, "SELECT * FROM validade_cadastro where token = '$token'");
 $linha_validade = mysqli_fetch_array($select_validade);
@@ -38,9 +65,9 @@ if ($linha_validade['quantidadeMax'] == $linha_validade['quantidadeCadastro']) {
 
 $confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, 
 enderecoResidencial,bairro,telefoneContato,idPolo,escola,dtMatricula,numeroEndereco,telefoneAluno,
-telefoneResponsavel,status,cep,idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel)VALUES('$nomeAluno','$dtNascimento','$sexo','$nomePai','$nomeMae','$enderecoResidencial',
+telefoneResponsavel,status,cep,idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRH, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, nomeMedicamento, oculos, aparelhoDentario, nomeMedicamento, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)VALUES('$nomeAluno','$dtNascimento','$sexo','$nomePai','$nomeMae','$enderecoResidencial',
 '$bairro','$telefoneContato','$idPolo','$escola','$dtMatricula','$numeroEndereco','$telefoneAluno','$telefoneResponsavel',1,'$cep','$idCidade', '$cpfAluno', '$rgAluno',
-'$cpfResponsavel', '$rgResponsavel')");
+'$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
 $quantidadeNova = $linha_validade['quantidadeCadastro'] + 1;
 
 $update = $con->query("UPDATE validade_cadastro set quantidadeCadastro = '$quantidadeNova' where token = '$token'");
