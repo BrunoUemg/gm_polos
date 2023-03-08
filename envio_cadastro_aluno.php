@@ -100,7 +100,7 @@ $sql7 = "INSERT INTO movimentacao (dataMovimentacao, descricao,idAluno) VALUES (
 if ($con->query($sql7)=== TRUE ){
 
 
-$con->query("UPDATE processamento_cadastro set etapa = 'Finalização' where idAluno = '$idAluno'");
+$con->query("UPDATE processamento_cadastro set etapa = 'Concluído', status = 1 where idAluno = '$idAluno'");
 
 
   } 

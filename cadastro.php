@@ -199,13 +199,16 @@ $hora_hoje = date("H:i:s");
                             <div class="row w-100">
                                 <div class="card">
                                     <div class="card-header">
-                                        <center><H3>Ficha Médica</H3></center>
+                                        <center>
+                                            <H3>Ficha Médica</H3>
+                                            <div class="alert alert-warning">Atenção, o tipo sanguíneo pode ser analisado no cartão de vacina</div>
+                                        </center>
                                     </div>
                                     <div class="row">
                                         <div class="col form-group">
-                                        <label>Tipo sanguíneo</label>
-                                            <Select class="form-control"  name="tipoSanguineo" maxlength="20" required="required" type="">
-                                                <option >Selecione</option>
+                                            <label>Tipo sanguíneo</label>
+                                            <Select class="form-control" name="tipoSanguineo" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
                                                 <option value="A">A</option>
                                                 <option value="B">B</option>
                                                 <option value="AB">AB</option>
@@ -213,45 +216,50 @@ $hora_hoje = date("H:i:s");
                                             </select>
                                         </div>
                                         <div class="col form-group">
-                                        <label>Fator RH</label>
-                                            <Select class="form-control"  name="fatorRh" maxlength="20" required="required" type="">
-                                                <option >Selecione</option>
+                                            <label>Fator RH</label>
+                                            <Select class="form-control" name="fatorRh" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
                                                 <option value="Positivo">Positivo</option>
                                                 <option value="Negativo">Negativo</option>
                                             </select>
                                         </div>
                                         <div class="col form-group">
-                                        <label>Emergências Médicas</label>
-                                            <Select class="form-control"  name="emergenciasMedicas" maxlength="20" required="required" type="">
-                                                <option >Selecione</option>
+                                            <label>Emergências Médicas</label>
+                                            <Select class="form-control" name="emergenciasMedicas" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
                                                 <option value="Aguardar Acompanhamento dos Pais/Responsavel">Aguardar Acompanhamento dos Pais/Responsável</option>
-                                                <option value="Aceitar decisões médicas">Aceitar decisões médicas<option>              
+                                                <option value="Aceitar decisões médicas">Aceitar decisões médicas
+                                                <option>
                                             </select>
                                         </div>
                                         <div class="col form-group">
-                                        <label>Telefone Emergência</label>
-                                        <input class="form-control"  maxlength="100" name="telefoneEmergencia" required="required" type="text" onkeyup="mascara('(##) #####-####',this,event,true)" >
+                                            <label>Telefone Emergência</label>
+                                            <input class="form-control" maxlength="100" name="telefoneEmergencia" required="required" type="text" onkeyup="mascara('(##) #####-####',this,event,true)">
                                         </div>
                                         <div class="col form-group">
-                                        <label>Avisar em Emergências</label>
-                                            <Select class="form-control"  name="avisarEmergencia" maxlength="20" required="required" type="">
-                                            <option >Selecione</option>
-                                            <option value="Pais/Responsavel">Pais/Responsável</option>
-                                            <option value="Outro">Outro</option>
+                                            <label>Avisar em Emergências</label>
+                                            <Select class="form-control" name="avisarEmergencia" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
+                                                <option value="Pais/Responsavel">Pais/Responsável</option>
+                                                <option value="Outro">Outro</option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col form-group">
                                             <label>Permitir administrar medicamentos por profissionais em sáude que atuam no Grupo</label>
-                                            <Select class="form-control"  name="permicao" maxlength="10" required="required" type="">
+                                            <Select class="form-control" name="permicao" maxlength="10" required="required" type="">
                                                 <option>Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col form-group">
                                             <label>Medicamento continuo?</label>
-                                            <Select class="form-control"  name="medContinuos" maxlength="20" required="required" type="">
-                                                <option >Selecione</option>
+                                            <Select class="form-control" name="medContinuos" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
                                             </select>
@@ -266,39 +274,39 @@ $hora_hoje = date("H:i:s");
                                                 <option value="">Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
-                                            </select>                                            
+                                            </select>
                                         </div>
                                         <div id="pai2">
-                                        <div id="Sim">
+                                            <div id="Sim">
 
-                                            <label for=""> Óculos</label>
-                                            <input   maxlength="100" hidden checked="checked" name="oculos" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="oculos" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Aparelho Dentário</label>
-                                            <input   maxlength="100" hidden checked="checked" name="aparelhoDentario" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="aparelhoDentario" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Marcapasso</label>
-                                            <input   maxlength="100" hidden checked="checked" name="marcapasso" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="marcapasso" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Sonda</label>
-                                            <input   maxlength="100" hidden checked="checked" name="sonda" value="Não"  type="checkbox" >
-                                            <input  maxlength="100" name="sonda" value="Sim" type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Aparelho Audição</label>
-                                            <input   maxlength="100" hidden checked="checked" name="aparelhoAudicao" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="aparelhoAudicao" value="Sim" type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Lentes Contato</label>
-                                            <input   maxlength="100" hidden checked="checked" name="lentesContato" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="lentesContato" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            
-                                            <input  class="form-control" maxlength="100" name="outroEquipamento"  type="text" placeholder="Outro " >
-                                            
-                                        </div>
+                                                <label for=""> Óculos</label>
+                                                <input maxlength="100" hidden checked="checked" name="oculos" value="Não" type="checkbox">
+                                                <input maxlength="100" name="oculos" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Aparelho Dentário</label>
+                                                <input maxlength="100" hidden checked="checked" name="aparelhoDentario" value="Não" type="checkbox">
+                                                <input maxlength="100" name="aparelhoDentario" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Marcapasso</label>
+                                                <input maxlength="100" hidden checked="checked" name="marcapasso" value="Não" type="checkbox">
+                                                <input maxlength="100" name="marcapasso" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Sonda</label>
+                                                <input maxlength="100" hidden checked="checked" name="sonda" value="Não" type="checkbox">
+                                                <input maxlength="100" name="sonda" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Aparelho Audição</label>
+                                                <input maxlength="100" hidden checked="checked" name="aparelhoAudicao" value="Não" type="checkbox">
+                                                <input maxlength="100" name="aparelhoAudicao" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Lentes Contato</label>
+                                                <input maxlength="100" hidden checked="checked" name="lentesContato" value="Não" type="checkbox">
+                                                <input maxlength="100" name="lentesContato" value="Sim" type="checkbox">
+                                                <label for=""></label>
+
+                                                <input class="form-control" maxlength="100" name="outroEquipamento" type="text" placeholder="Outro ">
+
+                                            </div>
                                         </div>
                                         <div class="col form-group">
                                             <label>Alergia</label>
@@ -309,71 +317,73 @@ $hora_hoje = date("H:i:s");
                                             </select>
                                         </div>
                                         <div id="pai">
-                                        <div id="Sim">
+                                            <div id="Sim">
 
-                                            <label for=""> Picada inseto</label>
-                                            <input   maxlength="100" hidden checked="checked" name="picadaInseto" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="picadaInseto" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Medicamento</label>
-                                            <input   maxlength="100" hidden checked="checked" name="alergiaMedicamentos" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="alergiaMedicamentos" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Plantas</label>
-                                            <input   maxlength="100" hidden checked="checked" name="plantas" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="plantas" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Alimentos</label>
-                                            <input   maxlength="100" hidden checked="checked" name="alimentos" value="Não"  type="checkbox" >
-                                            <input  maxlength="100" name="alimentos" value="Sim"  type="checkbox" >
-                                            <label for=""></label>
-                                            <label for=""> Outro</label>
-                                            <input   maxlength="100" hidden checked="checked" name="outraAlergia" value="Não"  type="checkbox" >
-                                            <input   maxlength="100" name="outraAlergia" value="Sim"  type="checkbox" >
-                                            
-                                            <label for=""></label>
-                                            
-                                            <input  class="form-control" maxlength="100" name="outraAlergiaDesc"  type="text" placeholder="Descrever " >
-                                            
-                                        </div>
+                                                <label for=""> Picada inseto</label>
+                                                <input maxlength="100" hidden checked="checked" name="picadaInseto" value="Não" type="checkbox">
+                                                <input maxlength="100" name="picadaInseto" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Medicamento</label>
+                                                <input maxlength="100" hidden checked="checked" name="alergiaMedicamentos" value="Não" type="checkbox">
+                                                <input maxlength="100" name="alergiaMedicamentos" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Plantas</label>
+                                                <input maxlength="100" hidden checked="checked" name="plantas" value="Não" type="checkbox">
+                                                <input maxlength="100" name="plantas" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Alimentos</label>
+                                                <input maxlength="100" hidden checked="checked" name="alimentos" value="Não" type="checkbox">
+                                                <input maxlength="100" name="alimentos" value="Sim" type="checkbox">
+                                                <label for=""></label>
+                                                <label for=""> Outro</label>
+                                                <input maxlength="100" hidden checked="checked" name="outraAlergia" value="Não" type="checkbox">
+                                                <input maxlength="100" name="outraAlergia" value="Sim" type="checkbox">
+
+                                                <label for=""></label>
+
+                                                <input class="form-control" maxlength="100" name="outraAlergiaDesc" type="text" placeholder="Descrever ">
+
+                                            </div>
                                         </div>
                                         <div class="col form-group">
                                             <label>Sabe Nadar?</label>
-                                            <Select class="form-control"  name="nadar" maxlength="20" required="required" type="">
-                                                <option >Selecione</option>
+                                            <Select class="form-control" name="nadar" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
                                             </select>
                                         </div>
                                         <div class="col form-group">
                                             <label>Possui problemas cardíacos?</label>
-                                            <Select class="form-control"  name="cardiaco" maxlength="20" required="required" type="">
-                                                <option >Selecione</option>
+                                            <Select class="form-control" name="cardiaco" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
                                             </select>
                                         </div>
                                         <div class="col form-group">
                                             <label>Possui restrição alimentar?</label>
-                                            <Select class="form-control"  name="restricoesAlimentos" maxlength="20" required="required" type="">
-                                                <option >Selecione</option>
+                                            <Select class="form-control" name="restricoesAlimentos" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
                                                 <option value="Sim">Sim</option>
                                                 <option value="Não">Não</option>
                                             </select>
                                         </div>
                                         <div class="col form-group">
                                             <label>Plano médico</label>
-                                            <input class="form-control"  maxlength="100" name="planoMedico" required="required" type="text">
+                                            <input class="form-control" maxlength="100" name="planoMedico" required="required" type="text">
                                         </div>
                                         <div class="col form-group">
                                             <label>Número carteirinha</label>
-                                            <input class="form-control"  maxlength="100" name="numCarteira"  type="text">
+                                            <input class="form-control" maxlength="100" name="numCarteira" type="text">
                                         </div>
                                         <div class="col form-group">
-                                            <select class="form-control" name="distubioComportamento" id="select4"> 
+                                            <label for="">Possui disturbio comportamental</label>
+                                            <select class="form-control" name="distubioComportamento" id="select4">
                                                 <option value="">Selecione</option>
                                                 <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option></select>
+                                                <option value="Não">Não</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -687,6 +697,133 @@ $hora_hoje = date("H:i:s");
             var selectValor = '#' + $(this).val();
             $('#pai3').children('div').hide();
             $('#pai3').children(selectValor).show();
+        });
+    });
+</Script>
+
+<style>
+    #pai3 div {
+        display: none;
+    }
+</style>
+
+<Script>
+    $(document).ready(function() {
+
+        $('#select3').on('change', function() {
+
+            var selectValor = '#' + $(this).val();
+            $('#pai3').children('div').hide();
+            $('#pai3').children(selectValor).show();
+        });
+    });
+</Script>
+
+<style>
+    #pai4 div {
+        display: none;
+    }
+</style>
+
+<Script>
+    $(document).ready(function() {
+
+        $('#select4').on('change', function() {
+
+            var selectValor = '#' + $(this).val();
+            $('#pai4').children('div').hide();
+            $('#pai4').children(selectValor).show();
+        });
+    });
+</Script>
+
+<style>
+    #pai5 div {
+        display: none;
+    }
+</style>
+
+<Script>
+    $(document).ready(function() {
+
+        $('#select5').on('change', function() {
+
+            var selectValor = '#' + $(this).val();
+            $('#pai5').children('div').hide();
+            $('#pai5').children(selectValor).show();
+        });
+    });
+</Script>
+
+<style>
+    #pai6 div {
+        display: none;
+    }
+</style>
+
+<Script>
+    $(document).ready(function() {
+
+        $('#select6').on('change', function() {
+
+            var selectValor = '#' + $(this).val();
+            $('#pai6').children('div').hide();
+            $('#pai6').children(selectValor).show();
+        });
+    });
+</Script>
+
+
+<style>
+    #pai7 div {
+        display: none;
+    }
+</style>
+
+<Script>
+    $(document).ready(function() {
+
+        $('#select7').on('change', function() {
+
+            var selectValor = '#' + $(this).val();
+            $('#pai7').children('div').hide();
+            $('#pai7').children(selectValor).show();
+        });
+    });
+</Script>
+
+<style>
+    #pai div {
+        display: none;
+    }
+</style>
+
+<style>
+    #pai2 div {
+        display: none;
+    }
+</style>
+
+<Script>
+    $(document).ready(function() {
+
+        $('#select').on('change', function() {
+
+            var selectValor = '#' + $(this).val();
+            $('#pai').children('div').hide();
+            $('#pai').children(selectValor).show();
+        });
+    });
+</Script>
+
+<Script>
+    $(document).ready(function() {
+
+        $('#select2').on('change', function() {
+
+            var selectValor = '#' + $(this).val();
+            $('#pai2').children('div').hide();
+            $('#pai2').children(selectValor).show();
         });
     });
 </Script>

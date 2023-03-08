@@ -34,9 +34,10 @@ $avisarEmergencia = $_POST['avisarEmergencia'];
 $permicao = $_POST['permicao'];
 $medContinuos = $_POST['medContinuos'];
 $nomeMedicamento = $_POST['nomeMedicamento'];
+$equipamentosAuxilio = $_POST['equipamentosAuxilio'];
 $oculos = $_POST['oculos'];
 $aparelhoDentario = $_POST['aparelhoDentario'];
-$marcapasso = $_POST['nomeMedicamento'];
+$marcapasso = $_POST['marcapasso'];
 $sonda = $_POST['sonda'];
 $aparelhoAudicao = $_POST['aparelhoAudicao'];
 $lentesContato = $_POST['lentesContato'];
@@ -63,11 +64,8 @@ if ($linha_validade['quantidadeMax'] == $linha_validade['quantidadeCadastro']) {
     exit();
 }
 
-$confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, 
-enderecoResidencial,bairro,telefoneContato,idPolo,escola,dtMatricula,numeroEndereco,telefoneAluno,
-telefoneResponsavel,status,cep,idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRH, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, nomeMedicamento, oculos, aparelhoDentario, nomeMedicamento, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)VALUES('$nomeAluno','$dtNascimento','$sexo','$nomePai','$nomeMae','$enderecoResidencial',
-'$bairro','$telefoneContato','$idPolo','$escola','$dtMatricula','$numeroEndereco','$telefoneAluno','$telefoneResponsavel',1,'$cep','$idCidade', '$cpfAluno', '$rgAluno',
-'$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
+$confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, enderecoResidencial, bairro, telefoneContato, idPolo, escola, dtMatricula, numeroEndereco, telefoneAluno, telefoneResponsavel, status, cep, idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRH, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, equipamentosAuxilio, oculos, aparelhoDentario, marcapasso, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)
+VALUES ('$nomeAluno', '$dtNascimento', '$sexo', '$nomePai', '$nomeMae', '$enderecoResidencial', '$bairro', '$telefoneContato', '$idPolo', '$escola', '$dtMatricula', '$numeroEndereco', '$telefoneAluno', '$telefoneResponsavel', 1, '$cep', '$idCidade', '$cpfAluno', '$rgAluno', '$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$equipamentosAuxilio' '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
 $quantidadeNova = $linha_validade['quantidadeCadastro'] + 1;
 
 $update = $con->query("UPDATE validade_cadastro set quantidadeCadastro = '$quantidadeNova' where token = '$token'");
@@ -102,9 +100,8 @@ while ($rows_documentos = mysqli_fetch_assoc($sql_resultado_documento)) {
         } else {
             echo "Erro para inserir: " . $con->error;
         }
-    } else{
+    } else {
         echo "n existe";
-       
     }
 }
 
