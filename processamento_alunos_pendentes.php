@@ -370,18 +370,18 @@ $linha = $res->fetch_assoc();
         <h3>Ficha Médica</h3>
             <section>
 
-            <center>   <h3>Ficha Médica</h3> </center>
+            <h3>Ficha Médica</h3>
 
-            <div class="row">
+          <div class="row">
             <div class="form-group col-md-4">
               <label>Tipo sanguíneo</label>
                 <Select class="form-control"  name="tipoSanguineo" maxlength="20" required="required" type="">
                   <option >Selecione</option>
-                <option value="A">A</option>
+                  <option value="A">A</option>
                   <option value="B">B</option>
                   <option value="AB">AB</option>
                   <option value="O">O</option>
-</select>
+                </select>
 </div>
 <div class="form-group col-md-4">
               <label>Fator RH</label>
@@ -431,14 +431,12 @@ $linha = $res->fetch_assoc();
 
 
 <div class="form-group col-md-4">
-              <label>Avisar em Emergências</label>
-                <Select class="form-control"  name="avisarEmergencia" maxlength="20" required="required" type="">
-                  <option >Selecione</option>
-                <option value="Pais/Responsavel">Pais/Responsável</option>
-                  <option value="Outro">Outro</option>
-                  
-                  
-</select>
+  <label>Avisar em Emergências</label>
+    <Select class="form-control"  name="avisarEmergencia" maxlength="20" required="required" type="">
+      <option >Selecione</option>
+      <option value="Pais/Responsavel">Pais/Responsável</option>
+      <option value="Outro">Outro</option>
+    </select>
 </div>
 
 <div class="form-group col-md-4">
@@ -477,7 +475,7 @@ $linha = $res->fetch_assoc();
 <div id="Sim">
 
 <label for=""> Óculos</label>
-<input   maxlength="100" hidden checked="checked" name="oculos" value="Não"  type="checkbox" >
+  <input   maxlength="100" hidden checked="checked" name="oculos" value="Não"  type="checkbox" >
   <input   maxlength="100" name="oculos" value="Sim"  type="checkbox" >
   <label for=""></label>
   <label for=""> Aparelho Dentário</label>

@@ -199,6 +199,186 @@ $hora_hoje = date("H:i:s");
                             <div class="row w-100">
                                 <div class="card">
                                     <div class="card-header">
+                                        <center><H3>Ficha Médica</H3></center>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col form-group">
+                                        <label>Tipo sanguíneo</label>
+                                            <Select class="form-control"  name="tipoSanguineo" maxlength="20" required="required" type="">
+                                                <option >Selecione</option>
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="AB">AB</option>
+                                                <option value="O">O</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                        <label>Fator RH</label>
+                                            <Select class="form-control"  name="fatorRh" maxlength="20" required="required" type="">
+                                                <option >Selecione</option>
+                                                <option value="Positivo">Positivo</option>
+                                                <option value="Negativo">Negativo</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                        <label>Emergências Médicas</label>
+                                            <Select class="form-control"  name="emergenciasMedicas" maxlength="20" required="required" type="">
+                                                <option >Selecione</option>
+                                                <option value="Aguardar Acompanhamento dos Pais/Responsavel">Aguardar Acompanhamento dos Pais/Responsável</option>
+                                                <option value="Aceitar decisões médicas">Aceitar decisões médicas<option>              
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                        <label>Telefone Emergência</label>
+                                        <input class="form-control"  maxlength="100" name="telefoneEmergencia" required="required" type="text" onkeyup="mascara('(##) #####-####',this,event,true)" >
+                                        </div>
+                                        <div class="col form-group">
+                                        <label>Avisar em Emergências</label>
+                                            <Select class="form-control"  name="avisarEmergencia" maxlength="20" required="required" type="">
+                                            <option >Selecione</option>
+                                            <option value="Pais/Responsavel">Pais/Responsável</option>
+                                            <option value="Outro">Outro</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Permitir administrar medicamentos por profissionais em sáude que atuam no Grupo</label>
+                                            <Select class="form-control"  name="permicao" maxlength="10" required="required" type="">
+                                                <option>Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Medicamento continuo?</label>
+                                            <Select class="form-control"  name="medContinuos" maxlength="20" required="required" type="">
+                                                <option >Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Nome do Medicamento </label>
+                                            <input class="form-control" maxlength="50" name="nomeMedicamento" type="text">
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Equipamentos Auxílio</label>
+                                            <select class="form-control" name="equipamentosAuxilio" id="select2">
+                                                <option value="">Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>                                            
+                                        </div>
+                                        <div id="pai2">
+                                        <div id="Sim">
+
+                                            <label for=""> Óculos</label>
+                                            <input   maxlength="100" hidden checked="checked" name="oculos" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="oculos" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Aparelho Dentário</label>
+                                            <input   maxlength="100" hidden checked="checked" name="aparelhoDentario" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="aparelhoDentario" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Marcapasso</label>
+                                            <input   maxlength="100" hidden checked="checked" name="marcapasso" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="marcapasso" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Sonda</label>
+                                            <input   maxlength="100" hidden checked="checked" name="sonda" value="Não"  type="checkbox" >
+                                            <input  maxlength="100" name="sonda" value="Sim" type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Aparelho Audição</label>
+                                            <input   maxlength="100" hidden checked="checked" name="aparelhoAudicao" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="aparelhoAudicao" value="Sim" type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Lentes Contato</label>
+                                            <input   maxlength="100" hidden checked="checked" name="lentesContato" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="lentesContato" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            
+                                            <input  class="form-control" maxlength="100" name="outroEquipamento"  type="text" placeholder="Outro " >
+                                            
+                                        </div>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Alergia</label>
+                                            <select class="form-control" name="alergia" id="select">
+                                                <option value="">Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                        </div>
+                                        <div id="pai">
+                                        <div id="Sim">
+
+                                            <label for=""> Picada inseto</label>
+                                            <input   maxlength="100" hidden checked="checked" name="picadaInseto" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="picadaInseto" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Medicamento</label>
+                                            <input   maxlength="100" hidden checked="checked" name="alergiaMedicamentos" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="alergiaMedicamentos" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Plantas</label>
+                                            <input   maxlength="100" hidden checked="checked" name="plantas" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="plantas" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Alimentos</label>
+                                            <input   maxlength="100" hidden checked="checked" name="alimentos" value="Não"  type="checkbox" >
+                                            <input  maxlength="100" name="alimentos" value="Sim"  type="checkbox" >
+                                            <label for=""></label>
+                                            <label for=""> Outro</label>
+                                            <input   maxlength="100" hidden checked="checked" name="outraAlergia" value="Não"  type="checkbox" >
+                                            <input   maxlength="100" name="outraAlergia" value="Sim"  type="checkbox" >
+                                            
+                                            <label for=""></label>
+                                            
+                                            <input  class="form-control" maxlength="100" name="outraAlergiaDesc"  type="text" placeholder="Descrever " >
+                                            
+                                        </div>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Sabe Nadar?</label>
+                                            <Select class="form-control"  name="nadar" maxlength="20" required="required" type="">
+                                                <option >Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Possui problemas cardíacos?</label>
+                                            <Select class="form-control"  name="proCardiaco" maxlength="20" required="required" type="">
+                                                <option >Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Possui restrição alimentar?</label>
+                                            <Select class="form-control"  name="restricaoAlimentar" maxlength="20" required="required" type="">
+                                                <option >Selecione</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Plano médico</label>
+                                            <input class="form-control"  maxlength="100" name="planoMedico" required="required" type="text">
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Número carteirinha</label>
+                                            <input class="form-control"  maxlength="100" name="numCarteira"  type="text">
+                                        </div>
+                                        <div class="col form-group">
+                                            <label>Possui alguma condição de saúde mental?</label>
+                                            <input class="form-control" maxlength="50" name="condicaoMental" type="text" required = "required" placeholder="Responda 'Nenhuma' caso não possua">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row w-100">
+                                <div class="card">
+                                    <div class="card-header">
                                         <center>
                                             <h3>Dados para matrícula</h3>
                                         </center>
