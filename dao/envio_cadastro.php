@@ -14,6 +14,8 @@ $bairro = $_POST["bairro"];
 $telefoneContato = $_POST["telefoneContato"];
 $idPolo = $_POST["idPolo"];
 $escola = $_POST["escola"];
+$anoEscola = $_POST["anoescola"];
+$turmaEscola = $_POST["turmaEscola"];
 $dtMatricula = date("d/m/Y");
 $numeroEndereco = $_POST["numeroEndereco"];
 $telefoneAluno = $_POST["telefoneAluno"];
@@ -64,8 +66,8 @@ if ($linha_validade['quantidadeMax'] == $linha_validade['quantidadeCadastro']) {
     exit();
 }
 
-$confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, enderecoResidencial, bairro, telefoneContato, idPolo, escola, dtMatricula, numeroEndereco, telefoneAluno, telefoneResponsavel, status, cep, idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRH, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, equipamentosAuxilio, oculos, aparelhoDentario, marcapasso, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)
-VALUES ('$nomeAluno', '$dtNascimento', '$sexo', '$nomePai', '$nomeMae', '$enderecoResidencial', '$bairro', '$telefoneContato', '$idPolo', '$escola', '$dtMatricula', '$numeroEndereco', '$telefoneAluno', '$telefoneResponsavel', 1, '$cep', '$idCidade', '$cpfAluno', '$rgAluno', '$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$equipamentosAuxilio' '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
+$confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, enderecoResidencial, bairro, telefoneContato, idPolo, escola, anoEscola, turmaEscola, dtMatricula, numeroEndereco, telefoneAluno, telefoneResponsavel, status, cep, idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRH, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, equipamentosAuxilio, oculos, aparelhoDentario, marcapasso, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)
+VALUES ('$nomeAluno', '$dtNascimento', '$sexo', '$nomePai', '$nomeMae', '$enderecoResidencial', '$bairro', '$telefoneContato', '$idPolo', '$escola', '$anoEscola', '$turmaEscola', '$dtMatricula', '$numeroEndereco', '$telefoneAluno', '$telefoneResponsavel', 1, '$cep', '$idCidade', '$cpfAluno', '$rgAluno', '$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$equipamentosAuxilio' '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
 $quantidadeNova = $linha_validade['quantidadeCadastro'] + 1;
 
 $update = $con->query("UPDATE validade_cadastro set quantidadeCadastro = '$quantidadeNova' where token = '$token'");

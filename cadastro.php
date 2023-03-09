@@ -407,6 +407,38 @@ $hora_hoje = date("H:i:s");
                                                 <?php } ?>
                                             </select>
                                         </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Turno</label>
+                                            <Select class="form-control" name="turnoEscola" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
+                                                <option value="Matutino" <?php if ($linha_aluno['turnoEscola'] == 'Matutino') echo 'selected'; ?>>Matutino</option>
+                                                <option value="Vespertino" <?php if ($linha_aluno['turnoEscola'] == 'Vespertino') echo 'selected'; ?>>Vespertino</option>
+                                                <option value="Noturno" <?php if ($linha_aluno['turnoEscola'] == 'Noturno') echo 'selected'; ?>>Noturno</option>
+                                                <option value="Integral" <?php if ($linha_aluno['turnoEscola'] == 'Integral') echo 'selected'; ?>>Integral</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Ano Escola</label>
+                                            <Select class="form-control" name="anoEscola" maxlength="20" required="required" type="">
+                                                <option>Selecione</option>
+                                                <option value="1 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '1 Ano Fundamental') echo 'selected'; ?>>1° Ano Fundamental</option>
+                                                <option value="2 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '2 Ano Fundamental') echo 'selected'; ?>>2° Ano Fundamental</option>
+                                                <option value="3 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '3 Ano Fundamental') echo 'selected'; ?>>3° Ano Fundamental</option>
+                                                <option value="4 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '4 Ano Fundamental') echo 'selected'; ?>>4° Ano Fundamental</option>
+                                                <option value="5 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '5 Ano Fundamental') echo 'selected'; ?>>5° Ano Fundamental</option>
+                                                <option value="6 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '6 Ano Fundamental') echo 'selected'; ?>>6° Ano Fundamental</option>
+                                                <option value="7 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '7 Ano Fundamental') echo 'selected'; ?>>7° Ano Fundamental</option>
+                                                <option value="8 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '8 Ano Fundamental') echo 'selected'; ?>>8° Ano Fundamental</option>
+                                                <option value="9 Ano Fundamental" <?php if ($linha_aluno['anoEscola'] == '9 Ano Fundamental') echo 'selected'; ?>>9° Ano Fundamental</option>
+                                                <option value="1 Colegial do Ensino Médio" <?php if ($linha_aluno['anoEscola'] == '1 Colegial do Ensino Médio') echo 'selected'; ?>>1° Colegial Ensino Médio</option>
+                                                <option value="2 Colegial do Ensino Médio" <?php if ($linha_aluno['anoEscola'] == '2 Colegial do Ensino Médio') echo 'selected'; ?>>2° Colegial Ensino Médio</option>
+                                                <option value="3 Colegial do Ensino Médio" <?php if ($linha_aluno['anoEscola'] == '3 Colegial do Ensino Médio') echo 'selected'; ?>>3° Colegial Ensino Médio</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label>Turma Escola</label>
+                                            <input class="form-control" maxlength="100" name="turmaEscola" required="required" type="text" value="<?php echo $linha_aluno['turmaEscola'];  ?>">
+                                        </div>
                                         <div class="col">
                                             <label for="">Pelotão do Aluno</label>
                                             <select class="form-control" name="idPolo" required="required">
