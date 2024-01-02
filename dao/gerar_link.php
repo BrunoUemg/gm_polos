@@ -1,7 +1,5 @@
-<?php
+<?php include "conexao.php"; session_start();
 
-include "conexao.php";
-session_start();
 $dataInicial = $con->escape_string($_POST['dataInicial']);
 $dataFinal = $con->escape_string($_POST['dataFinal']);
 $horaInicial = $con->escape_string($_POST['horaInicial']);
@@ -16,5 +14,5 @@ $con->query("INSERT into validade_cadastro VALUES(null,'$dataInicial','$dataFina
 '$link','$token','0','$quantidadeMax','$idCidade')");
 
 $_SESSION['msg'] = ' <div class="alert alert-success" role="alert"> <p> Link gerado com sucesso! </div> </p> ';
-echo "<script>window.location='../pagina_principal.php'</script>";
-exit();
+echo "<script>window.location='../consultar_link.php';</script>";
+exit(); ?>
