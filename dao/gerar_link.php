@@ -9,7 +9,7 @@ $horaFinal = $con->escape_string($_POST['horaFinal']);
 $quantidadeMax = $con->escape_string($_POST['quantidadeMax']);
 $idCidade = $con->escape_string($_POST['idCidade']);
 $token = password_hash($quantidadeMax, PASSWORD_DEFAULT);
-$link = 'gmfrutal.com/gm_projoc/cadastro.php?tkd=' . $token;
+$link = 'sistemas.gmfrutal.com/gm_projoc/cadastro.php?tkd=' . $token;
 $link = 'localhost/gm_polos/cadastro.php?tkd=' . $token;
 
 $con->query("INSERT into validade_cadastro VALUES(null,'$dataInicial','$dataFinal','$horaInicial','$horaFinal',
