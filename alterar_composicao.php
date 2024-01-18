@@ -5,7 +5,7 @@ if(isset($_POST['idAluno']))
 {
 $idAluno = $_POST['idAluno'];    
 $idComposicao_familiar = $_POST["idComposicao_familiar"];
-$cpfIntegrante_composicao = $_POST["cpfIntegrante_composicao"];
+$cpfAluno_composicao = $_POST["cpfAluno_composicao"];
 $nomeIntegrante = $_POST["nomeIntegrante"];
 $renda = $_POST["renda"];
 $parentesco = $_POST["parentesco"];
@@ -18,7 +18,7 @@ $estadoCivil = $_POST["estadoCivil"];
 
 
 $sql = "UPDATE  composicao_familiar SET nomeIntegrante = '$nomeIntegrante', idAluno = '$idAluno', renda = '$renda', idade = '$idade',
- profissao = '$profissao', parentesco = '$parentesco', escolaridade = '$escolaridade', estadoCivil = '$estadoCivil', cpfIntegrante_composicao = '$cpfIntegrante_composicao' where idComposicao_familiar = '$idComposicao_familiar' "; 
+ profissao = '$profissao', parentesco = '$parentesco', escolaridade = '$escolaridade', estadoCivil = '$estadoCivil', cpfAluno_composicao = '$cpfAluno_composicao' where idComposicao_familiar = '$idComposicao_familiar' "; 
 
 if($con->query($sql)=== true){
   
@@ -31,7 +31,7 @@ if($con->query($sql)=== true){
 }else{
 
     $idComposicao_familiar = $_POST["idComposicao_familiar"];
-    $cpfIntegrante_composicao = $_POST["cpfIntegrante_composicao"];
+    $cpfAluno_composicao = $_POST["cpfAluno_composicao"];
     $nomeIntegrante = $_POST["nomeIntegrante"];
     $renda = $_POST["renda"];
     $parentesco = $_POST["parentesco"];
@@ -41,10 +41,10 @@ if($con->query($sql)=== true){
     $estadoCivil = $_POST["estadoCivil"];
 
     $sql = "UPDATE  composicao_familiar SET nomeIntegrante = '$nomeIntegrante', renda = '$renda', idade = '$idade',
- profissao = '$profissao', parentesco = '$parentesco', escolaridade = '$escolaridade', estadoCivil = '$estadoCivil', cpfIntegrante_composicao = '$cpfIntegrante_composicao' where idComposicao_familiar = '$idComposicao_familiar' "; 
+ profissao = '$profissao', parentesco = '$parentesco', escolaridade = '$escolaridade', estadoCivil = '$estadoCivil', cpfAluno_composicao = '$cpfAluno_composicao' where idComposicao_familiar = '$idComposicao_familiar' "; 
 if($con->query($sql)=== true){
   
-    echo "<script>alert('Cadastro alterado com sucesso!');window.location='cadastrar_composicao.php?idAluno=$idAluno'</script>";
+    echo "<script>alert('Cadastro alterado com sucesso!');window.location='cadastrar_composicao.php?cpfAluno_composicao=$cpfAluno_composicao'</script>";
         }else{
             echo "Erro para inserir: " . $con->error;
         

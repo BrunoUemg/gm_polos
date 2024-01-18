@@ -21,7 +21,7 @@ if($con->query($sql) === true){
         $extensao1 = strtolower(substr($_FILES['pdfAtividade']['name'], -4));
         
     
-        $novo_nome1 = "pdfAtividade-".$idAtividades."-".$idAluno.".".$extensao1; //define o nome do arquivo
+        $novo_nome1 = "pdfAtividade-".$idAtividades.".".$idAluno.".".$extensao1; //define o nome do arquivo
      
     
         $diretorio ="tarefas_concluidas/"; 
@@ -30,7 +30,7 @@ if($con->query($sql) === true){
         
     
     
-    $sql5 = "UPDATE tarefa SET pdfAtividade = '$novo_nome1' where idAtividade ='$idAtividades' and idAluno = '$idAluno'"; 
+    $sql5 = "UPDATE  tarefa SET pdfAtividade = '$novo_nome1' where idAtividade ='$idAtividades' and idAluno = '$idAluno'"; 
     
      if($con->query($sql5)===true){
         $query = mysqli_query($con, "SELECT Max(idTarefa)  AS codigo FROM tarefa where idAluno = '$idAluno' and idAtividade = '$idAtividades'");

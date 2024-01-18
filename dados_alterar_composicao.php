@@ -88,7 +88,7 @@ C.profissao,
 C.escolaridade,
 C.idade,
 C.estadoCivil,
-C.cpfIntegrante_composicao
+C.cpfAluno_composicao
 
 from composicao_familiar C
 where C.idAluno = '$idAluno' and status = 1  ";
@@ -153,8 +153,8 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
                                 </div>
                                 <div class="modal-body">
                                   <form action="alterar_composicao.php" method="POST">
-                                     <label for="">CPF do Integrante</label>
-                                    <input type="text"  name="cpfIntegrante_composicao" class="form-control" value="<?php echo $rows_consultaComposicao['cpfIntegrante_composicao']; ?>" onkeyup="mascara('###.###.###-##',this,event,true)">
+                                     <label for="">CPF aluno</label>
+                                    <input type="text"  name="cpfAluno_composicao" class="form-control" value="<?php echo $rows_consultaComposicao['cpfAluno_composicao']; ?>" onkeyup="mascara('###.###.###-##',this,event,true)">
                                     <input type="text" readonly hidden name="idComposicao_familiar" class="form-control" value="<?php echo $rows_consultaComposicao['idComposicao_familiar']; ?>">
                                     <input type="text" readonly hidden name="idAluno" class="form-control" value="<?php echo $rows_consultaComposicao['idAluno']; ?>">
 
@@ -169,6 +169,8 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
 			  <select class="form-control" name="parentesco" id="">
 				  <option value="">Selecione</option>
 				  <option value="Pai"<?php if($rows_consultaComposicao['parentesco'] == 'Pai') echo 'selected'; ?>>Pai</option>
+				   <option value="Padrasto"<?php if($rows_consultaComposicao['parentesco'] == 'Padrasto') echo 'selected'; ?>>Padrasto</option>
+				    <option value="Madrasta"<?php if($rows_consultaComposicao['parentesco'] == 'Madrasta') echo 'selected'; ?>>Madrasta</option>
 				  <option value="Mãe"<?php if($rows_consultaComposicao['parentesco'] == 'Mãe') echo 'selected'; ?>>Mãe</option>
 				  <option value="Filho"<?php if($rows_consultaComposicao['parentesco'] == 'Filho') echo 'selected'; ?>>Filho</option>
 				  <option value="Irmão"<?php if($rows_consultaComposicao['parentesco'] == 'Irmão') echo 'selected'; ?>>Irmão</option>

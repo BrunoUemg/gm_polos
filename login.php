@@ -59,7 +59,7 @@
 					<div class="form-group">
 					<form action="dao/valida.php" method="POST">
 						<label for="username" class="placeholder"><b>Usuário</b></label>
-						<input id="username" name="user" type="text" class="form-control" required onkeyup="mascara('###.###.###-##',this,event,true)">
+						<input id="username" name="user" type="text" class="form-control" required onkeyup="mascara('###.###.###-####',this,event,true)">
 					</div>
 					<div class="form-group">
 						<label for="password" class="placeholder"><b>Senha</b></label>

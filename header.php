@@ -57,24 +57,7 @@ $resultado_final = mysqli_fetch_array($result);
     <script src="js/select2.min.js"></script>
 
 </head>
-<style>
-    .loader {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: url('https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif') 50% 40% no-repeat transparent;
-        border-color: transparent;
-    }
-</style>
-<!-- <div id="loader" class="loader"></div>
-<script>
-    window.onload = function() {
-        $(".loader").fadeOut("slow");
-    };
-</script> -->
+
 
 <body data-background-color="white">
     <div class="wrapper">

@@ -170,6 +170,8 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
 			  <select class="form-control" name="parentesco" id="">
 				  <option value="">Selecione</option>
 				  <option value="Pai"<?php if($rows_consultaComposicao['parentesco'] == 'Pai') echo 'selected'; ?>>Pai</option>
+				   <option value="Padrasto"<?php if($rows_consultaComposicao['parentesco'] == 'Padrasto') echo 'selected'; ?>>Padrasto</option>
+				    <option value="Madrasta"<?php if($rows_consultaComposicao['parentesco'] == 'Madrasta') echo 'selected'; ?>>Madrasta</option>
 				  <option value="Mãe"<?php if($rows_consultaComposicao['parentesco'] == 'Mãe') echo 'selected'; ?>>Mãe</option>
 				  <option value="Filho"<?php if($rows_consultaComposicao['parentesco'] == 'Filho') echo 'selected'; ?>>Filho</option>
 				  <option value="Irmão"<?php if($rows_consultaComposicao['parentesco'] == 'Irmão') echo 'selected'; ?>>Irmão</option>

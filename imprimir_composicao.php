@@ -62,12 +62,22 @@ A.atestadoescolardigi,
 A.outro,
 A.fotoAluno,
 A.desArquivo1,
+A.desArquivo2,
+A.desArquivo3,
+A.desArquivo4,
+A.desArquivo5,
+A.desArquivo6,
+A.desArquivo7,
+A.desArquivo8,
+A.desArquivo9,
+A.desArquivo10,
 P.idPolo,
 P.nomePolo
 
 from aluno A, polo P
-where A.idPolo = P.idPolo and A.status = 1  ";
-$resultado_consultaAluno = mysqli_query($con, $result_consultaAluno);
+where A.idPolo = P.idPolo and A.status = 1 and A.idAluno = '$idAluno'  ";
+$res = $con-> query($result_consultaAluno);
+$linha = $res->fetch_assoc();
 
 $result_consultaComposicao = "SELECT C.idComposicao_familiar,
 C.idAluno,
@@ -87,7 +97,7 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
   <div class="content">
     <div class="page-inner">
       <div class="page-header">
-       
+        <h4 class="page-title">Composição familiar do Aluno <?php echo $linha['nomeAluno']?></h4>
       </div>
       <div class="row">
 
@@ -113,11 +123,16 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
                 
                   <tbody>
 
-                    <?php while ($rows_consultaComposicao = mysqli_fetch_assoc($resultado_consultaAluno)) {
+                    <?php while ($rows_consultaComposicao = mysqli_fetch_assoc($resultado_consultaComposicao)) {
                       ?>
                       <tr>
-                        <td><?php echo $rows_consultaComposicao['nomeAluno']; ?></td>
+                        <td><?php echo $rows_consultaComposicao['nomeIntegrante']; ?></td>
                        
+                        <td><?php echo $rows_consultaComposicao['renda']; ?></td>
+                        <td><?php echo $rows_consultaComposicao['parentesco']; ?></td>
+                        <td><?php echo $rows_consultaComposicao['idade']; ?></td>
+                        <td><?php echo $rows_consultaComposicao['profissao']; ?></td>
+                        <td><?php echo $rows_consultaComposicao['escolaridade']; ?></td>
                         
                     </div>
                       
@@ -140,10 +155,20 @@ $resultado_consultaComposicao = mysqli_query($con, $result_consultaComposicao);
                     </div>
                     </div>
                     
+<script src="js/mascaras.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
 
-                    <script src="jquery/jquery-3.4.1.min.js"></script>
-  <script src="js/states.js"></script>
-  <script src="js/mascaras.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+
+<script src="js/dataTables.bootstrap4.min.js"></script>
      
        
      
@@ -163,7 +188,7 @@ include_once("footer.php");
         // CRIA UM OBJETO WINDOW
         var win = window.open('', '', 'height=700,width=700');
         win.document.write('<html><head>');
-        win.document.write('<title>Alunos</title>');   // <title> CABEÇALHO DO PDF.
+        win.document.write('<title>Composição familiar de <?php echo $linha['nomeAluno']?></title>');   // <title> CABEÇALHO DO PDF.
         win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
         win.document.write('</head>');
         win.document.write('<div>');
@@ -173,34 +198,3 @@ include_once("footer.php");
         win.print();                                                            // IMPRIME O CONTEUDO
     }
 </script>
-
-
-<script>
-    $(document).ready(function() {
-      $('#basic-datatables').DataTable({
-        "language": {
-          "sEmptyTable": "Nenhum registro encontrado",
-          "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-          "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-          "sInfoFiltered": "(Filtrados de _MAX_ registros)",
-          "sInfoPostFix": "",
-          "sInfoThousands": ".",
-          "sLengthMenu": "_MENU_ resultados por página",
-          "sLoadingRecords": "Carregando...",
-          "sProcessing": "Processando...",
-          "sZeroRecords": "Nenhum registro encontrado",
-          "sSearch": "Pesquisar",
-          "oPaginate": {
-            "sNext": "Próximo",
-            "sPrevious": "Anterior",
-            "sFirst": "Primeiro",
-            "sLast": "Último"
-          },
-          "oAria": {
-            "sSortAscending": ": Ordenar colunas de forma ascendente",
-            "sSortDescending": ": Ordenar colunas de forma descendente"
-          }
-        }
-      });
-    });
-  </script>

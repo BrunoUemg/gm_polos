@@ -14,7 +14,8 @@ $bairro = $_POST["bairro"];
 $telefoneContato = $_POST["telefoneContato"];
 $idPolo = $_POST["idPolo"];
 $escola = $_POST["escola"];
-$anoEscola = $_POST["anoescola"];
+$anoEscola = $_POST["anoEscola"];
+$turnoEscola = $_POST["turnoEscola"];
 $turmaEscola = $_POST["turmaEscola"];
 $dtMatricula = date("d/m/Y");
 $numeroEndereco = $_POST["numeroEndereco"];
@@ -29,7 +30,7 @@ $cpfResponsavel = $_POST['cpfResponsavel'];
 $rgResponsavel = $_POST['rgResponsavel'];
 
 $tipoSanguineo = $_POST['tipoSanguineo'];
-$fatorRh = $_POST['fatorRH'];
+$fatorRh = $_POST['fatorRh'];
 $emergenciasMedicas = $_POST['emergenciasMedicas'];
 $telefoneEmergencia = $_POST['telefoneEmergencia'];
 $avisarEmergencia = $_POST['avisarEmergencia'];
@@ -66,8 +67,8 @@ if ($linha_validade['quantidadeMax'] == $linha_validade['quantidadeCadastro']) {
     exit();
 }
 
-$confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, enderecoResidencial, bairro, telefoneContato, idPolo, escola, anoEscola, turmaEscola, dtMatricula, numeroEndereco, telefoneAluno, telefoneResponsavel, status, cep, idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRH, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, equipamentosAuxilio, oculos, aparelhoDentario, marcapasso, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)
-VALUES ('$nomeAluno', '$dtNascimento', '$sexo', '$nomePai', '$nomeMae', '$enderecoResidencial', '$bairro', '$telefoneContato', '$idPolo', '$escola', '$anoEscola', '$turmaEscola', '$dtMatricula', '$numeroEndereco', '$telefoneAluno', '$telefoneResponsavel', 1, '$cep', '$idCidade', '$cpfAluno', '$rgAluno', '$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$equipamentosAuxilio' '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
+$confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, enderecoResidencial, bairro, telefoneContato, idPolo, escola, anoEscola, turmaEscola, turnoEscola, dtMatricula, numeroEndereco, telefoneAluno, telefoneResponsavel, status, cep, idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRh, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, equipamentosAuxilio, oculos, aparelhoDentario, marcapasso, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)
+VALUES ('$nomeAluno', '$dtNascimento', '$sexo', '$nomePai', '$nomeMae', '$enderecoResidencial', '$bairro', '$telefoneContato', '$idPolo', '$escola', '$anoEscola', '$turmaEscola', '$turnoEscola', '$dtMatricula', '$numeroEndereco', '$telefoneAluno', '$telefoneResponsavel', 1, '$cep', '$idCidade', '$cpfAluno', '$rgAluno', '$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$equipamentosAuxilio', '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
 $quantidadeNova = $linha_validade['quantidadeCadastro'] + 1;
 
 $update = $con->query("UPDATE validade_cadastro set quantidadeCadastro = '$quantidadeNova' where token = '$token'");
@@ -114,6 +115,6 @@ if ($confirma === true) {
     echo "<script>window.location='../cadastro.php?tkd=$token'</script>";
     exit();
 } else {
-    echo "<script>alert('Erro, entre em contato com o suporte!');window.location='cadastro_aluno_inicial.php'</script>";
+    echo "<script>alert('Erro, entre em contato com o suporte!');window.location='../cadastro.php?tkd=$token'</script>";
     exit();
 }

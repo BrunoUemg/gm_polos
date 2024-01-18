@@ -22,13 +22,18 @@ exit();
 } else {
 
 
-$sql1 = "INSERT INTO chamada (dtChamada, idEncontro, idMonitor, idPolo, descricao) VALUES ('$date', '$idEncontro', '$idMonitor', '$idPolo', '$descricao' )";
+$sql1 = "INSERT INTO chamada (dtChamada, idEncontro, idMonitor, idPolo, foto, descricao) VALUES ('$date', '$idEncontro', '$idMonitor', '$idPolo', '$foto', '$descricao' )";
 if ($con->query($sql1) === TRUE){
 
 	$sql2 = "UPDATE encontro SET funcionamento = 'Encerrado' WHERE idEncontro = '$idEncontro' ";
 	if ($con->query($sql2) === TRUE){
 
+echo "<script>window.location='consultar_encontros.php'</script>";
+	}
+} else {
+	echo "Erro para inserir: " . $con->error; 
 
+}
 
 if (isset($_FILES['foto'] )){
 
@@ -48,18 +53,7 @@ if (isset($_FILES['foto'] )){
 
 $sql3 = "UPDATE  chamada SET foto = '$novo_nome1' where idEncontro ='$idEncontro'"; 
 
-} if ($con->query($sql3) === TRUE){ 
-	echo "<script>window.location='consultar_encontros.php'</script>";
-
-}
-
-	}
-} else {
-	echo "Erro para inserir: " . $con->error; 
-
-}
-
-
+} 
 $con->close();
 }
 

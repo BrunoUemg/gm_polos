@@ -1350,8 +1350,8 @@ $resultado_repositorio = mysqli_query($con, $result_repositorio);
 					<label>Avisar em Emergências</label>
 					<Select class="form-control" name="avisarEmergencia" maxlength="20" required="required" type="">
 						<option>Selecione</option>
-						<option value="Pais/Responsavel" <?php if ($linha['avisarEmergencia'] == 'Pais/Responsavel') echo 'selected'; ?>>Pais/Responsável</option>
-						<option value="Outro" <?php if ($linha['permicao'] == 'Outro') echo 'selected'; ?>>Outro</option>
+						<option value="Pais/Responsavel" <?php if ($linha_aluno['avisarEmergencia'] == 'Pais/Responsavel') echo 'selected'; ?>>Pais/Responsável</option>
+						<option value="Outro" <?php if ($linha_aluno['permicao'] == 'Outro') echo 'selected'; ?>>Outro</option>
 
 
 					</select>

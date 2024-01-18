@@ -23,7 +23,7 @@ $valorEnergia = $_POST["valorEnergia"];
 $sql = $con->query("SELECT * FROM ficha_social WHERE idAluno ='$idAluno'");
 
 if(mysqli_num_rows($sql) > 0){
-	echo "<script>alert('Ficha Social já existente! ');window.location='cadastrar_socioeconomica.php'</script>";
+	echo "<script>alert('Ficha Social já existente! ');window.location='cadastrar_socioeconomica.php?idAluno=$idAluno'</script>";
 exit();
 } else {
  !$con->query("INSERT INTO ficha_social (idAluno, gestante, semDocumento, dependenteQuimico, nomeDependenteQui, gastosMedicamentos,

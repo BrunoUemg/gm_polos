@@ -378,7 +378,7 @@ $hora_hoje = date("H:i:s");
                                             <input class="form-control" maxlength="100" name="numCarteira" type="text">
                                         </div>
                                         <div class="col form-group">
-                                            <label for="">Possui disturbio comportamental</label>
+                                            <label for="">possui algum distúrbio ou é neurodivergente (ansiedade, tdah, autismo)?</label>
                                             <select class="form-control" name="distubioComportamento" id="select4">
                                                 <option value="">Selecione</option>
                                                 <option value="Sim">Sim</option>
@@ -407,7 +407,7 @@ $hora_hoje = date("H:i:s");
                                                 <?php } ?>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-4">
+                                        <div class="col">
                                             <label>Turno</label>
                                             <Select class="form-control" name="turnoEscola" maxlength="20" required="required" type="">
                                                 <option>Selecione</option>
@@ -417,7 +417,9 @@ $hora_hoje = date("H:i:s");
                                                 <option value="Integral" <?php if ($linha_aluno['turnoEscola'] == 'Integral') echo 'selected'; ?>>Integral</option>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
                                             <label>Ano Escola</label>
                                             <Select class="form-control" name="anoEscola" maxlength="20" required="required" type="">
                                                 <option>Selecione</option>
@@ -435,7 +437,7 @@ $hora_hoje = date("H:i:s");
                                                 <option value="3 Colegial do Ensino Médio" <?php if ($linha_aluno['anoEscola'] == '3 Colegial do Ensino Médio') echo 'selected'; ?>>3° Colegial Ensino Médio</option>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-4">
+                                        <div class="col">
                                             <label>Turma Escola</label>
                                             <input class="form-control" maxlength="100" name="turmaEscola" required="required" type="text" value="<?php echo $linha_aluno['turmaEscola'];  ?>">
                                         </div>
@@ -461,7 +463,7 @@ $hora_hoje = date("H:i:s");
                                 <div class="card">
                                     <div class="card-header">
                                         <center>
-                                            <h3>Dados para matrícula</h3>
+                                            <h3>Documentos</h3>
                                         </center>
                                     </div>
                                     <div class="card-body">

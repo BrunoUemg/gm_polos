@@ -1,0 +1,1061 @@
+[15-Jan-2024 13:39:20 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[15-Jan-2024 13:39:20 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[15-Jan-2024 13:40:15 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[15-Jan-2024 13:40:15 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[15-Jan-2024 13:40:18 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[15-Jan-2024 13:40:18 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:40:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:40:51 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:41:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:41:48 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:44:05 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:48:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:51:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:52:04 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 13:57:21 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:12 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:27 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:00:29 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:02:28 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:04:40 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:14:46 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 14:28:25 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 17:12:16 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 17:12:43 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[15-Jan-2024 17:50:09 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[16-Jan-2024 14:22:30 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[16-Jan-2024 14:22:30 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[16-Jan-2024 14:22:46 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[16-Jan-2024 14:22:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[16-Jan-2024 14:23:00 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[16-Jan-2024 14:23:00 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[16-Jan-2024 14:23:05 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[16-Jan-2024 14:23:05 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[16-Jan-2024 14:23:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 16:38:49 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 16:38:49 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 16:40:46 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 16:40:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 16:40:51 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 16:40:51 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 16:41:07 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:43:02 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:48:20 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:51:31 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined variable: filename in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 9
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idUsuario in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 14
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 106
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: nomeUsuario in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 108
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 136
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: nomeUsuario in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 141
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idMonitor in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 157
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idAluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 157
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idMonitor in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 245
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idMonitor in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 316
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idMonitor in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 362
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idAluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 362
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: tipoAcesso in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 362
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: tipoAcesso in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 582
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idUsuario in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 678
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Notice:  Undefined index: idUsuario in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 736
+[17-Jan-2024 17:51:32 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 17:55:41 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 17:55:41 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 17:57:24 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 17:57:24 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 17:57:30 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 17:57:30 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 17:57:34 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 18:01:11 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 18:02:53 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 18:02:56 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:02:56 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:03:07 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:03:07 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:03:07 America/Sao_Paulo] PHP Notice:  Undefined index: status in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/consultar_alunos.php on line 127
+[17-Jan-2024 18:03:07 America/Sao_Paulo] PHP Notice:  Undefined index: status in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/consultar_alunos.php on line 127
+[17-Jan-2024 18:03:26 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:03:26 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:03:26 America/Sao_Paulo] PHP Notice:  Undefined index: status in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/consultar_alunos.php on line 127
+[17-Jan-2024 18:03:39 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:03:39 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:03:51 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:03:51 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:04:01 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:04:01 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:04:05 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:04:05 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:04:08 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:04:08 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:04:11 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:04:11 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:04:16 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:04:16 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:04:22 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:04:22 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:19:03 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:19:03 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:19:07 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[17-Jan-2024 18:19:07 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 414
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 415
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 416
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 417
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 426
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 427
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 428
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 429
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 430
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 431
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 432
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 433
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 434
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 435
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 436
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 437
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Undefined variable: linha_aluno in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[17-Jan-2024 18:19:10 America/Sao_Paulo] PHP Notice:  Trying to access array offset on value of type null in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/cadastro.php on line 442
+[18-Jan-2024 10:26:45 America/Sao_Paulo] PHP Notice:  Undefined index: email in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 109
+[18-Jan-2024 10:26:45 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/gmfr6199/sistemas.gmfrutal.com/gm_projoc/header.php on line 768

@@ -780,7 +780,7 @@ $resultado_documentos = mysqli_query($con, $result_repositorio);
 				</div>
 				<div class="form-group col-md-4">
 					<label>Turma Escola</label>
-					<input class="form-control" maxlength="100" name="turmaEscola" required="required" type="text" value="<?php echo $linha_aluno['turmaEscola'];  ?>">
+					<input class="form-control" maxlength="100" name="turmaEscola" type="text" value="<?php echo $linha_aluno['turmaEscola'];  ?>">
 				</div>
 
 
@@ -826,202 +826,222 @@ $resultado_documentos = mysqli_query($con, $result_repositorio);
 
 		</section>
 
+		<h3>Ficha médica</h3>
+		<section>
+			<div class="row w-100">
+				<div class="card">
+					<div class="card-header">
+					</div>
+					<div class="row">
+						<div class="col form-group">
+							<label>Tipo sanguíneo</label>
+							<Select class="form-control" name="tipoSanguineo" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="A" <?php if ($linha_aluno['tipoSanguineo'] ==  'A') echo 'selected'; ?>>A</option>
+								<option value="B" <?php if ($linha_aluno['tipoSanguineo'] ==  'B') echo 'selected'; ?>>B</option>
+								<option value="AB" <?php if ($linha_aluno['tipoSanguineo'] ==  'AB') echo 'selected'; ?>>AB</option>
+								<option value="O" <?php if ($linha_aluno['tipoSanguineo'] ==  'O') echo 'selected'; ?>>O</option>
+							</select>
+						</div>
+						<div class="col form-group">
+							<label>Fator RH</label>
+							<Select class="form-control" name="fatorRh" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="Positivo">Positivo</option>
+								<option value="Negativo">Negativo</option>
+							</select>
+						</div>
+						<div class="col form-group">
+							<label>Emergências Médicas</label>
+							<Select class="form-control" name="emergenciasMedicas" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="Positivo" <?php if ($linha_aluno['fatorRh'] ==  'Positivo') echo 'selected'; ?>>Positivo</option>
+								<option value="Negativo" <?php if ($linha_aluno['fatorRh'] ==  'Negativo') echo 'selected'; ?>>Negativo</option>
+							</select>
+						</div>
+						<div class="col form-group">
+							<label>Telefone Emergência</label>
+							<input class="form-control" maxlength="100" name="telefoneEmergencia" required="required" type="text" onkeyup="mascara('(##) #####-####',this,event,true)" value="<?php echo $linha_aluno['telefoneEmergencia']; ?>">
+						</div>
+						<div class="col form-group">
+							<label>Avisar em Emergências</label>
+							<Select class="form-control" name="avisarEmergencia" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="Pais/Responsavel" <?php if ($linha_aluno['avisarEmergencia'] == 'Pais/Responsavel') echo 'selected'; ?>>Pais/Responsável</option>
+								<option value="Outro" <?php if ($linha_aluno['permicao'] == 'Outro') echo 'selected'; ?>>Outro</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col form-group">
+							<label>Permitir administrar medicamentos por profissionais em sáude que atuam no Grupo</label>
+							<Select class="form-control" name="permicao" maxlength="10" required="required" type="">
+								<option>Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['permicao'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['permicao'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col form-group">
+							<label>Medicamento continuo?</label>
+							<Select class="form-control" name="medContinuos" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['medContinuos'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['medContinuos'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+						<div class="col form-group">
+							<label>Nome do Medicamento </label>
+							<input class="form-control" maxlength="50" name="nomeMedicamento" value="<?php echo $linha['nomeMedicamento']; ?>" type="text">
+						</div>
+						<div class="col form-group">
+							<label>Equipamentos Auxílio</label>
+							<select class="form-control" name="equipamentosAuxilio" id="select2">
+								<option value="">Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['equipamentosAuxilio'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['equipamentosAuxilio'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+						<div id="pai2">
+							<div id="Sim">
 
-		<div class="row w-100">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <center>
-                                            <H3>Ficha Médica</H3>
-                                            <div class="alert alert-warning">Atenção, o tipo sanguíneo pode ser analisado no cartão de vacina</div>
-                                        </center>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col form-group">
-                                            <label>Tipo sanguíneo</label>
-                                            <Select class="form-control" name="tipoSanguineo" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="A">A</option>
-                                                <option value="B">B</option>
-                                                <option value="AB">AB</option>
-                                                <option value="O">O</option>
-                                            </select>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Fator RH</label>
-                                            <Select class="form-control" name="fatorRh" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Positivo">Positivo</option>
-                                                <option value="Negativo">Negativo</option>
-                                            </select>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Emergências Médicas</label>
-                                            <Select class="form-control" name="emergenciasMedicas" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Aguardar Acompanhamento dos Pais/Responsavel">Aguardar Acompanhamento dos Pais/Responsável</option>
-                                                <option value="Aceitar decisões médicas">Aceitar decisões médicas
-                                                <option>
-                                            </select>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Telefone Emergência</label>
-                                            <input class="form-control" maxlength="100" name="telefoneEmergencia" required="required" type="text" onkeyup="mascara('(##) #####-####',this,event,true)">
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Avisar em Emergências</label>
-                                            <Select class="form-control" name="avisarEmergencia" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Pais/Responsavel">Pais/Responsável</option>
-                                                <option value="Outro">Outro</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col form-group">
-                                            <label>Permitir administrar medicamentos por profissionais em sáude que atuam no Grupo</label>
-                                            <Select class="form-control" name="permicao" maxlength="10" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col form-group">
-                                            <label>Medicamento continuo?</label>
-                                            <Select class="form-control" name="medContinuos" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Nome do Medicamento </label>
-                                            <input class="form-control" maxlength="50" name="nomeMedicamento" type="text">
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Equipamentos Auxílio</label>
-                                            <select class="form-control" name="equipamentosAuxilio" id="select2">
-                                                <option value="">Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                        <div id="pai2">
-                                            <div id="Sim">
-
-                                                <label for=""> Óculos</label>
-                                                <input maxlength="100" hidden checked="checked" name="oculos" value="Não" type="checkbox">
-                                                <input maxlength="100" name="oculos" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Aparelho Dentário</label>
-                                                <input maxlength="100" hidden checked="checked" name="aparelhoDentario" value="Não" type="checkbox">
-                                                <input maxlength="100" name="aparelhoDentario" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Marcapasso</label>
-                                                <input maxlength="100" hidden checked="checked" name="marcapasso" value="Não" type="checkbox">
-                                                <input maxlength="100" name="marcapasso" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Sonda</label>
-                                                <input maxlength="100" hidden checked="checked" name="sonda" value="Não" type="checkbox">
-                                                <input maxlength="100" name="sonda" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Aparelho Audição</label>
-                                                <input maxlength="100" hidden checked="checked" name="aparelhoAudicao" value="Não" type="checkbox">
-                                                <input maxlength="100" name="aparelhoAudicao" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Lentes Contato</label>
-                                                <input maxlength="100" hidden checked="checked" name="lentesContato" value="Não" type="checkbox">
-                                                <input maxlength="100" name="lentesContato" value="Sim" type="checkbox">
-                                                <label for=""></label>
-
-                                                <input class="form-control" maxlength="100" name="outroEquipamento" type="text" placeholder="Outro ">
-
-                                            </div>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Alergia</label>
-                                            <select class="form-control" name="alergia" id="select">
-                                                <option value="">Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                        <div id="pai">
-                                            <div id="Sim">
-
-                                                <label for=""> Picada inseto</label>
-                                                <input maxlength="100" hidden checked="checked" name="picadaInseto" value="Não" type="checkbox">
-                                                <input maxlength="100" name="picadaInseto" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Medicamento</label>
-                                                <input maxlength="100" hidden checked="checked" name="alergiaMedicamentos" value="Não" type="checkbox">
-                                                <input maxlength="100" name="alergiaMedicamentos" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Plantas</label>
-                                                <input maxlength="100" hidden checked="checked" name="plantas" value="Não" type="checkbox">
-                                                <input maxlength="100" name="plantas" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Alimentos</label>
-                                                <input maxlength="100" hidden checked="checked" name="alimentos" value="Não" type="checkbox">
-                                                <input maxlength="100" name="alimentos" value="Sim" type="checkbox">
-                                                <label for=""></label>
-                                                <label for=""> Outro</label>
-                                                <input maxlength="100" hidden checked="checked" name="outraAlergia" value="Não" type="checkbox">
-                                                <input maxlength="100" name="outraAlergia" value="Sim" type="checkbox">
-
-                                                <label for=""></label>
-
-                                                <input class="form-control" maxlength="100" name="outraAlergiaDesc" type="text" placeholder="Descrever ">
-
-                                            </div>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Sabe Nadar?</label>
-                                            <Select class="form-control" name="nadar" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Possui problemas cardíacos?</label>
-                                            <Select class="form-control" name="cardiaco" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Possui restrição alimentar?</label>
-                                            <Select class="form-control" name="restricoesAlimentos" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Plano médico</label>
-                                            <input class="form-control" maxlength="100" name="planoMedico" required="required" type="text">
-                                        </div>
-                                        <div class="col form-group">
-                                            <label>Número carteirinha</label>
-                                            <input class="form-control" maxlength="100" name="numCarteira" type="text">
-                                        </div>
-                                        <div class="col form-group">
-                                            <label for="">Possui disturbio comportamental</label>
-                                            <select class="form-control" name="distubioComportamento" id="select4">
-                                                <option value="">Selecione</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+								<label for=""> Óculos: </label>
+								<label for="">Não </label>
+								<input maxlength="100" name="oculos" value="Não" type="checkbox" <?php if ($linha_aluno['oculos'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim </label>
+								<input maxlength="100" name="oculos" value="Sim" type="checkbox" <?php if ($linha_aluno['oculos'] == 'Sim') echo 'checked'; ?>>
+								<label for="">| </label>
+								<label for=""> Aparelho Dentário: </label>
+								<label for="">Não</label>
+								<input maxlength="100" name="aparelhoDentario" value="Não" type="checkbox" <?php if ($linha_aluno['aparelhoDentario'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="aparelhoDentario" value="Sim" type="checkbox" <?php if ($linha_aluno['aparelhoDentario'] == 'Sim') echo 'checked'; ?>>
+								<label for="">| </label>
+								<label for=""> Marcapasso: </label>
+								<label for="">Não</label>
+								<input maxlength="100" name="marcapasso" value="Não" type="checkbox" <?php if ($linha_aluno['marcapasso'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim </label>
+								<input maxlength="100" name="marcapasso" value="Sim" type="checkbox" <?php if ($linha_aluno['marcapasso'] == 'Sim') echo 'checked'; ?>>
+								<label for="">| </label>
+								<label for=""> Sonda: </label>
+								<label for="">Não</label>
+								<input maxlength="100" name="sonda" value="Não" type="checkbox" <?php if ($linha_aluno['sonda'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="sonda" value="Sim" type="checkbox" <?php if ($linha_aluno['sonda'] == 'Sim') echo 'checked'; ?>>
+								<label for="">| </label>
+								<label for=""> Aparelho Audição: </label>
+								<label for="">Não</label>
+								<input maxlength="100" name="aparelhoAudicao" value="Não" type="checkbox" <?php if ($linha_aluno['aparelhoAudicao'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="aparelhoAudicao" value="Sim" type="checkbox" <?php if ($linha_aluno['aparelhoAudicao'] == 'Sim') echo 'checked'; ?>>
+								<label for="">| </label>
+								<label for=""> Lentes Contato:</label>
+								<label for="">Não</label>
+								<input maxlength="100" name="lentesContato" value="Não" type="checkbox" <?php if ($linha_aluno['lentesContato'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="lentesContato" value="Sim" type="checkbox" <?php if ($linha_aluno['lentesContato'] == 'Sim') echo 'checked'; ?>>
+								<label for=""></label>
 
 
+								<input class="form-control" maxlength="100" name="outroEquipamento" type="text" placeholder="Outro " value="<?php echo $linha_aluno['outroEquipamento'] ?>">
 
+							</div>
+						</div>
+						<div class="col form-group">
+							<label>Alergia</label>
+							<select class="form-control" name="alergia" id="select">
+								<option value="">Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['alergia'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['alergia'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+						<div id="pai">
+							<div id="Sim">
+
+								<label for=""> Picada inseto:</label>
+								<label for="">Não</label>
+								<input maxlength="100" name="picadaInseto" value="Não" type="checkbox" <?php if ($linha_aluno['picadaInseto'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="picadaInseto" value="Sim" type="checkbox" <?php if ($linha_aluno['picadaInseto'] == 'Sim') echo 'checked'; ?>>
+								<label for="">|</label>
+								<label for=""> Medicamento:</label>
+								<label for="">Não</label>
+								<input maxlength="100" name="alergiaMedicamentos" value="Não" type="checkbox" <?php if ($linha_aluno['alergiaMedicamentos'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="alergiaMedicamentos" value="Sim" type="checkbox" <?php if ($linha_aluno['alergiaMedicamentos'] == 'Sim') echo 'checked'; ?>>
+								<label for="">|</label>
+								<label for=""> Plantas:</label>
+								<label for="">Não</label>
+								<input maxlength="100" name="plantas" value="Não" type="checkbox" <?php if ($linha_aluno['plantas'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="plantas" value="Sim" type="checkbox" <?php if ($linha_aluno['plantas'] == 'Sim') echo 'checked'; ?>>
+								<label for="">|</label>
+								<label for=""> Alimentos:</label>
+								<label for="">Não</label>
+								<input maxlength="100" name="alimentos" value="Não" type="checkbox" <?php if ($linha_aluno['alimentos'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="alimentos" value="Sim" type="checkbox" <?php if ($linha_aluno['alimentos'] == 'Sim') echo 'checked'; ?>>
+								<label for="">|</label>
+								<label for=""> outro:</label>
+								<label for="">Não</label>
+								<input maxlength="100" name="outraAlergia" value="Não" type="checkbox" <?php if ($linha_aluno['outraAlergia'] == 'Não') echo 'checked'; ?>>
+								<label for="">Sim</label>
+								<input maxlength="100" name="outraAlergia" value="Sim" type="checkbox" <?php if ($linha_aluno['outraAlergia'] == 'Sim') echo 'checked'; ?>>
+
+
+								<label for=""></label>
+
+								<input class="form-control" maxlength="100" name="outraAlergiaDesc" type="text" placeholder="Descrever ">
+
+							</div>
+						</div>
+						<div class="col form-group">
+							<label>Sabe Nadar?</label>
+							<Select class="form-control" name="nadar" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['nadar'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['nadar'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+						<div class="col form-group">
+							<label>Possui problemas cardíacos?</label>
+							<Select class="form-control" name="cardiaco" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['sonambulo'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['sonambulo'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+						<div class="col form-group">
+							<label>Possui restrição alimentar?</label>
+							<Select class="form-control" name="restricoesAlimentos" maxlength="20" required="required" type="">
+								<option>Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['restricoesAlimentos'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['restricoesAlimentos'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+						<div class="col form-group">
+							<label>Plano médico</label>
+							<input class="form-control" maxlength="100" name="planoMedico" required="required" value="<?php echo $linha_aluno['planoMedico']; ?> " type="text">
+						</div>
+						<div class="col form-group">
+							<label>Número carteirinha</label>
+							<input class="form-control" maxlength="100" name="numCarteira" type="text" value="<?php echo $linha_aluno['numCarteira']; ?>">
+						</div>
+						<div class="col form-group">
+							<label for="">Possui disturbio comportamental</label>
+							<select class="form-control" name="distubioComportamento" id="select4">
+								<option value="">Selecione</option>
+								<option value="Sim" <?php if ($linha_aluno['distubioComportamento'] == 'Sim') echo 'selected'; ?>>Sim</option>
+								<option value="Não" <?php if ($linha_aluno['distubioComportamento'] == 'Não') echo 'selected'; ?>>Não</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</section>
 
 
 
@@ -1049,15 +1069,15 @@ $resultado_documentos = mysqli_query($con, $result_repositorio);
 									</thead>
 									<tbody>
 										<?php while ($rows_documentos = mysqli_fetch_assoc($resultado_documentos)) {
-											
+
 										?>
 
-												<tr>
-													<td><label for=""><?php echo $rows_documentos['descricao']; ?></label></td>
-													<td> <a class='btn btn-default' target="_blank" href="<?php echo 'digitalizados/' .  $rows_documentos['srcDocumento'] . ''; ?>">Visualizar</a>
-													</td>
-												</tr>
-										<?php 
+											<tr>
+												<td><label for=""><?php echo $rows_documentos['descricao']; ?></label></td>
+												<td> <a class='btn btn-default' target="_blank" href="<?php echo 'digitalizados/' .  $rows_documentos['srcDocumento'] . ''; ?>">Visualizar</a>
+												</td>
+											</tr>
+										<?php
 										} ?>
 
 

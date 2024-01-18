@@ -34,17 +34,7 @@ $result_profile = mysqli_fetch_array($profile);
              
 
              
-              <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Polo</label>
-                  <select class="form-control" name="idPolo" readonly>
-                    <option value="">Selecione o Cargo</option>
-                    <?php
-                    $resultado_cargos = mysqli_query($con, "SELECT * FROM polo");
-                    while ($row_polos = mysqli_fetch_assoc($resultado_polos)) { ?>
-                      <option value="<?php echo utf8_encode($row_cargos['idPolo']); ?>"<?php if($result_profile['idPolo']==$row_cargos['idPolo'])echo 'selected';?>><?php echo $row_cargos['nomePolo']; ?></option>
-                    <?php } ?> } ?>
-                  </select>
-                </div>
+             
               <div class="card-action">
                 <button type="button" class="btn btn-danger" onClick="window.location.href='pagina_principal.php'">Cancelar</button>
 

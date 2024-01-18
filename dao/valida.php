@@ -7,7 +7,7 @@ $senha = $_POST['senha'];
 
 
 
-$sql = "SELECT * FROM usuario WHERE userAcesso = '$usuario' and senha = '$senha'  ";
+$sql = "SELECT * FROM usuario WHERE userAcesso = '$usuario' and senha = '$senha' order by idUsuario desc  ";
 	
 $res = $con->query($sql);
 $linha = $res->fetch_assoc();

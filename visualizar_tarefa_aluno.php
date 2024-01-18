@@ -28,7 +28,7 @@ if($con->query($sql) === TRUE){
   }
   }
 
-if($_POST['possuiNota'] == 'NÃ£o'){
+if($_POST['possuiNota'] == 'N«ªo'){
 
 $sql = "UPDATE tarefa set nota = -1, confirmacao = '$confirmacao', idUsuario = '$_SESSION[idUsuario]' where idTarefa = '$idTarefa2'";
 if($con->query($sql) === TRUE){
@@ -94,7 +94,7 @@ $linha2 = $res->fetch_assoc();
 <select name="possuiNota" id="select" class="form-control">
 <option value="">Selecione</option>
 <option value="Sim">Sim</option>
-<option value="NÃ£o">NÃ£o</option>
+<option value="N«ªo">N«ªo</option>
 
 </select>
 
@@ -109,7 +109,7 @@ $linha2 = $res->fetch_assoc();
 </div>
 <div class="item form-group">
 <label for="">Eu confirmo a entrega da atividade</label>
-<input type="checkBox" name="confirmacao" id="" required value="ConcluÃ­do">
+<input type="checkBox" name="confirmacao" id="" required value="Conclu«¿do">
 </div>
 <br>
 <br>
