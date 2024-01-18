@@ -383,11 +383,11 @@ $resultado_final = mysqli_fetch_array($result);
                                                 <span class="sub-item">Consultar Link</span>
                                             </a>
                                         </li>
-                                        <li>
+                                    <!--<li>
                                             <a href="cadastro_aluno_inicial.php">
                                                 <span class="sub-item">Inicial</span>
                                             </a>
-                                        </li>
+                                        </li>-->
                                        
                                         <li>
                                             <a href="cadastro_aluno_pendente.php">

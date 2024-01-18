@@ -42,14 +42,6 @@ if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) { ?>
                     </select>
                   </div>
                 </div>
-
-
-
-
-
-
-
-
                 <div class="ln_solid"></div>
                 <div class="form-group">
                   <div class="col-md-6 col-md-offset-3">
@@ -59,6 +51,7 @@ if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) { ?>
                   </div>
                 </div>
               </form>
+                      </div>
 
 
               <div class="row">
@@ -79,14 +72,6 @@ if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) { ?>
                         </div>
 
                       </div>
-
-
-
-
-
-
-
-
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
@@ -96,16 +81,15 @@ if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) { ?>
                         </div>
                       </div>
                     </form>
-                    <div class="row">
+                      </div></div>
+
+                <!--  <div class="row">
                       <div class="col-md-12">
                         <div class="card">
                           <div class="card-header">
-
-                            <div class="card-title">Cadastro de Documentos</div>
+                          <div class="card-title">Cadastro de Documentos</div>
                           </div>
-
                           <form action="envio_cadastro_documento.php" method="POST" onsubmit="return(verifica())" class="form-horizontal form-label-left">
-
                             <div class="item form-group">
                               <label class="control-label col-md-6 col-sm-3 col-xs-12" for="nome">Nome do documento
                               </label>
@@ -122,14 +106,6 @@ if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) { ?>
                                 </select>
                               </div>
                             </div>
-
-
-
-
-
-
-
-
                             <div class="ln_solid"></div>
                             <div class="form-group">
                               <div class="col-md-6 col-md-offset-3">
@@ -138,14 +114,7 @@ if ($_SESSION['idMonitor'] == 0 && $_SESSION['idAluno'] == 0) { ?>
                                 <a href="atualizar_documentos.php"> <input type="button" name="cancelar" class="btn btn-primary" value="Atualizar"></a>
                               </div>
                             </div>
-                          </form>
-
-                          
-
-
-
-
-
+                          </form>-->
 
 
 

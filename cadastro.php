@@ -1,11 +1,7 @@
-<?php
-
-include_once "dao/conexao.php";
-
-session_start();
+<?php include_once "dao/conexao.php"; session_start();
 
 $token = $_GET['tkd'];
-$select_validade = mysqli_query($con, "SELECT * FROM validade_cadastro where token = '$token'");
+$select_validade = mysqli_query($con, "SELECT * FROM validade_cadastro where token = '$token';");
 $linha_validade = mysqli_fetch_array($select_validade);
 
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
@@ -21,7 +17,7 @@ $hora_hoje = date("H:i:s");
 
 <head>
     <meta charset="UTF-8" />
-    <title>GM POLO - Cadastro Inicial</title>
+    <title>PROJOC - Cadastro Inicial</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="img/logo.png" type="image/x-icon" />
 
@@ -226,10 +222,9 @@ $hora_hoje = date("H:i:s");
                                         <div class="col form-group">
                                             <label>Emergências Médicas</label>
                                             <Select class="form-control" name="emergenciasMedicas" maxlength="20" required="required" type="">
-                                                <option>Selecione</option>
+                                                <option selected default disabled>Selecione</option>
                                                 <option value="Aguardar Acompanhamento dos Pais/Responsavel">Aguardar Acompanhamento dos Pais/Responsável</option>
-                                                <option value="Aceitar decisões médicas">Aceitar decisões médicas
-                                                <option>
+                                                <option value="Aceitar decisões médicas">Aceitar decisões médicas</option>
                                             </select>
                                         </div>
                                         <div class="col form-group">
@@ -399,12 +394,11 @@ $hora_hoje = date("H:i:s");
                                         <div class="col">
                                             <label for="">Nome escola</label>
                                             <select class="form-control" name="escola" required="required">
-                                                <option>Selecione a Escola</option>
-                                                <?php
-                                                $resultado_escola = mysqli_query($con, "SELECT * FROM escola where idCidade = '$linha_validade[idCidade]'");
-                                                while ($rows_Escola = mysqli_fetch_assoc($resultado_escola)) { ?>
-                                                    <option value="<?php echo $rows_Escola['nomeEscola']; ?>"><?php echo ($rows_Escola['nomeEscola']); ?></option>
-                                                <?php } ?>
+                                                <option selected default disabled>Selecione a Escola</option>
+                                                <?php $resultado_escola = mysqli_query($con, "SELECT * FROM `escola` WHERE `idCidade` = '$linha_validade[idCidade]' ORDER BY `nomeEscola` ASC;");
+                                                while($rows_Escola = mysqli_fetch_assoc($resultado_escola)){
+                                                    echo '<option value="'.$rows_Escola['nomeEscola'].'">'.$rows_Escola['nomeEscola'].'</option>';
+                                                } ?>
                                             </select>
                                         </div>
                                         <div class="col">
@@ -441,6 +435,8 @@ $hora_hoje = date("H:i:s");
                                             <label>Turma Escola</label>
                                             <input class="form-control" maxlength="100" name="turmaEscola" required="required" type="text" value="<?php echo $linha_aluno['turmaEscola'];  ?>">
                                         </div>
+                                        
+                                        <?php /*
                                         <div class="col">
                                             <label for="">Pelotão do Aluno</label>
                                             <select class="form-control" name="idPolo" required="required">
@@ -452,10 +448,9 @@ $hora_hoje = date("H:i:s");
                                                 <?php } ?>
                                             </select>
                                         </div>
+                                        */ ?>
+
                                     </div>
-
-
-
                                     <br>
                                 </div>
                             </div>

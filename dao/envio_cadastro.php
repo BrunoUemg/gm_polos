@@ -1,9 +1,9 @@
-<?php
+<?php include_once "conexao.php"; session_start();
 
-include_once "conexao.php";
-session_start();
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
+
+
 $nomeAluno = $_POST["nomeAluno"];
 $dtNascimento = $_POST["dtNascimento"];
 $sexo = $_POST["sexo"];
@@ -12,7 +12,7 @@ $nomeMae = $_POST["nomeMae"];
 $enderecoResidencial = $_POST["enderecoResidencial"];
 $bairro = $_POST["bairro"];
 $telefoneContato = $_POST["telefoneContato"];
-$idPolo = $_POST["idPolo"];
+if(isset($_POST["idPolo"])){$idPolo = $_POST["idPolo"];}else{$idPolo = NULL;}
 $escola = $_POST["escola"];
 $anoEscola = $_POST["anoEscola"];
 $turnoEscola = $_POST["turnoEscola"];
@@ -25,7 +25,7 @@ $cep = $_POST["cep"];
 $token = $_POST['token'];
 $idCidade = $_POST['idCidade'];
 $cpfAluno = $_POST['cpfAluno'];
-$rgAluno = $_POST['rgAluno'];
+if(isset($_POST['rgAluno'])){$rgAluno = $_POST['rgAluno'];}else{$rgAluno = NULL;}
 $cpfResponsavel = $_POST['cpfResponsavel'];
 $rgResponsavel = $_POST['rgResponsavel'];
 
@@ -58,63 +58,80 @@ $planoMedico = $_POST['planoMedico'];
 $numCarteira = $_POST['numCarteira'];
 $distubioComportamento = $_POST['distubioComportamento'];
 
-$select_validade = mysqli_query($con, "SELECT * FROM validade_cadastro where token = '$token'");
+
+
+$select_validade = mysqli_query($con, "SELECT * FROM validade_cadastro where token = '$token';");
 $linha_validade = mysqli_fetch_array($select_validade);
 
-if ($linha_validade['quantidadeMax'] == $linha_validade['quantidadeCadastro']) {
-    $_SESSION['msg'] = ' <div class="alert alert-danger text-center" role="alert"> <p> Esse link atingiu o máximo de cadastro, solicite um novo link! </div> </p> ';
-    echo "<script>window.location='../cadastro.php?tkd=$token'</script>";
-    exit();
+if($linha_validade['quantidadeMax'] == $linha_validade['quantidadeCadastro']){
+$_SESSION['msg'] = ' <div class="alert alert-danger text-center" role="alert"> <p> Esse link atingiu o máximo de cadastro, solicite um novo link! </div> </p> ';
+echo "<script>window.location='../cadastro.php?tkd=$token'</script>";
+die();
 }
 
-$confirma = $con->query("INSERT INTO aluno (nomeAluno, dtNascimento, sexo, nomePai, nomeMae, enderecoResidencial, bairro, telefoneContato, idPolo, escola, anoEscola, turmaEscola, turnoEscola, dtMatricula, numeroEndereco, telefoneAluno, telefoneResponsavel, status, cep, idCidade, cpfAluno, rgAluno, cpfResponsavel, rgResponsavel, tipoSanguineo, fatorRh, emergenciasMedicas, telefoneEmergencia, avisarEmergencia, permicao, medContinuos, equipamentosAuxilio, oculos, aparelhoDentario, marcapasso, sonda, aparelhoAudicao, lentesContato, alergia, picadaInseto, alergiaMedicamentos, plantas, alimentos, outraAlergia, outraAlergiaDesc, nadar, cardiaco, restricoesAlimentos, planoMedico, numCarteira, distubioComportamento)
-VALUES ('$nomeAluno', '$dtNascimento', '$sexo', '$nomePai', '$nomeMae', '$enderecoResidencial', '$bairro', '$telefoneContato', '$idPolo', '$escola', '$anoEscola', '$turmaEscola', '$turnoEscola', '$dtMatricula', '$numeroEndereco', '$telefoneAluno', '$telefoneResponsavel', 1, '$cep', '$idCidade', '$cpfAluno', '$rgAluno', '$cpfResponsavel', '$rgResponsavel', '$tipoSanguineo', '$fatorRh', '$emergenciasMedicas', '$telefoneEmergencia', '$avisarEmergencia', '$permicao', '$medContinuos', '$equipamentosAuxilio', '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$nadar', '$cardiaco', '$restricoesAlimentos', '$planoMedico', '$numCarteira', '$distubioComportamento')");
+
+
+try{
+
+
 $quantidadeNova = $linha_validade['quantidadeCadastro'] + 1;
+$update = $con->query("UPDATE validade_cadastro set quantidadeCadastro = '$quantidadeNova' where token = '$token';");
 
-$update = $con->query("UPDATE validade_cadastro set quantidadeCadastro = '$quantidadeNova' where token = '$token'");
 
-$query = mysqli_query($con, "SELECT Max(idAluno)  AS codigo FROM aluno");
+$query = mysqli_query($con, "SELECT Max(idAluno) AS codigo FROM aluno;");
 $result = mysqli_fetch_array($query);
 
-$idAluno = $result['codigo'];
 
-$sql_documentos = "SELECT * FROM documentos";
-$sql_resultado_documento = mysqli_query($con, $sql_documentos);
+function gerarIdUnico(){$geraId = uniqid(); $geraId = md5($geraId); $geraId = substr($geraId, 0, 16); return $geraId;}
+$get_url = gerarIdUnico();
 
-while ($rows_documentos = mysqli_fetch_assoc($sql_resultado_documento)) {
+$extensao = pathinfo($_FILES['fotoAluno']['name'], PATHINFO_EXTENSION);
+$src_fotoAluno = 'ftA-'.$get_url.'.'. $extensao;
 
-    $variavelDocumento = $rows_documentos['variavelDocumento'];
-    $nomeDocumento = $rows_documentos['nomeDocumento'];
-    if (!empty($_FILES[$variavelDocumento]["name"])) {
-        $pasta_arquivo = "digitalizados/";
+$extensoesPermitidas_fotoAluno = array('jpg', 'jpeg', 'png');
 
+if(in_array(strtolower($extensao), $extensoesPermitidas_fotoAluno)){
+$diretorio_fotoAluno = '../arquivos/fotoAluno/';
 
-        $formatos = array("png", "jpeg", "jpg", "pdf", "PNG", "JPEG", "JPG");
-        $extensao = pathinfo($_FILES[$variavelDocumento]['name'], PATHINFO_EXTENSION);
-
-        if (in_array($extensao, $formatos)) {
-            $pasta = "../digitalizados/";
-            $temporario = $_FILES[$variavelDocumento]['tmp_name'];
-            $novo_nome = $idAluno . "-" . $variavelDocumento . "." . $extensao; //define o nome do arquivo
-
-            if (move_uploaded_file($temporario, $pasta . $novo_nome)) {
-                $con->query("INSERT INTO repositorio_aluno (idAluno,srcDocumento,descricao)VALUES('$idAluno','$novo_nome','$nomeDocumento')");
-            }
-        } else {
-            echo "Erro para inserir: " . $con->error;
-        }
-    } else {
-        echo "n existe";
-    }
+if(move_uploaded_file($_FILES['fotoAluno']['tmp_name'], $diretorio_fotoAluno . $src_fotoAluno)){
+// Foto movida com sucesso.
+}else{
+echo "<script>alert('Ops, ocorreu um erro com o arquivo \"Foto do jovem\".');window.location='../cadastro.php?tkd=$token'</script>";
+die();
+}
+}else{
+echo "<script>alert('Ops, o arquivo enviado pelo campo \"Foto do jovem\" não é válido.');window.location='../cadastro.php?tkd=$token'</script>";
+die();
 }
 
-$con->query("INSERT INTO processamento_cadastro (etapa,status,idAluno)VALUES('Continuação cadastro',0,'$idAluno')");
 
-if ($confirma === true) {
-    $_SESSION['msg'] = ' <div class="alert alert-success text-center" role="alert"> <p> Cadastrado com sucesso! </div> </p> ';
-    echo "<script>window.location='../cadastro.php?tkd=$token'</script>";
-    exit();
-} else {
-    echo "<script>alert('Erro, entre em contato com o suporte!');window.location='../cadastro.php?tkd=$token'</script>";
-    exit();
+
+if($con->query("INSERT INTO `aluno` (`idAluno`, `nomeAluno`, `dtNascimento`, `nomePai`, `profissaoPai`, `nomeMae`, `profissaoMae`, `sexo`, `enderecoResidencial`, `bairro`, `numeroEndereco`, `cep`, `idCidade`, `idPolo`, `graduacao`, `telefoneContato`, `telefoneAluno`, `telefoneResponsavel`, `escola`, `anoEscola`, `turmaEscola`, `turnoEscola`, `status`, `dataDesligamento`, `nacionalidadeAluno`, `nacionalidadeResponsavel`, `rgAluno`, `cpfAluno`, `cpfResponsavel`, `rgResponsavel`, `dtMatricula`, `tipoSanguineo`, `fatorRh`, `altura`, `peso`, `equipamentosAuxilio`, `oculos`, `aparelhoDentario`, `marcapasso`, `sonda`, `aparelhoAudicao`, `lentesContato`, `outroEquipamento`, `permicao`, `emergenciasMedicas`, `avisarEmergencia`, `telefoneEmergencia`, `medContinuos`, `nomeMedicamento`, `alergia`, `picadaInseto`, `alergiaMedicamentos`, `plantas`, `alimentos`, `outraAlergia`, `outraAlergiaDesc`, `planoMedico`, `numCarteira`, `nadar`, `sonambulo`, `cardiaco`, `restricoesAlimentos`, `restricoesAlimentosDesc`, `impedimentoFisico`, `distubioComportamento`, `disturbioComportamentoDesc`, `disturbioAlimentar`, `disturbioAlimentarDesc`, `disturbioAnsiedade`, `disturbioAnsiedadeDesc`, `deficiencia`, `fisica`, `visual`, `auditiva`, `intectual`, `composicaoFamiliar`, `rgalunodigi`, `cpfalunodigi`, `cpfrespdigi`, `cpfresp2digi`, `rgrespdigi`, `rgresp2digi`, `comprovanteresidigi`, `atestadoescolardigi`, `outro`, `fotoAluno`, `arquivo10`, `arquivo11`, `arquivo12`, `desArquivo1`, `desArquivo2`, `desArquivo3`, `desArquivo4`, `desArquivo5`, `desArquivo6`, `desArquivo7`, `desArquivo8`, `desArquivo9`, `desArquivo10`, `desArquivo11`, `desArquivo12`, `fichaDigitalizada`) VALUES (NULL, '$nomeAluno', '$dtNascimento', '$nomePai', NULL, '$nomeMae', NULL, '$sexo', '$enderecoResidencial', '$bairro', '$numeroEndereco', '$cep', '$idCidade', NULL, '', '$telefoneContato', '$telefoneAluno', '$telefoneResponsavel', '$escola', '$anoEscola', '$turmaEscola', '$turnoEscola', 1, NULL, NULL, NULL, '$rgAluno', '$cpfAluno', '$cpfResponsavel', '$rgResponsavel', '$dtMatricula', '$tipoSanguineo', '$fatorRh', NULL, NULL, '$equipamentosAuxilio', '$oculos', '$aparelhoDentario', '$marcapasso', '$sonda', '$aparelhoAudicao', '$lentesContato', NULL, '$permicao', '$emergenciasMedicas', '$avisarEmergencia', '$telefoneResponsavel', '$medContinuos', '$nomeMedicamento', '$alergia', '$picadaInseto', '$alergiaMedicamentos', '$plantas', '$alimentos', '$outraAlergia', '$outraAlergiaDesc', '$planoMedico', '$numCarteira', '$nadar', NULL, '$cardiaco', '$restricoesAlimentos', NULL, NULL, '$distubioComportamento', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$src_fotoAluno', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)") === TRUE){
+
+
+
+$consulta_idAluno = $con->query("SELECT `idAluno` FROM `aluno` WHERE `cpfAluno` = '$cpfAluno' AND `dtMatricula` = '$dtMatricula' LIMIT 1;");
+$idAluno = mysqli_fetch_assoc($consulta_idAluno);
+if($con->query("INSERT INTO `repositorio_aluno` VALUES (null, '$src_fotoAluno', '$idAluno[idAluno]', 'Foto do jovem com fundo branco');") === FALSE){
+echo "<script>alert('Ops, ocorreu um erro com o repositório deste aluno.');window.location='../cadastro.php?tkd=$token'</script>";
+die();
 }
+
+
+$con->query("INSERT INTO `processamento_cadastro` (`etapa`,`status`,`idAluno`)VALUES('Continuação cadastro',0,'$idAluno[idAluno]');");
+
+
+
+$_SESSION['msg'] = ' <div class="alert alert-success text-center" role="alert"> <p> Cadastrado com sucesso! </div> </p> ';
+echo "<script>window.location='../cadastro.php?tkd=$token'</script>";
+die();
+
+}else{
+echo "<script>alert('Ops, ocorreu um erro em nossa base de dados.');window.location='../cadastro.php?tkd=$token'</script>";
+die();
+}
+
+
+}catch(Exception $e){
+echo "<script>alert('Ops, ocorreu um erro inesperado.');window.location='../cadastro.php?tkd=$token'</script>";
+} die(); ?>
