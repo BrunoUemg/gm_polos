@@ -29,7 +29,7 @@ if (isset($_POST['idAluno'])) {
   }
 }
 
-$result_consultaAlunoAdm = "SELECT * FROM processamento_cadastro P INNER JOIN aluno A ON  A.idAluno = P.idAluno where A.status = 1 and P.status = 0 ";
+$result_consultaAlunoAdm = "SELECT * FROM processamento_cadastro P INNER JOIN aluno A ON A.idAluno = P.idAluno WHERE A.status = 0 AND P.status = 0;";
 $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
 
 ?>
