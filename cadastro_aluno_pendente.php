@@ -29,7 +29,7 @@ if (isset($_POST['idAluno'])) {
   }
 }
 
-$result_consultaAlunoAdm = "SELECT A.idAluno, A.nomeAluno, A.dtNascimento, P.etapa FROM processamento_cadastro P INNER JOIN aluno A ON A.idAluno = P.idAluno WHERE A.status = 0 AND P.status = 0 ORDER BY A.nomeAluno ASC;";
+$result_consultaAlunoAdm = "SELECT DISTINCT A.idAluno, A.nomeAluno, A.dtNascimento, P.etapa FROM processamento_cadastro P INNER JOIN aluno A ON A.idAluno = P.idAluno WHERE A.status = 0 AND P.status = 0 ORDER BY A.nomeAluno ASC;";
 $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
 
 ?>
