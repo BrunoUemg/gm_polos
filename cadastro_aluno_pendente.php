@@ -1,7 +1,8 @@
-<?php
-include_once "header.php";
+<?php include_once "header.php"; include_once "dao/conexao.php";
 
-include_once "dao/conexao.php";
+setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Sao_Paulo');
+$ano_atual = date("Y");
 
 if (isset($_POST['idAluno'])) {
   if (!empty($_FILES["fichaDigitalizada"]["name"])) {
@@ -29,7 +30,7 @@ if (isset($_POST['idAluno'])) {
   }
 }
 
-$result_consultaAlunoAdm = "SELECT DISTINCT A.idAluno, A.nomeAluno, A.dtNascimento, P.etapa FROM processamento_cadastro P INNER JOIN aluno A ON A.idAluno = P.idAluno WHERE A.status = 0 AND P.status = 0 ORDER BY A.nomeAluno ASC;";
+$result_consultaAlunoAdm = "SELECT DISTINCT A.idAluno, A.nomeAluno, A.dtNascimento, P.etapa, C.nomeCidade FROM processamento_cadastro P INNER JOIN aluno A ON A.idAluno = P.idAluno INNER JOIN cidade C ON A.idCidade = C.idCidade WHERE A.status = 0 AND P.status = 0 AND YEAR(dtMatricula) = '$ano_atual' ORDER BY A.nomeAluno ASC;";
 $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
 
 ?>
@@ -52,8 +53,8 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
                     <tr>
                       <th>Nome</th>
                       <th>Data de Nascimento</th>
+                      <th>Cidade</th>
                       <th>Etapa</th>
-
                       <th></th>
                     </tr>
                   </thead>
@@ -65,18 +66,19 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
                       while ($rows_consultaAluno = mysqli_fetch_assoc($resultado_consultaAluno)) {
                     ?>
                         <tr>
+                            
                           <td><?php echo $rows_consultaAluno['nomeAluno']; ?></td>
 
                           <td><?php echo $rows_consultaAluno['dtNascimento']; ?></td>
 
-
+                          <td><?php echo $rows_consultaAluno['nomeCidade']; ?></td>
+                          
+                          <td></td>
+                          
                           <td>
                             <?php echo "<a class='btn btn-default' title='Vizualizar boletim' href='visualizar_boletim.php?idAluno=" . $rows_consultaAluno['idAluno'] . "'>" ?><i class="fa fa-search"></i><?php echo "</a>"; ?>
-
                           </td>
-
-
-
+                          
                         </tr>
                       <?php }
                     } else {
@@ -86,11 +88,14 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
 
                       ?>
                         <tr>
+                            
                           <td><?php echo $rows_consultaAluno['nomeAluno']; ?></td>
 
                           <td><?php echo $rows_consultaAluno['dtNascimento']; ?></td>
+                          
+                          <td><?php echo $rows_consultaAluno['nomeCidade']; ?></td>
+                          
                           <td><?php echo $rows_consultaAluno['etapa']; ?></td>
-
 
                           <td>
 
@@ -189,7 +194,4 @@ $resultado_consultaAlunoAdm = mysqli_query($con, $result_consultaAlunoAdm);
 
 
 
-  <?php
-  include_once("footer.php");
-
-  ?>
+  <?php include_once("footer.php"); ?>
